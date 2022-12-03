@@ -1,0 +1,114 @@
+% ----------------------------------------------------------------------------
+% Vorlage Abschlussarbeit Informatik THM (minimal)
+%
+% Copyright (c) 2016 - 2020 by Burkhardt Renz. All rights reserved.
+% Die Vorlage für eine Abschlussarbeit in der Informatik am Fachbereich
+% MNI der THM ist lizenziert unter einer Creative Commons
+% Namensnennung-Nicht kommerziell 4.0 International Lizenz.
+%
+% $Id: vorlage.tex 979 2020-08-24 07:03:19Z br $
+% ----------------------------------------------------------------------------
+
+\documentclass[%
+	BCOR=8.25mm,         % Bindekorrektur
+	DIV=12,              % Satzspiegel
+	parskip=half,				 % Abstand zwischen Absätzen
+	bibliography=totoc,	 % Literaturverzeichnis im Inhaltsverzeichnis
+	headsepline=on,      % Trennlinie Kolumnentitel
+	]{scrbook}
+
+%% Präambel
+\usepackage[english, ngerman]{babel} % deutsche typogr. Regeln + Trenntabelle
+\usepackage[T1]{fontenc}             % interner TeX-Font-Codierung
+\usepackage{helvet}                 % Font Latin Modern
+\usepackage[utf8]{inputenc}          % Font-Codierung der Eingabedatei
+\usepackage[babel]{csquotes}         % Anführungszeichen
+\usepackage{graphicx}                % Graphiken
+\usepackage{booktabs}                % Tabellen schöner
+\usepackage{listingsutf8}            % Listings mit Einstellungen
+\lstset{basicstyle=\small\ttfamily,
+	tabsize=2,
+	basewidth={0.5em,0.45em},
+	extendedchars=true}
+\lstset{literate=%                   % Umlaute in Listings
+  {Ö}{{\"O}}1
+  {Ä}{{\"A}}1
+  {Ü}{{\"U}}1
+  {ß}{{\ss}}2
+  {ü}{{\"u}}1
+  {ä}{{\"a}}1
+  {ö}{{\"o}}1
+	{~}{{\textasciitilde}}1} 
+\usepackage{amsmath}	               % Mathematik
+\usepackage[pdftex]{hyperref}       
+\hypersetup{
+	bookmarksopen=true,
+	bookmarksopenlevel=3,
+	colorlinks,
+	citecolor=blue,
+	linkcolor=blue,
+}
+\usepackage{scrhack}				% unterdrückt Fehlermeldung von listings
+\usepackage[
+	sorting = none,
+	style = authoryear,
+	backend = biber]{biblatex}   % Biblatex für das Literaturverzeichnis
+\addbibresource{Hadoop.bib}			% Import der Bibliothek von Zotero
+
+%% Nummerierungstiefen
+\setcounter{tocdepth}{3}             % 3 Stufen im Inhaltsverzeichnis
+\setcounter{secnumdepth}{3} 		     % 3 Stufen in Abschnittnummerierung
+
+% ----------------------------------------------------------------------------
+\begin{document}
+
+\frontmatter
+
+%% Titelseite
+\begin{titlepage}
+	\begin{center}
+	\includegraphics[width=0.9\textwidth]{img/mni-logo}
+	
+	\vspace{5cm}	
+
+	\vspace{1cm}	
+
+	\huge\textbf{\sffamily Apache Hadoop}
+
+	\normalsize
+	\vspace{1cm}	
+
+	Hauptseminar "Cloud-Plattformen und Big Data" \\
+	Dozent Steffen Rupp
+
+	von \\[1cm]	
+
+	\textbf{René Gentzen}\\ [.5cm] 
+	rene.gentzen@mni.thm.de\\ [.5cm] 
+	im WS22/23
+	\end{center}
+	\vfill
+\end{titlepage}
+
+%% Verzeichnissse
+\tableofcontents
+
+\listoffigures
+\listoftables
+\lstlistoflistings
+
+\mainmatter 
+\pagestyle{headings}
+\include{Chapter1.tex}
+\include{Chapter2.tex}
+
+%% Stuff goes here
+
+\backmatter 
+
+\appendix
+
+\printbibliography
+
+\end{document}
+% ----------------------------------------------------------------------------
