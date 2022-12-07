@@ -1,11 +1,25 @@
-\chapter{Hadoop Fundamentals}
-\section{Anforderungen von Big Data}
-\subsection{Die Limits von Vertical Scalability}
-\subsection{Die Vorteile und Challenges von Horizontal Scalability}
+\chapter{Hadoop Grundlagen}
+
+``Die Apache Hadoop Softwarebibliothek ist ein Framework, das die über Computercluster verteilte Verarbeitung großer Datensätze mit einfachen Programmiermodellen ermöglicht. Es ist so konzipiert, dass es von einzelnen Servern bis hin zu Tausenden von Rechnern skaliert werden kann, von denen jeder lokale Rechenleistung und Speicherplatz bietet. Anstatt sich auf Hardware zu verlassen, um eine hohe Verfügbarkeit zu gewährleisten, ist die Bibliothek selbst so konzipiert, dass sie Ausfälle auf der Anwendungsebene erkennt und bewältigt, so dass ein hochverfügbarer Dienst auf einem Cluster von Computern bereitgestellt wird, von denen jeder für sich für Ausfälle anfällig sein kann.''\cite{noauthor_apache_nodate}\\
+So beschreibt (übersetzt aus dem Englischen) die Apache Software Foundation ihr Top Level Projekt Apache™ Hadoop®.  Diese Arbeit wird einen pragmatischen Überblick über Hadoop und die Komponenten im Hadoop Ecosystem geben. Dabei soll der Fokus nicht auf technischen Details, sondern auf Anwendungsorientiertheit leigen. Es sollen konkrete Anwendungsfälle zu den einzelnen Komponenten besprochen werden und nicht abstrakte Architekturkonzepte.
 
 \section{Hadoop Historie}
-\subsection{GFS und MapReduce}
+\subsection{Anforderungen von Big Data}
+``Der Begriff „Big Data“ bezieht sich auf Datenbestände, die so groß, schnelllebig oder komplex sind, dass sie sich mit herkömmlichen Methoden nicht oder nur schwer verarbeiten lassen.''\cite{noauthor_big_nodate} \\ 
+Schon Anfang der Neunziger war es nicht mehr praktikabel, Webseiten händisch, zum Beispiel in ''Web Directories'', zu katalogisieren. Man wollte Nutzern trotzdem die Möglichkeit geben, Informationen durch das Durchsuchen zentraler Anlaufstellen ausfindig zu machen. Automatisierte Tools, die sogenannten ''Web Crawler'' wurden erfunden, um diese Arbeit zu übernehmen.\cite{griffiths_search_2007} \\ 
+Das Internet erlebte in den letzten Jahren des 20. Jahrhunderts ein explosionsartiges Wachstum an Nutzern und Webseiten, und damit auch an Informationen, die katalogisiert werden mussten.\cite{zakon_hobbes_2018} 
+Um eine immer größer werdende Menge an Informationen verarbeiten zu können, gibt es zwei Ansätze der Skalierung: Vertikale und horizontale Skalierung. Diese sollen in den folgenden Abschnitten erläutert werden.
 
+\subsection{Vertikale Skalierung}
+Bei der vertikalen Skalierung (''scaling up'') werden \emph{einem} System mehr Ressourcen wie zum Beispiel größerer Speicher, oder eine schnellere CPU hinzugefügt. Dadurch bekommt man einen Performance-Gewinn: Man kann mehr Daten speichern, oder Berechnungen werden schneller fertig gestellt.
+Ein großer Vorteil der vertikalen Skalierung ist, dass Anwendungsprogramme in der Regel nicht angepasst werden müssen, um vom diesem Performance-Wachstum zu profitieren. Wenn man eine 5TB große Festplatte gegen eine 10TB Festplatte austauscht, dann hat man den Speicherplatz eines Servers vertikal skaliert. Die darauf laufenden Programme müssen nicht angepasst werden, sondern man kann einfach doppelt so viele Daten speichern.\cite{beaumont_how_2014}\\
+Vertikale Skalierung hat drei große Nachteile: Erstens kann man nicht unbegrenzt vertikal skalieren. Ein Server kann physisch nur eine begrenzte Anzahl an Hardware aufnehmen. Zweitens wächst die Performance eines Systems bei vertikaler Skalierung höchstens linear, die Kosten allerdings nicht. Heutzutage kann man gerade bei Cloud-Anbietern sehr leistungsfähige Systeme bei linearem Preisanstieg mieten.\cite{noauthor_pricing_nodate} Sucht man aber noch mehr Performance in \emph{einem} System, dann steigen die Kosten exponentiell\cite{athow_at_2020}. Drittens skalieren nicht alle Faktoren in einem System gleich gut vertikal. Die Speicherkapazität von SSDs ist zum Beispiel seit 1978 von 45MB auf 100TB gestiegen (Faktor $2222,22 \cdot 10^{3}$), während sich die Datenrate nur von 1.5MB/s auf 500/460MB/s (Sequential Read/Write) erhöht hat (Faktor $0,333 \cdot 10^{3}$).\cite{noauthor_who_nodate}\cite{athow_at_2020}  
+
+
+\subsection{Horizontale Skalierung}
+Bei der horizontalen Skalierung (''scaling out'')
+
+\subsection{GFS und MapReduce}
 \section{Hadoop 1.0 Aufbau}
 \subsection{HDFS in depth theoretisch}
 \subsection{MapReduce in depth theoretisch}

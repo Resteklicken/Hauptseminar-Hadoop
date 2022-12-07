@@ -66,15 +66,15 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labeldateparts</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labeldatespec</bcf:key>
-      <bcf:value order="1" type="field">date</bcf:value>
-      <bcf:value order="2" type="field">year</bcf:value>
-      <bcf:value order="3" type="field">eventdate</bcf:value>
-      <bcf:value order="4" type="field">origdate</bcf:value>
-      <bcf:value order="5" type="field">urldate</bcf:value>
+      <bcf:value order="1" type="field">origdate</bcf:value>
+      <bcf:value order="2" type="field">date</bcf:value>
+      <bcf:value order="3" type="field">year</bcf:value>
+      <bcf:value order="4" type="field">dateaddon</bcf:value>
+      <bcf:value order="5" type="field">eventdate</bcf:value>
       <bcf:value order="6" type="string">nodate</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
@@ -91,15 +91,15 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxbibnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxcitenames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxsortnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxitems</bcf:key>
@@ -175,11 +175,11 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
-      <bcf:value>true</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>full</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniqueprimaryauthor</bcf:key>
@@ -273,20 +273,25 @@
       <bcf:key>useshorteditor</bcf:key>
       <bcf:value>1</bcf:value>
     </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usesupervisor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
   </bcf:options>
-  <!-- online -->
-  <bcf:options component="biblatex" type="online">
+  <!-- patent -->
+  <bcf:options component="biblatex" type="patent">
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labelnamespec</bcf:key>
-      <bcf:value order="1">shortauthor</bcf:value>
-      <bcf:value order="2">author</bcf:value>
-      <bcf:value order="3">shorteditor</bcf:value>
-      <bcf:value order="4">editor</bcf:value>
-      <bcf:value order="5">translator</bcf:value>
+      <bcf:value order="1">holder</bcf:value>
+      <bcf:value order="2">shortauthor</bcf:value>
+      <bcf:value order="3">author</bcf:value>
+      <bcf:value order="4">shorteditor</bcf:value>
+      <bcf:value order="5">editor</bcf:value>
+      <bcf:value order="6">translator</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labeltitle</bcf:key>
@@ -304,15 +309,15 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labeldateparts</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labeldatespec</bcf:key>
-      <bcf:value order="1" type="field">date</bcf:value>
-      <bcf:value order="2" type="field">year</bcf:value>
-      <bcf:value order="3" type="field">eventdate</bcf:value>
-      <bcf:value order="4" type="field">origdate</bcf:value>
-      <bcf:value order="5" type="field">urldate</bcf:value>
+      <bcf:value order="1" type="field">origdate</bcf:value>
+      <bcf:value order="2" type="field">date</bcf:value>
+      <bcf:value order="3" type="field">year</bcf:value>
+      <bcf:value order="4" type="field">dateaddon</bcf:value>
+      <bcf:value order="5" type="field">eventdate</bcf:value>
       <bcf:value order="6" type="string">nodate</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
@@ -321,15 +326,15 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxbibnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxcitenames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxsortnames</bcf:key>
-      <bcf:value>3</bcf:value>
+      <bcf:value>99</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxitems</bcf:key>
@@ -385,11 +390,11 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
-      <bcf:value>true</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>full</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniqueprimaryauthor</bcf:key>
@@ -481,6 +486,10 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>useshorteditor</bcf:key>
+      <bcf:value>1</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>usesupervisor</bcf:key>
       <bcf:value>1</bcf:value>
     </bcf:option>
   </bcf:options>
@@ -569,6 +578,7 @@
     <bcf:option datatype="boolean">usetranslator</bcf:option>
     <bcf:option datatype="boolean">useshortauthor</bcf:option>
     <bcf:option datatype="boolean">useshorteditor</bcf:option>
+    <bcf:option datatype="boolean">usesupervisor</bcf:option>
     <bcf:option datatype="boolean">debug</bcf:option>
     <bcf:option datatype="boolean">loadfiles</bcf:option>
     <bcf:option datatype="boolean">safeinputenc</bcf:option>
@@ -625,13 +635,17 @@
     <bcf:option datatype="boolean">sortfirstinits</bcf:option>
     <bcf:option datatype="boolean">sortgiveninits</bcf:option>
     <bcf:option datatype="boolean">labelyear</bcf:option>
-    <bcf:option datatype="boolean">isbn</bcf:option>
+    <bcf:option datatype="boolean">spacecolon</bcf:option>
+    <bcf:option datatype="boolean">pagetotal</bcf:option>
+    <bcf:option datatype="boolean">shortnumeration</bcf:option>
+    <bcf:option datatype="boolean">thesisinfoinnotes</bcf:option>
     <bcf:option datatype="boolean">url</bcf:option>
+    <bcf:option datatype="boolean">isbn</bcf:option>
     <bcf:option datatype="boolean">doi</bcf:option>
     <bcf:option datatype="boolean">eprint</bcf:option>
-    <bcf:option datatype="boolean">related</bcf:option>
-    <bcf:option datatype="boolean">dashed</bcf:option>
-    <bcf:option datatype="boolean">mergedate</bcf:option>
+    <bcf:option datatype="boolean">articlepubinfo</bcf:option>
+    <bcf:option datatype="boolean">currentlang</bcf:option>
+    <bcf:option datatype="boolean">noenddot</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer">mincrossrefs</bcf:option>
     <bcf:option datatype="integer">minxrefs</bcf:option>
@@ -684,6 +698,7 @@
     <bcf:option datatype="boolean">usetranslator</bcf:option>
     <bcf:option datatype="boolean">useshortauthor</bcf:option>
     <bcf:option datatype="boolean">useshorteditor</bcf:option>
+    <bcf:option datatype="boolean">usesupervisor</bcf:option>
     <bcf:option datatype="boolean">terseinits</bcf:option>
     <bcf:option datatype="boolean">abbreviate</bcf:option>
     <bcf:option datatype="boolean">dateabbrev</bcf:option>
@@ -708,12 +723,6 @@
     <bcf:option datatype="boolean">dataonly</bcf:option>
     <bcf:option datatype="boolean">skiplos</bcf:option>
     <bcf:option datatype="boolean">labelyear</bcf:option>
-    <bcf:option datatype="boolean">isbn</bcf:option>
-    <bcf:option datatype="boolean">url</bcf:option>
-    <bcf:option datatype="boolean">doi</bcf:option>
-    <bcf:option datatype="boolean">eprint</bcf:option>
-    <bcf:option datatype="boolean">related</bcf:option>
-    <bcf:option datatype="boolean">mergedate</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="xml">labelalphatemplate</bcf:option>
     <bcf:option datatype="xml">translit</bcf:option>
@@ -772,6 +781,7 @@
     <bcf:option datatype="boolean" backendout="1">usetranslator</bcf:option>
     <bcf:option datatype="boolean" backendout="1">useshortauthor</bcf:option>
     <bcf:option datatype="boolean" backendout="1">useshorteditor</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">usesupervisor</bcf:option>
     <bcf:option datatype="boolean" backendout="1">terseinits</bcf:option>
     <bcf:option datatype="boolean" backendout="1">abbreviate</bcf:option>
     <bcf:option datatype="boolean" backendout="1">dateabbrev</bcf:option>
@@ -795,12 +805,6 @@
     <bcf:option datatype="boolean" backendout="1">skiplab</bcf:option>
     <bcf:option datatype="boolean" backendin="uniquename=false,uniquelist=false,skipbib=true,skipbiblist=true,skiplab=true">dataonly</bcf:option>
     <bcf:option datatype="boolean" backendout="1">skiplos</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">isbn</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">url</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">doi</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">eprint</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">related</bcf:option>
-    <bcf:option datatype="boolean" backendout="1">mergedate</bcf:option>
     <bcf:option datatype="boolean" backendout="1">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer" backendin="maxcitenames,maxbibnames,maxsortnames">maxnames</bcf:option>
     <bcf:option datatype="integer" backendin="mincitenames,minbibnames,minsortnames">minnames</bcf:option>
@@ -859,6 +863,13 @@
   </bcf:datafieldset>
   <!-- SOURCEMAP -->
   <bcf:sourcemap>
+    <bcf:maps datatype="bibtex" level="style">
+      <bcf:map>
+        <bcf:per_type>patent</bcf:per_type>
+        <bcf:map_step map_field_source="author"/>
+        <bcf:map_step map_field_set="holder" map_origfieldval="1"/>
+      </bcf:map>
+    </bcf:maps>
     <bcf:maps datatype="bibtex" level="driver">
       <bcf:map>
         <bcf:map_step map_field_set="day" map_null="1"/>
@@ -1329,6 +1340,8 @@
       <bcf:field fieldtype="field" format="xsv" datatype="option" skip_output="true">relatedoptions</bcf:field>
       <bcf:field fieldtype="field" datatype="range">pages</bcf:field>
       <bcf:field fieldtype="field" datatype="code">execute</bcf:field>
+      <bcf:field fieldtype="list" datatype="name">supervisor</bcf:field>
+      <bcf:field fieldtype="field" datatype="literal">dateaddon</bcf:field>
     </bcf:fields>
     <bcf:entryfields>
       <bcf:field>abstract</bcf:field>
@@ -2092,6 +2105,13 @@
       <bcf:field>type</bcf:field>
       <bcf:field>venue</bcf:field>
     </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:entrytype>thesis</bcf:entrytype>
+      <bcf:field>supervisor</bcf:field>
+    </bcf:entryfields>
+    <bcf:entryfields>
+      <bcf:field>dateaddon</bcf:field>
+    </bcf:entryfields>
     <bcf:multiscriptfields>
       <bcf:field>abstract</bcf:field>
       <bcf:field>addendum</bcf:field>
@@ -2347,9 +2367,18 @@
   <!-- CITATION DATA -->
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
-    <bcf:datasource type="file" datatype="bibtex" glob="false">Hadoop.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">Hauptseminar Hadoop.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1" intorder="1">noauthor_apache_nodate</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">noauthor_big_nodate</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">griffiths_search_2007</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">zakon_hobbes_2018</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">beaumont_how_2014</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">noauthor_pricing_nodate</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">athow_at_2020</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">noauthor_who_nodate</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">athow_at_2020</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

@@ -41,7 +41,7 @@
   >
 ]>
 <requests version="1.0">
-  <internal package="biblatex" priority="9" active="0">
+  <internal package="biblatex" priority="9" active="1">
     <generic>latex</generic>
     <provides type="dynamic">
       <file>Main.bcf</file>
@@ -51,15 +51,22 @@
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
+      <file>iso-numeric.dbx</file>
       <file>blx-compat.def</file>
       <file>biblatex.def</file>
-      <file>standard.bbx</file>
-      <file>authoryear.bbx</file>
-      <file>authoryear.cbx</file>
+      <file>iso.bbx</file>
+      <file>iso-numeric.bbx</file>
+      <file>numeric.cbx</file>
+      <file>iso-fullcite.cbx</file>
+      <file>iso-numeric.cbx</file>
       <file>biblatex.cfg</file>
       <file>german.lbx</file>
+      <file>german-iso.lbx</file>
       <file>ngerman.lbx</file>
+      <file>ngerman-iso.lbx</file>
       <file>english.lbx</file>
+      <file>english-iso.lbx</file>
+      <file>american.lbx</file>
     </requires>
   </internal>
   <external package="biblatex" priority="5" active="0">
@@ -81,7 +88,7 @@
       <file>Main.bcf</file>
     </requires>
     <requires type="editable">
-      <file>Hadoop.bib</file>
+      <file>Hauptseminar Hadoop.bib</file>
     </requires>
   </external>
 </requests>
