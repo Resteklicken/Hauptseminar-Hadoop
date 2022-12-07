@@ -179,9 +179,60 @@
       \verb https://www.ibm.com/blogs/cloud-computing/2014/04/09/explain-vertical-horizontal-scaling-cloud/
       \endverb
     \endentry
-    \entry{noauthor_pricing_nodate}{online}{}
+    \entry{gustafson_amdahls_2011}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=351aa3ec1bf2b12adf8f540f6ab58b7d}{%
+           family={Gustafson},
+           familyi={G\bibinitperiod},
+           given={John\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=10069b6c0f07f4f656cd2853b6599848}{%
+           family={Padua},
+           familyi={P\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston, {MA}}%
+      }
+      \list{publisher}{1}{%
+        {Springer {US}}%
+      }
+      \strng{namehash}{351aa3ec1bf2b12adf8f540f6ab58b7d}
+      \strng{fullhash}{351aa3ec1bf2b12adf8f540f6ab58b7d}
+      \strng{bibnamehash}{351aa3ec1bf2b12adf8f540f6ab58b7d}
+      \strng{authorbibnamehash}{351aa3ec1bf2b12adf8f540f6ab58b7d}
+      \strng{authornamehash}{351aa3ec1bf2b12adf8f540f6ab58b7d}
+      \strng{authorfullhash}{351aa3ec1bf2b12adf8f540f6ab58b7d}
+      \strng{editorbibnamehash}{10069b6c0f07f4f656cd2853b6599848}
+      \strng{editornamehash}{10069b6c0f07f4f656cd2853b6599848}
+      \strng{editorfullhash}{10069b6c0f07f4f656cd2853b6599848}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Encyclopedia of Parallel Computing}
+      \field{isbn}{978-0-387-09766-4}
+      \field{title}{Amdahl's Law}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{pages}{53\bibrangedash 60}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1007/978-0-387-09766-4_77
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-0-387-09766-4_77
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-0-387-09766-4_77
+      \endverb
+    \endentry
+    \entry{noauthor_pricing_nodate}{online}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labeltitlesource}{title}
       \field{abstract}{View and compare pricing options for Linux Virtual Machine Scale Sets. Pay only for what you use with no upfront cost.}
       \field{langid}{english}
@@ -214,8 +265,8 @@
       \strng{authorbibnamehash}{ba6000fe0077e75350811c3d7dcbd3e9}
       \strng{authornamehash}{ba6000fe0077e75350811c3d7dcbd3e9}
       \strng{authorfullhash}{ba6000fe0077e75350811c3d7dcbd3e9}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Largest ever solid state drive comes with very steep premium}
@@ -241,8 +292,8 @@
       \endverb
     \endentry
     \entry{noauthor_who_nodate}{online}{}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labeltitlesource}{title}
       \field{title}{who was who in {SSD}? - {StorageTek}}
       \field{urlday}{7}
