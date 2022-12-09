@@ -230,9 +230,31 @@
       \verb https://doi.org/10.1007/978-0-387-09766-4_77
       \endverb
     \endentry
-    \entry{noauthor_pricing_nodate}{online}{}
+    \entry{noauthor_horizontal_nodate}{online}{}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A guide to understanding horizontal vs. vertical scaling and helping system administrators make the right decision when scaling is needed.}
+      \field{langid}{english}
+      \field{title}{Horizontal Vs. Vertical Scaling Comparison Guide}
+      \field{titleaddon}{{MongoDB}}
+      \field{urlday}{7}
+      \field{urlmonth}{12}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/home/rene/Zotero/storage/9538ILZX/horizontal-vs-vertical-scaling.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mongodb.com/basics/horizontal-vs-vertical-scaling
+      \endverb
+      \verb{url}
+      \verb https://www.mongodb.com/basics/horizontal-vs-vertical-scaling
+      \endverb
+    \endentry
+    \entry{noauthor_pricing_nodate}{online}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{title}
       \field{abstract}{View and compare pricing options for Linux Virtual Machine Scale Sets. Pay only for what you use with no upfront cost.}
       \field{langid}{english}
@@ -265,8 +287,8 @@
       \strng{authorbibnamehash}{ba6000fe0077e75350811c3d7dcbd3e9}
       \strng{authornamehash}{ba6000fe0077e75350811c3d7dcbd3e9}
       \strng{authorfullhash}{ba6000fe0077e75350811c3d7dcbd3e9}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Largest ever solid state drive comes with very steep premium}
@@ -292,8 +314,8 @@
       \endverb
     \endentry
     \entry{noauthor_who_nodate}{online}{}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{title}{who was who in {SSD}? - {StorageTek}}
       \field{urlday}{7}
@@ -309,6 +331,189 @@
       \verb{url}
       \verb http://www.storagesearch.com/storagetek.html
       \endverb
+    \endentry
+    \entry{noauthor_what_nodate}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{A computer cluster is a set of connected computers (nodes) that work together to combine computing power as if they are a single (much more powerful) machine. You can learn more about computer clusters and their role in the enterprise linux software environment here.}
+      \field{langid}{american}
+      \field{shorttitle}{What is a Computer Cluster?}
+      \field{title}{What is a Computer Cluster? {|} Answer from {SUSE} Defines}
+      \field{titleaddon}{{SUSE} Defines}
+      \field{urlday}{7}
+      \field{urlmonth}{12}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/home/rene/Zotero/storage/65JYW74P/computer-cluster.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.suse.com/suse-defines/definition/computer-cluster/
+      \endverb
+      \verb{url}
+      \verb https://www.suse.com/suse-defines/definition/computer-cluster/
+      \endverb
+    \endentry
+    \entry{ghemawat_google_2003}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=193bcec5240237591ad8fb697869f013}{%
+           family={Ghemawat},
+           familyi={G\bibinitperiod},
+           given={Sanjay},
+           giveni={S\bibinitperiod}}}%
+        {{hash=cba27430b5b9cc9a103159616e785bbd}{%
+           family={Gobioff},
+           familyi={G\bibinitperiod},
+           given={Howard},
+           giveni={H\bibinitperiod}}}%
+        {{hash=408f4502cb10162a8e4bab0e4cc0649b}{%
+           family={Leung},
+           familyi={L\bibinitperiod},
+           given={Shun-Tak},
+           giveni={S\bibinithyphendelim T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Bolton Landing, {NY}}%
+      }
+      \strng{namehash}{57e17cb11465ebe3ae3f1449f8b1549f}
+      \strng{fullhash}{57e17cb11465ebe3ae3f1449f8b1549f}
+      \strng{bibnamehash}{57e17cb11465ebe3ae3f1449f8b1549f}
+      \strng{authorbibnamehash}{57e17cb11465ebe3ae3f1449f8b1549f}
+      \strng{authornamehash}{57e17cb11465ebe3ae3f1449f8b1549f}
+      \strng{authorfullhash}{57e17cb11465ebe3ae3f1449f8b1549f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 19th {ACM} Symposium on Operating Systems Principles}
+      \field{title}{The Google File System}
+      \field{year}{2003}
+      \field{dateera}{ce}
+      \field{pages}{20\bibrangedash 43}
+      \range{pages}{24}
+      \verb{file}
+      \verb The Google File System.pdf:/home/rene/Zotero/storage/H8VUWYA5/gfs-sosp2003.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{dean_mapreduce_2004}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=4aecfb0cc2e1e3b7899129fa2a94e2b8}{%
+           family={Dean},
+           familyi={D\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod}}}%
+        {{hash=193bcec5240237591ad8fb697869f013}{%
+           family={Ghemawat},
+           familyi={G\bibinitperiod},
+           given={Sanjay},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {San Francisco, {CA}}%
+      }
+      \strng{namehash}{59b423e9fed33260f87a089f738c1beb}
+      \strng{fullhash}{59b423e9fed33260f87a089f738c1beb}
+      \strng{bibnamehash}{59b423e9fed33260f87a089f738c1beb}
+      \strng{authorbibnamehash}{59b423e9fed33260f87a089f738c1beb}
+      \strng{authornamehash}{59b423e9fed33260f87a089f738c1beb}
+      \strng{authorfullhash}{59b423e9fed33260f87a089f738c1beb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{OSDI}'04: Sixth Symposium on Operating System Design and Implementation}
+      \field{title}{{MapReduce}: Simplified Data Processing on Large Clusters}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \field{pages}{137\bibrangedash 150}
+      \range{pages}{14}
+      \verb{file}
+      \verb Dean and Ghemawat - 2008 - MapReduce simplified data processing on large clu.pdf:/home/rene/Zotero/storage/S5M9GTHF/Dean and Ghemawat - 2008 - MapReduce simplified data processing on large clu.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{cutting_next_2016}{video}{}
+      \name{author}{3}{}{%
+        {{hash=cad5cdd53c2b9352d6c1b722646e475f}{%
+           family={Cutting},
+           familyi={C\bibinitperiod},
+           given={Doug},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f1323ff0101e64ee31de4870355f75b0}{%
+           family={Cafarella},
+           familyi={C\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+        {{hash=27eb1c7d274ff6024d29f509df08f605}{%
+           family={Lorica},
+           familyi={L\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{36fb920289310518642521af9cc5b5cc}
+      \strng{fullhash}{36fb920289310518642521af9cc5b5cc}
+      \strng{bibnamehash}{36fb920289310518642521af9cc5b5cc}
+      \strng{authorbibnamehash}{36fb920289310518642521af9cc5b5cc}
+      \strng{authornamehash}{36fb920289310518642521af9cc5b5cc}
+      \strng{authorfullhash}{36fb920289310518642521af9cc5b5cc}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Apache Hadoop co-founders Doug Cutting and Mike Cafarella explore the future of Hadoop.}
+      \field{day}{31}
+      \field{langid}{american}
+      \field{month}{3}
+      \field{title}{The next 10 years of Apache Hadoop}
+      \field{urlday}{8}
+      \field{urlmonth}{12}
+      \field{urlyear}{2022}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/home/rene/Zotero/storage/4HBNQBF7/the-next-10-years-of-apache-hadoop.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.oreilly.com/content/the-next-10-years-of-apache-hadoop/
+      \endverb
+      \verb{url}
+      \verb https://www.oreilly.com/content/the-next-10-years-of-apache-hadoop/
+      \endverb
+    \endentry
+    \entry{white_hadoop_2015}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fec0f7585932951edb687003842f3da9}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Beijing}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly}%
+      }
+      \strng{namehash}{fec0f7585932951edb687003842f3da9}
+      \strng{fullhash}{fec0f7585932951edb687003842f3da9}
+      \strng{bibnamehash}{fec0f7585932951edb687003842f3da9}
+      \strng{authorbibnamehash}{fec0f7585932951edb687003842f3da9}
+      \strng{authornamehash}{fec0f7585932951edb687003842f3da9}
+      \strng{authorfullhash}{fec0f7585932951edb687003842f3da9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{edition}{Fourth edition}
+      \field{isbn}{978-1-4919-0163-2}
+      \field{note}{{OCLC}: ocn904818464}
+      \field{pagetotal}{727}
+      \field{shorttitle}{Hadoop}
+      \field{title}{Hadoop: the definitive guide}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \keyw{Apache Hadoop,File organization (Computer science),Hadoop}
     \endentry
   \enddatalist
 \endrefsection

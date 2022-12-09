@@ -1,0 +1,49 @@
+\section{Hadoop Core}
+Der Kern von Hadoop (Hadoop Core) besteht seit Hadoop 2.x aus vier Modulen, welche im offiziellen Download zusammengefasst sind\cite{noauthor_apache_nodate}:
+\begin{itemize}
+    \item Hadoop Distributed File System (HDFS™): Hadoops verteiltes Dateisystem
+    \item Hadoop MapReduce: Hadoops Parallel Processing Engine für große Datenmengen
+    \item Hadoop YARN: Ein Framework für Job Scheduling und Ressourcenverwaltung im Cluster
+    \item Hadoop Common: Unterstützende Programme für die anderen Hadoop-Module
+\end{itemize}
+Diese Komponenten bringen alles mit, was man zur verteilten Verarbeitung und Speicherung großer Datenmengen benötigt. 
+
+\subsection{HDFS}
+\label{chap:fund sec:core sub:hdfs}
+Das HDFS ist ein Dateisystem, welches dem Anwender eine Abstraktionsschicht über verteilt gespeicherte Daten bietet. Das HDFS ist für den Betrieb auf sogenannter \textit{"Commodity Hardware"} konzipiert. Commodity Hardware ist günstige, leicht zu ersetzende Hardware. Anders als spezialisierte Hardware, zum Beispiel Festplatten mit besonderer Fehlererkennung und -kompensation, wird bei Commodity Hardware nicht versucht, Ausfälle zu verhindern. Geht eine Komponente kaputt, was in einem Cluster von hunderten Maschinen kein Sonderfall ist, wird sie einfach durch eine neue ersetzt. Das bedeutet für die darauf arbeitenden Programme aber, dass diese softwareseitig dafür sorgen müssen, dass bei einem Ausfall der Betrieb des Clusters nicht beeinträchtigt wird.\cite{white_hadoop_2015} 
+Speichert man Dateien im HDFS, so werden diese in Blöcke aufgeteilt und auf Nodes im Hadoop Cluster verteilt. Praktisch heißt das, dass man eine 1TB große Datei im HDFS speichern kann, auch wenn man keine einzelne Festplatte mit 1TB Speicherkapazität besitzt. Der Anwender benutzt dabei das HDFS wie ein normales, nicht verteiltes Dateisystem. Die Verteilung passiert im Hintergrund. 
+
+NameNode
+DataNode
+Blöcke
+Replikation
+High Availability
+
+Jeder einzelne Block wird dabei repliziert und auf unterschiedlichen Nodes gespeichert, um bei Ausfall eines Nodes keinen Datenverlust zu haben. Will man eine Datei aufrufen, fragt man bei einem zentralen Node (dem NameNode) die Datei an und dieser setzt die dazugehörigen Blöc
+
+
+\subsection{YARN}
+
+
+\subsection{Setup}
+\subsubsection*{Single Node Setup}
+Defaulteinstellung des Hadoop Downloads
+Installation auf der einen beteiligten Maschine
+Start eines Single Node Clusters lokal
+Erste Übung zum Umgang mit dem HDFS
+\subsubsection*{Fully-distributed Cluster}
+Installation von Hadoop auf allen beteiligten Maschinen
+Einrichtung von passwordless ssh auf allen Maschinen
+Evtl. Anpassung der /etc/hosts auf allen Maschinen
+Editieren der ganzen Konfigurationsdateien (XML) und kopieren der gleichen Dateien auf alle beteiligten Maschinen
+Editieren der Worker Datei auf dem NameNode
+NameNode (HDFS) formatieren
+Ausführen der Skripte auf dem NameNode
+
+\subsubsection*{Hadoop in der Cloud}
+Google Dataproc, Azure HDInsights
+Oftmals eigenes Dateisystem, fully managed
+Grafische Oberfläche zum Submitten von Jobs, etc.
+
+\subsection{MapReduce}
+MapReduce Workflow: Erstellung eines MapReduce Jobs, Kopieren auf den Name Node und Ausführung

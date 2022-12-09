@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2022.11.9)  7 DEC 2022 16:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2022.11.9)  9 DEC 2022 15:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -249,7 +249,11 @@ Package pdftexcmds Info: \pdfdraftmode found.
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-))) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+))) (/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+ Excluding comment 'comment') (/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
+Package: import 2020/04/01  v 6.2
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2022/04/08 v2.17n AMS math features
 \@mathmargin=\skip64
 
@@ -409,8 +413,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip67
 )
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 50.
-Package hyperref Info: Option `colorlinks' set `true' on input line 50.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 53.
+Package hyperref Info: Option `colorlinks' set `true' on input line 53.
  (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrhack.sty
 Package: scrhack 2022/07/04 v3.37 KOMA-Script package (hacking other packages)
  (/usr/share/texlive/texmf-dist/tex/latex/xpatch/xpatch.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
@@ -494,7 +498,7 @@ Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 \bibparsep=\skip74
 \bibhang=\skip75
 \blx@bcfin=\read3
-\blx@bcfout=\write3
+\blx@bcfout=\write4
 \blx@langwohyphens=\language9
 \c@mincomprange=\count350
 \c@maxcomprange=\count351
@@ -687,7 +691,7 @@ Package: blx-case-expl3 2022/07/12 v3.18b expl3 case changing code for biblatex
 ))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
- (./Main.aux (./Kapitel/Fundamentals.aux) (./Kapitel/Hadoop Ecosystem.aux) (./Kapitel/Operations.aux) (./Kapitel/Pig.aux) (./Kapitel/Data Ingestion.aux) (./Kapitel/Hive.aux) (./Kapitel/HBase.aux) (./Kapitel/Streaming.aux) (./Kapitel/Hadoop heute.aux) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/de/babel-german.tex
+ (./Main.aux (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/de/babel-german.tex
 Package babel Info: Importing basic data for german
 (babel)             from babel-de.ini. Reported on input line 25.
 ) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-american.tex
@@ -696,24 +700,24 @@ Package babel Info: Importing basic data for american
 ))
 \openout1 = `Main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count432
@@ -741,10 +745,10 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
  (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 63.
+Package hyperref Info: Link coloring ON on input line 67.
  (./Main.out) (./Main.out)
-\@outlinefile=\write4
-\openout4 = `Main.out'.
+\@outlinefile=\write5
+\openout5 = `Main.out'.
 
 Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           Using `bookmark' together with `hyperref' is recommended,
@@ -753,14 +757,14 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 63.
+(scrbook)           before \begin{document} on input line 67.
  (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 \BKM@id=\count439
 ))
-Package scrhack Info: undefining \float@addtolists on input line 63.
+Package scrhack Info: undefining \float@addtolists on input line 67.
 Package biblatex Info: Trying to load language 'ngerman' -> 'ngerman-iso'...
 Package biblatex Info: ... file 'ngerman-iso.lbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex-iso690/ngerman-iso.lbx
@@ -848,19 +852,19 @@ File: english.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout3 = `Main.bcf'.
+\openout4 = `Main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Main.bbl' found.
  (./Main.bbl)
-Package biblatex Info: Reference section=0 on input line 63.
-Package biblatex Info: Reference segment=0 on input line 63.
-<img/mni-logo.pdf, id=4, 1133.23375pt x 146.5475pt>
-File: img/mni-logo.pdf Graphic file (type pdf)
-<use img/mni-logo.pdf>
-Package pdftex.def Info: img/mni-logo.pdf  used on input line 70.
+Package biblatex Info: Reference section=0 on input line 67.
+Package biblatex Info: Reference segment=0 on input line 67.
+<./img//mni-logo.pdf, id=4, 1133.23375pt x 146.5475pt>
+File: ./img//mni-logo.pdf Graphic file (type pdf)
+<use ./img//mni-logo.pdf>
+Package pdftex.def Info: ./img//mni-logo.pdf  used on input line 74.
 (pdftex.def)             Requested size: 387.47061pt x 50.10722pt.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 76.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 80.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 ) [1
@@ -869,141 +873,75 @@ File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/mni-logo.pdf>] [2
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img//mni-logo.pdf>] [2
 
 
-] (./Main.toc [3] [4])
-\tf@toc=\write5
-\openout5 = `Main.toc'.
+] (./Main.toc [3])
+\tf@toc=\write6
+\openout6 = `Main.toc'.
 
- [5] [6
+ [4] (./Main.lof)
+\tf@lof=\write7
+\openout7 = `Main.lof'.
+
+ [5
 
 
-]
-\openout2 = `Kapitel/Fundamentals.aux'.
+] [6
 
- (./Kapitel/Fundamentals.tex
+
+] (./Kapitel/Fundamentals.tex
 chapter 1.
 [1
 
 
-
-])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2] [3]
-\openout2 = `"Kapitel/Hadoop Ecosystem.aux"'.
-
- (./Kapitel/Hadoop Ecosystem.tex [4
-
-
-
+] [2] Excluding 'comment' comment. (./Kapitel/Sections/Hadoop Architektur.tex [3])) (./Kapitel/Pig.tex [4] [5] [6
 
 
 ]
 chapter 2.
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
-Overfull \vbox (14.61772pt too high) has occurred while \output is active []
-
- [6]
-\openout2 = `Kapitel/Operations.aux'.
-
- (./Kapitel/Operations.tex
-chapter 3.
-) [7
-
-
-
+) (./Kapitel/Data Ingestion.tex [7] [8
 
 
 ]
-\openout2 = `Kapitel/Pig.aux'.
-
- (./Kapitel/Pig.tex [8
-
-
-
+chapter 3.
+) (./Kapitel/Hive.tex [9] [10
 
 
 ]
 chapter 4.
-) [9]
-\openout2 = `"Kapitel/Data Ingestion.aux"'.
-
- (./Kapitel/Data Ingestion.tex [10
-
-
-
+) (./Kapitel/HBase.tex [11] [12
 
 
 ]
 chapter 5.
-) [11]
-\openout2 = `Kapitel/Hive.aux'.
-
- (./Kapitel/Hive.tex [12
-
-
-
+) (./Kapitel/Streaming.tex [13] [14
 
 
 ]
 chapter 6.
-) [13]
-\openout2 = `Kapitel/HBase.aux'.
-
- (./Kapitel/HBase.tex [14
-
-
-
+) (./Kapitel/Hadoop heute.tex [15] [16
 
 
 ]
 chapter 7.
-) [15]
-\openout2 = `Kapitel/Streaming.aux'.
-
- (./Kapitel/Streaming.tex [16
-
-
-
-
-
-]
-chapter 8.
-) [17]
-\openout2 = `"Kapitel/Hadoop heute.aux"'.
-
- (./Kapitel/Hadoop heute.tex [18
-
-
-
-
-
-]
-chapter 9.
-) [19] [20
-
-
+) [17] [18
 
 
 ]
 chapter without number
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 112.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 115.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-Overfull \hbox (14.66986pt too wide) in paragraph at lines 113--113
-\T1/cmr/m/n/10.95 [[]be-sucht am[] 2022-12-05]. []Ab-ger. un-ter[]: [][]$\T1/cmtt/m/n/10.95 https : / / web . archive . org / web / 20070621143859 /
- []
-
-[21
+) [19
 
 
-] (./Main.aux (./Kapitel/Fundamentals.aux) (./Kapitel/Hadoop Ecosystem.aux) (./Kapitel/Operations.aux) (./Kapitel/Pig.aux) (./Kapitel/Data Ingestion.aux) (./Kapitel/Hive.aux) (./Kapitel/HBase.aux) (./Kapitel/Streaming.aux) (./Kapitel/Hadoop heute.aux))
+]
+
+Package biblatex Warning: No driver for 'video'.
+(biblatex)                Using fallback driver on input line 115.
+
+[20] (./Main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1017,18 +955,18 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24486 strings out of 479930
- 455151 string characters out of 5885661
- 1378593 words of memory out of 5000000
- 42149 multiletter control sequences out of 15000+600000
- 491276 words of font info for 58 fonts, out of 8000000 for 9000
+ 24382 strings out of 479930
+ 450842 string characters out of 5885661
+ 1357174 words of memory out of 5000000
+ 42086 multiletter control sequences out of 15000+600000
+ 494935 words of font info for 66 fonts, out of 8000000 for 9000
  18 hyphenation exceptions out of 8191
  108i,8n,106p,10629b,4783s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on Main.pdf (27 pages, 163753 bytes).
+ </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
+Output written on Main.pdf (26 pages, 179195 bytes).
 PDF statistics:
- 977 PDF objects out of 1000 (max. 8388607)
- 703 compressed objects within 8 object streams
- 138 named destinations out of 1000 (max. 500000)
- 806 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 887 PDF objects out of 1000 (max. 8388607)
+ 559 compressed objects within 6 object streams
+ 115 named destinations out of 1000 (max. 500000)
+ 510 words of extra memory for PDF output out of 10000 (max. 10000000)
 

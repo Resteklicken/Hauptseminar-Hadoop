@@ -12,7 +12,7 @@
 \documentclass[%
 	BCOR=8.25mm,         % Bindekorrektur
 	DIV=12,              % Satzspiegel
-	parskip=half,				 % Abstand zwischen Absätzen
+	parskip=half,		 % Abstand zwischen Absätzen
 	bibliography=totoc,	 % Literaturverzeichnis im Inhaltsverzeichnis
 	headsepline=on,      % Trennlinie Kolumnentitel
 	]{scrbook}
@@ -20,12 +20,15 @@
 %% Präambel
 \usepackage[english, ngerman]{babel} % deutsche typogr. Regeln + Trenntabelle
 \usepackage[T1]{fontenc}             % interner TeX-Font-Codierung
-\usepackage{helvet}                 % Font Latin Modern
+\usepackage{helvet}                  % Font Helvetica
 \usepackage[utf8]{inputenc}          % Font-Codierung der Eingabedatei
 \usepackage[babel]{csquotes}         % Anführungszeichen
 \usepackage{graphicx}                % Graphiken
+\graphicspath{{./img/}}				 % Setzen des Ordners für Bilder
 \usepackage{booktabs}                % Tabellen schöner
 \usepackage{listingsutf8}            % Listings mit Einstellungen
+\usepackage{comment}            	 % Verstecken ganzer Textblöcke
+\usepackage{import}            	     % Bessere File Imports
 \lstset{basicstyle=\small\ttfamily,
 	tabsize=2,
 	basewidth={0.5em,0.45em},
@@ -39,7 +42,7 @@
   {ä}{{\"a}}1
   {ö}{{\"o}}1
 	{~}{{\textasciitilde}}1} 
-\usepackage{amsmath}	               % Mathematik
+\usepackage{amsmath}	             % Mathematik
 \usepackage[pdftex]{hyperref}       
 \hypersetup{
 	bookmarksopen=true,
@@ -48,16 +51,17 @@
 	citecolor=blue,
 	linkcolor=blue,
 }
-\usepackage{scrhack}				% unterdrückt Fehlermeldung von listings
+\usepackage{scrhack}				 % unterdrückt Fehlermeldung von listings
 \usepackage[
 	sorting = none,
 	style = iso-numeric,
-	backend = biber]{biblatex}   % Biblatex für das Literaturverzeichnis
+	backend = biber]{biblatex}       % Biblatex für das Literaturverzeichnis
 \addbibresource{Hauptseminar Hadoop.bib}			% Import der Bibliothek von Zotero
 
 %% Nummerierungstiefen
 \setcounter{tocdepth}{3}             % 3 Stufen im Inhaltsverzeichnis
-\setcounter{secnumdepth}{3} 		     % 3 Stufen in Abschnittnummerierung
+\setcounter{secnumdepth}{3} 		 % 3 Stufen in Abschnittnummerierung
+\raggedbottom 		 				 % Seiten nicht oben mit Whitespace auffüllen, damit der Inhalt unten abschließt
 
 % ----------------------------------------------------------------------------
 \begin{document}
@@ -67,7 +71,7 @@
 %% Titelseite
 \begin{titlepage}
 	\begin{center}
-	\includegraphics[width=0.9\textwidth]{img/mni-logo}
+	\includegraphics[width=0.9\textwidth]{mni-logo}
 	
 	\vspace{5cm}	
 
@@ -92,18 +96,17 @@
 
 %% Verzeichnissse
 \tableofcontents
+\listoffigures
 
 \mainmatter 
 \pagestyle{headings}
-\include{Kapitel/Fundamentals.tex}
-\include{Kapitel/Hadoop Ecosystem.tex}
-\include{Kapitel/Operations.tex}
-\include{Kapitel/Pig.tex}
-\include{Kapitel/Data Ingestion.tex}
-\include{Kapitel/Hive.tex}
-\include{Kapitel/HBase.tex}
-\include{Kapitel/Streaming.tex}
-\include{Kapitel/Hadoop heute.tex}
+\import{Kapitel/}{Fundamentals.tex}
+\import{Kapitel/}{Pig.tex}
+\import{Kapitel/}{Data Ingestion.tex}
+\import{Kapitel/}{Hive.tex}
+\import{Kapitel/}{HBase.tex}
+\import{Kapitel/}{Streaming.tex}
+\import{Kapitel/}{Hadoop heute.tex}
 
 \backmatter 
 

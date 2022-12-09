@@ -2376,10 +2376,19 @@
     <bcf:citekey order="4" intorder="1">zakon_hobbes_2018</bcf:citekey>
     <bcf:citekey order="5" intorder="1">beaumont_how_2014</bcf:citekey>
     <bcf:citekey order="6" intorder="1">gustafson_amdahls_2011</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">noauthor_pricing_nodate</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">athow_at_2020</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">noauthor_who_nodate</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">noauthor_horizontal_nodate</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">noauthor_pricing_nodate</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">athow_at_2020</bcf:citekey>
     <bcf:citekey order="10" intorder="1">athow_at_2020</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">noauthor_who_nodate</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">noauthor_what_nodate</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">noauthor_horizontal_nodate</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">noauthor_apache_nodate</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">ghemawat_google_2003</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">dean_mapreduce_2004</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">cutting_next_2016</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">noauthor_apache_nodate</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">white_hadoop_2015</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
