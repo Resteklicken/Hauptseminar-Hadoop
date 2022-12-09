@@ -10,7 +10,9 @@ Diese Komponenten bringen alles mit, was man zur verteilten Verarbeitung und Spe
 
 \subsection{HDFS}
 \label{chap:fund sec:core sub:hdfs}
-Das HDFS ist ein Dateisystem, welches dem Anwender eine Abstraktionsschicht über verteilt gespeicherte Daten bietet. Das HDFS ist für den Betrieb auf sogenannter \textit{"Commodity Hardware"} konzipiert. Commodity Hardware ist günstige, leicht zu ersetzende Hardware. Anders als spezialisierte Hardware, zum Beispiel Festplatten mit besonderer Fehlererkennung und -kompensation, wird bei Commodity Hardware nicht versucht, Ausfälle zu verhindern. Geht eine Komponente kaputt, was in einem Cluster von hunderten Maschinen kein Sonderfall ist, wird sie einfach durch eine neue ersetzt. Das bedeutet für die darauf arbeitenden Programme aber, dass diese softwareseitig dafür sorgen müssen, dass bei einem Ausfall der Betrieb des Clusters nicht beeinträchtigt wird.\cite{white_hadoop_2015} 
+\par
+Das HDFS ist ein Dateisystem, welches dem Anwender eine Abstraktionsschicht über verteilt gespeicherte Daten bietet. Das HDFS ist für den Betrieb auf sogenannter \textit{"Commodity Hardware"} konzipiert. Commodity Hardware ist günstige, leicht zu ersetzende Hardware. Anders als spezialisierte Hardware, zum Beispiel Festplatten mit besonderer Fehlererkennung und -kompensation, wird bei Commodity Hardware nicht versucht, Ausfälle zu verhindern. Geht eine Komponente kaputt, was in einem Cluster von hunderten Maschinen kein Sonderfall ist, wird sie einfach durch eine neue ersetzt. Das bedeutet für die darauf arbeitenden Programme aber, dass diese softwareseitig dafür sorgen müssen, dass bei einem Ausfall der Betrieb des Clusters nicht beeinträchtigt wird.\cite{white_hadoop_2015}  
+\par
 Speichert man Dateien im HDFS, so werden diese in Blöcke aufgeteilt und auf Nodes im Hadoop Cluster verteilt. Praktisch heißt das, dass man eine 1TB große Datei im HDFS speichern kann, auch wenn man keine einzelne Festplatte mit 1TB Speicherkapazität besitzt. Der Anwender benutzt dabei das HDFS wie ein normales, nicht verteiltes Dateisystem. Die Verteilung passiert im Hintergrund. 
 
 NameNode
