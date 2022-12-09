@@ -2389,6 +2389,11 @@
     <bcf:citekey order="17" intorder="1">cutting_next_2016</bcf:citekey>
     <bcf:citekey order="18" intorder="1">noauthor_apache_nodate</bcf:citekey>
     <bcf:citekey order="19" intorder="1">white_hadoop_2015</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">white_hadoop_2015</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">noauthor_apache_nodate-1</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">noauthor_apache_nodate-1</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">freiknecht_big_2018</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">freiknecht_big_2018</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
