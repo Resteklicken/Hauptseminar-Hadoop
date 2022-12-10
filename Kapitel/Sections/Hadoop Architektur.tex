@@ -6,11 +6,11 @@ Der Kern von Hadoop (Hadoop Core) besteht seit Hadoop 2.x aus vier Modulen, welc
     \item Hadoop YARN: Ein Framework für Job Scheduling und Ressourcenverwaltung im Cluster
     \item Hadoop Common: Unterstützende Programme für die anderen Hadoop-Module
 \end{itemize}
-Diese Komponenten bringen alles mit, was man zur verteilten Verarbeitung und Speicherung großer Datenmengen benötigt. 
+Diese Komponenten bringen alles mit, was man zur verteilten Verarbeitung und Speicherung großer Datenmengen benötigt.
 
 \subsection{HDFS}
 \label{chap:fund sec:core sub:hdfs}
-Das HDFS ist ein Dateisystem, welches dem Anwender eine Abstraktionsschicht über verteilt gespeicherte Daten bietet. Das HDFS ist für den Betrieb auf Clustern aus sogenannter \textit{Commodity Hardware} konzipiert. Commodity Hardware ist günstige, leicht zu ersetzende Hardware. Bei Commodity-Hardware-Clustern wird nicht etwa versucht, Ausfälle einzelner Nodes durch den Einsatz von besonders ausfallsicherer (und somit teurer) Hardware zu verhindern. Fällt ein Node aus, was in einem Cluster von hunderten Maschinen kein Sonderfall ist, übernimmt ein anderer Node dessen Arbeit, ohne dass dadurch die Verfügbarkeit des Clusters beeinträchtigt wird. Das HDFS setzt dafür auf die Konzepte von Blöcken, Replikation und Redundanz.\cite{white_hadoop_2015}  
+Das HDFS ist ein Dateisystem, welches dem Anwender eine Abstraktionsschicht über verteilt gespeicherte Daten bietet. Dateien lassen sich ganz normal über einen Dateipfad im HDFS ansprechen, auch wenn sie im Hintergrund in Einzelteilen über viele Nodes verteilt gespeichert sind. Das HDFS ist für den Betrieb auf Clustern aus sogenannter \textit{Commodity Hardware} konzipiert. Commodity Hardware ist günstige, leicht zu ersetzende Hardware. Bei Commodity-Hardware-Clustern wird nicht etwa versucht, Ausfälle einzelner Nodes durch den Einsatz von besonders ausfallsicherer (und somit teurer) Hardware zu verhindern. Fällt ein Node aus, was in einem Cluster von hunderten Maschinen kein Sonderfall ist, übernimmt ein anderer Node dessen Arbeit, ohne dass dadurch die Verfügbarkeit des Clusters beeinträchtigt wird. Das HDFS setzt dafür auf die Konzepte von Blöcken, Replikation und Redundanz.\cite{white_hadoop_2015}  
 \par
 Ein vollwertiger Hadoop Cluster (Hadoop im \textit{fully-distributed Mode}) besteht aus mindestens einem Master, dem \textbf{NameNode}, und einem oder mehr Workern, den \textbf{DataNodes} (\textit{vgl. Abb. }\ref{fig:hdfs}). Um Dateien im HDFS zu speichern, teilt ein \textit{Client}-Prozess die Dateien in Blöcke von standardmäßig 128MB auf und kontaktiert den NameNode. Der NameNode hat einen Überblick über den verfügbaren Speicherplatz aller DataNodes und designiert manche davon, um einige der Blöcke aufzunehmen. Der NameNode achtet außerdem darauf, dass jeder einzelne Block repliziert und auf unterschiedlichen DataNodes gespeichert wird. Standardmäßig verteilt Hadoop drei Kopien eines jeden Blocks im Cluster. Dadurch verbraucht man zwar drei mal so viel Speicher wie bei herkömmlichen, nicht redundanten Dateisystemen, erreicht dafür aber eine sehr hohe Verfügbarkeit. Der Einsatz von Commodity Hardware hält trotz des erhöhten Speicherbedarfs die Kosten niedrig.\cite{white_hadoop_2015}     
 \par
@@ -18,17 +18,36 @@ Die DataNodes senden in regelmäßigen Abständen sogenannte \textit{Block Repor
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\textwidth]{hdfsarchitecture}
-    \caption[Architektur des HDFS]{Architektur des HDFS\parencite{noauthor_apache_nodate-1}}
+    \includegraphics[width=0.8\textwidth]{hdfsarchitecture}
+    \caption[Architektur des HDFS]{Architektur des HDFS\parencite[S.69, Figure 3-2]{white_hadoop_2015}}
     \label{fig:hdfs}
 \end{figure}
 
-\subsection{YARN}
-In Version 1.x von Hadoop war MapReduce sowohl für die Verarbeitung der Daten, als auch für die Ressourcenzuteilung im Cluster zuständig. Das bedeutete, dass man zwingend MapReduce-Applikationen nutzen musste, um die im Hadoop Cluster gespeicherten Daten auszuwerten. MapReduce hat Einschränkungen und Eigenheiten, auf die in Abschnitt \ref{chap:fund sec:core sub:mapred} eingegangen wird. Weiterhin war die Ressourcenverwaltung damit ein mögliches Bottleneck, da sie bei mehreren parallel laufenden Jobs auf einem Node um Rechenzeit mit der Datenverarbeitung konkurrieren musste.\cite{freiknecht_big_2018}
+\subsection{MapReduce}
+\label{chap:fund sec:core sub:mapred}
+MapReduce heißt sowohl ein Programmiermodell zur parallelisierten Verarbeitung von Datensätzen, als auch die konkrete Implementierung eben dieses Modells zur Verwendung mit dem HDFS. MapReduce macht sich mehrere Prinzipien zu Nutze, um effizient mit großen Datenmengen umzugehen: \\
+\textbf{Aufteilung}: Eingabedaten werden in \textbf{InputSplits} geteilt verarbeitet. Dadurch verarbeitet ein einzelner Prozess ein logisch zusammenhängendes Datenpaket.\\
+\textbf{Parallelisierung}: InputSplits werden parallel auf mehreren Nodes bearbeitet und die Ausgaben zusammengeführt. Dadurch erreicht man auch bei großen Datenmengen hohe Datendurchsatzraten.\\
+\textbf{Datenlokalität}: Der erste Teil der Verarbeitungslogik, die Mapping-Phase, wird so nah wie möglich an den Daten durchgeführt; wenn möglich auf den Nodes, auf denen die Daten gespeichert sind. Ansonsten wird versucht, die Verarbeitung wenigstens auf dem gleichen Server Rack durchzuführen, um die Belastung der Netzwerkinfrastruktur so gering wie möglich zu halten.
 \par
-Die größte Änderung in Hadoop 2.x war dann die Ausgliederung der Ressourcenverwaltung aus MapReduce und die Einführung einer dedizierten Ressourcenverwaltungsanwendung - \textbf{YARN} - \textit{Yet Another Ressource Negotiator}. YARN teilt eingehenden Jobs Cluster-Ressourcen zu und startet fehlgeschlagene Jobs gegebenenfalls neu.\cite{freiknecht_big_2018} Ähnlich wie das HDFS bringt YARN eine Reihe von Prozessen mit sich, die Master- und Worker-Rollen einnehmen. Auf \textit{einem} Node im Cluster, nämlich dem vom HDFS designierten NameNode, läuft der \textbf{Resource Manager}. Dieser unterteilt sich wiederum in \textbf{Application Manager} und \textit{Scheduler}. Auf allen DataNodes laufen jeweils ein \textbf{Node Manager} und ein \textbf{Application Master}. 
-\par
+Ein MapReduce-Job besteht aus drei Phasen: der \textbf{Map-Phase}, der \textbf{Shuffle- und Sort-Phase} und der \textbf{Reduce-Phase} (siehe Abb. \ref*{fig:mapred}).
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{MapReduce}
+    \caption[Die Phasen von MapReduce]{Die Phasen von MapReduce\parencite[Seite 34, Figure 2-4]{white_hadoop_2015}}
+    \label{fig:mapred}
+\end{figure}
+Wie eingangs erwähnt, wird die Eingabe in InputSplits zerteilt. Wie diese Aufteilung abläuft, wird durch das InputFormat bestimmt, welches vom Anwender im Programmcode für seine Daten festgelegt werden muss. 
+In der Map-Phase wird 
+
+\subsection{YARN}
+In Version 1.x von Hadoop war MapReduce sowohl für die Verarbeitung der Daten, als auch für die Ressourcenzuteilung im Cluster zuständig. Das bedeutete, dass man zwingend das MapReduce-Programmiermodell nutzen musste, um die im Hadoop Cluster gespeicherten Daten auszuwerten. Die Ressourcenverwaltung war damit ein mögliches Bottleneck, da sie bei mehreren parallel laufenden Jobs auf einem Node um Rechenzeit mit der Datenverarbeitung konkurrieren musste.\cite{freiknecht_big_2018}
+Die größte Änderung in Hadoop 2.x war dann die Ausgliederung der Ressourcenverwaltung aus MapReduce und die Einführung einer dedizierten Ressourcenverwaltungsanwendung - \textbf{YARN} - \textit{Yet Another Ressource Negotiator}. YARN teilt eingehenden Jobs Cluster-Ressourcen zu und startet fehlgeschlagene Jobs gegebenenfalls neu. Ähnlich wie das HDFS bringt YARN eine Reihe von Prozessen mit sich, die Master- und Worker-Rollen einnehmen. Auf dem vom HDFS designierten NameNode läuft der \textbf{Resource Manager}. Dieser unterteilt sich wiederum in \textbf{Application Manager} und \textbf{Scheduler}. Auf allen DataNodes laufen jeweils ein \textbf{Node Manager} und ein \textbf{Application Master}.\cite{freiknecht_big_2018} 
+\par
+Durch das Zusammenspiel dieser Prozesse bietet sich dem Anwender ein Interface zur verteilten Ausführung von Anwendungslogik, bei dem man sich nicht an das MapReduce-Programmiermodell halten muss. Startet man in Hadoop 2.x eine MapReduce-Applikation, ist diese eigentlich eine YARN-Applikation, bei der einem schon ein Teil des Programmieraufwands abgenommen wurde. Eine eigene YARN-Applikation zu schreiben bedeutet hingegen, sich selbst um die logische Aufteilung der Daten zu kümmern, Cluster-Ressourcen wie CPU und RAM in Form sogenannter \textbf{Container} von YARN anzufordern und dafür zu sorgen, dass der auszuführende Programmcode im HDFS verfügbar ist. \\
+YARN reiht die Ausführung der angeforderten Container auf verschiedenen DataNodes in Warteschlangen ein, kopiert den Anwendungscode aus dem HDFS auf diese Nodes und überwacht die erfolgreiche Ausführung der Anwendung. 
+  
 \subsection{Setup}
 \subsubsection*{Single Node Setup}
 Defaulteinstellung des Hadoop Downloads
@@ -49,6 +68,4 @@ Google Dataproc, Azure HDInsights
 Oftmals eigenes Dateisystem, fully managed
 Grafische Oberfläche zum Submitten von Jobs, etc.
 
-\subsection{MapReduce}
-\label{chap:fund sec:core sub:mapred}
-MapReduce Workflow: Erstellung eines MapReduce Jobs, Kopieren auf den Name Node und Ausführung
+

@@ -515,25 +515,6 @@
       \field{dateera}{ce}
       \keyw{Apache Hadoop,File organization (Computer science),Hadoop}
     \endentry
-    \entry{noauthor_apache_nodate-1}{online}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labeltitlesource}{title}
-      \field{title}{Apache Hadoop 3.3.4 – {HDFS} Architecture}
-      \field{urlday}{9}
-      \field{urlmonth}{12}
-      \field{urlyear}{2022}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Apache Hadoop 3.3.4 – HDFS Architecture:/home/rene/Zotero/storage/IRRGQ2HB/HdfsDesign.html:text/html;hdfsarchitecture.png:/home/rene/Zotero/storage/X4LADWQ2/hdfsarchitecture.png:image/png
-      \endverb
-      \verb{urlraw}
-      \verb https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html
-      \endverb
-      \verb{url}
-      \verb https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html
-      \endverb
-    \endentry
     \entry{freiknecht_big_2018}{book}{}
       \name{author}{2}{}{%
         {{hash=9fc145b56cfe489dfbdaae6e28fd140c}{%
