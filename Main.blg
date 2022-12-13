@@ -1,15 +1,15 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'Main.blg'
-[38] biber:340> INFO - === Mo Dez 12, 2022, 22:07:39
-[46] Biber.pm:418> INFO - Reading 'Main.bcf'
-[80] Biber.pm:978> INFO - Found 19 citekeys in bib section 0
-[87] Biber.pm:4401> INFO - Processing section 0
-[92] Biber.pm:4592> INFO - Looking for bibtex file 'Hauptseminar Hadoop.bib' for section 0
-[94] bibtex.pm:1713> INFO - LaTeX decoding ...
-[106] bibtex.pm:1518> INFO - Found BibTeX data source 'Hauptseminar Hadoop.bib'
-[161] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[161] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[161] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[161] Biber.pm:4227> INFO - No sort tailoring available for locale 'de-DE'
-[169] bbl.pm:654> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
-[173] bbl.pm:757> INFO - Output to Main.bbl
+[38] biber:340> INFO - === Di Dez 13, 2022, 10:02:02
+[47] Biber.pm:418> INFO - Reading 'Main.bcf'
+[81] Biber.pm:978> INFO - Found 19 citekeys in bib section 0
+[88] Biber.pm:4401> INFO - Processing section 0
+[94] Biber.pm:4592> INFO - Looking for bibtex file 'Hauptseminar Hadoop.bib' for section 0
+[95] bibtex.pm:1713> INFO - LaTeX decoding ...
+[108] bibtex.pm:1518> INFO - Found BibTeX data source 'Hauptseminar Hadoop.bib'
+[165] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[165] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[165] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[165] Biber.pm:4227> INFO - No sort tailoring available for locale 'de-DE'
+[173] bbl.pm:654> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
+[177] bbl.pm:757> INFO - Output to Main.bbl

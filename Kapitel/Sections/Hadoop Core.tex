@@ -6,7 +6,7 @@ Der Kern von Hadoop (Hadoop Core) besteht seit Hadoop 2.x aus vier Modulen, welc
     \item Hadoop YARN: Ein Framework für Job Scheduling und Ressourcenverwaltung im Cluster
     \item Hadoop Common: Unterstützende Programme für die anderen Hadoop-Module
 \end{itemize}
-Diese Komponenten bringen alles mit, was man zur verteilten Verarbeitung und Speicherung großer Datenmengen benötigt. Dazu schreibt man in der Regel Java-Applikationen, die bestimmte Klassen aus den Bibliotheken Hadoop ableiten. Ein Beispiel dazu wird im Abschnitt \ref{chap:fund sec:core sub:handson mapred} gezeigt. 
+Diese Komponenten bringen alles mit, was man zur verteilten Verarbeitung und Speicherung großer Datenmengen benötigt. Dazu schreibt man in der Regel Java-Applikationen, die bestimmte Klassen aus den Bibliotheken von Hadoop ableiten. Beispiele zur Java-API und zur Streaming-API von MapReduce werden im Abschnitt \ref{chap:fund sec:core sub:handson mapred} gezeigt. 
 
 \subsection{HDFS}
 \label{chap:fund sec:core sub:hdfs}
@@ -71,7 +71,7 @@ Cloudanbieter wie Amazon, Google und Microsoft bieten fertig konfigurierte und v
 Hadoop bietet unzählige Einstellungsmöglichkeiten während der Installation und sie alle zu behandeln würde den Rahmen dieser Arbeit sprengen. Daher wird in diesem Abschnitt ein VirtualBox Image von Cloudera (die Hortonworks Data Platform (HDP) Sandbox)\footnote{Download: https://www.cloudera.com/downloads/hortonworks-sandbox/hdp.html} genutzt. Dieses kann auf dem eigenen Rechner oder auf einem Remote-Host gestartet werden\footnote{Installation: https://www.cloudera.com/tutorials/sandbox-deployment-and-install-guide.html} und bietet Zugriff auf eine voll konfigurierte Installation von Hadoop im Single Node Modus. Zusätzlich sind noch ergänzende Komponenten aus dem Hadoop Ecosystem installiert, auf die in späteren Kapiteln eingegangen wird.\par
 
 \subsubsection*{Hadoop und Ambari in der HDP Sandbox VM}
-Im Single Node Modus laufen alle Hadoop-Prozesse auf \textit{einem} Host(sprich Rechner). Dieser Modus ist für die Entwicklung und zum Testen von Hadoop gedacht, da es keinen praktischen Nutzen bringt, ein Framework zur verteilten Datenverarbeitung ohne die entsprechende Verteilung über einen Cluster zu betreiben. Auch wenn in dieser VM nur ein Cluster bestehend aus einem Node aufgesetzt wurde, steht das Cluster-Verwaltungs-Tool \textbf{Apache Ambari}\footnote{https://ambari.apache.org/} zur Verfügung. Normalerweise ist das Aufsetzen eines Hadoop Clusters mit dem Bearbeiten vieler XML-Konfigurationsdateien und der Ausführung von Start-Bash-Skripten auf allen Nodes verbunden. Auf diese Weise bestimmt man, welcher Node der NameNode des HDFS werden soll, welche Nodes DataNodes werden, wo der ResourceManager von YARN läuft und so weiter. Ambari bietet einem für all das (und noch viel mehr) eine übersichtliche Weboberfläche. Diese erreicht man nach Starten der HDP Sandbox unter \textit{http://localhost:8080}. Die Rechte und Anwendungsszenarien der verschiedenen Nutzeraccounts, eine Anleitung zum (Zurück)setzen des Admin-Passworts und weitere Schrite nach der Installation findet man auf Clouderas Hilfeseite zur Sandbox\footnote{https://www.cloudera.com/tutorials/learning-the-ropes-of-the-hdp-sandbox.html}. Loggt man sich als 'admin' zeitnah nach dem Start der VM in das das Ambari Dashboard ein, kann man im Header des Dashboards auf das Zahnrad klicken und den Prozess in Arbeit sehen, der die Dienste aller Hadoop Komponenten startet (siehe Abb. \ref{fig:cluster startup}). 
+Im Single Node Modus laufen alle Hadoop-Prozesse auf \textit{einem} Host(sprich Rechner). Dieser Modus ist für die Entwicklung und zum Testen von Hadoop gedacht, da es keinen praktischen Nutzen bringt, ein Framework zur verteilten Datenverarbeitung ohne die entsprechende Verteilung über einen Cluster zu betreiben. Auch wenn in dieser VM nur ein Cluster bestehend aus einem Node aufgesetzt wurde, steht das Cluster-Verwaltungs-Tool \textbf{Apache Ambari}\footnote{https://ambari.apache.org/} zur Verfügung. Normalerweise ist das Aufsetzen eines Hadoop Clusters mit dem Bearbeiten vieler XML-Konfigurationsdateien und der Ausführung von Start-Bash-Skripten auf allen Nodes verbunden. Auf diese Weise bestimmt man, welcher Node der NameNode des HDFS werden soll, welche Nodes DataNodes werden, wo der ResourceManager von YARN läuft und so weiter. Ambari bietet einem für all das (und noch viel mehr) eine übersichtliche Weboberfläche. Diese erreicht man nach Starten der HDP Sandbox unter \verb|http://localhost:8080|. Die Rechte und Anwendungsszenarien der verschiedenen Nutzeraccounts, eine Anleitung zum (Zurück)setzen des Admin-Passworts und weitere Schrite nach der Installation findet man auf Clouderas Hilfeseite zur Sandbox\footnote{https://www.cloudera.com/tutorials/learning-the-ropes-of-the-hdp-sandbox.html}. Loggt man sich als 'admin' zeitnah nach dem Start der VM in das das Ambari Dashboard ein, kann man im Header des Dashboards auf das Zahnrad klicken und den Prozess in Arbeit sehen, der die Dienste aller Hadoop Komponenten startet (siehe Abb. \ref{fig:cluster startup}). 
 
 \begin{figure}[ht]
     \centering
@@ -89,7 +89,7 @@ Ist der Prozess abgeschlossen, kann man im Navigationsmenü auf der linken Seite
     \label{fig:hdp core processes}
 \end{figure}
 
-Im Tab \textit{Configs} kann man die sonst über viele XML-Dateien verstreuten Einstellungen der Komponenten vornehmen. So kann man zum Beispiel unter \textit{HDFS -> Advanced -> General -> Block replication} (siehe Abb. \ref{fig:block replication factor}) den Replication Factor des HDFS verändern.   
+Im Tab \textit{Configs} kann man die sonst über viele XML-Dateien verstreuten Einstellungen der Komponenten vornehmen. So kann man zum Beispiel unter \textit{HDFS -> Advanced -> General -> Block replication} (siehe Abb. \ref{fig:block replication factor}) den Replication Factor des HDFS verändern. Dieser ist in der Sandbox auf \verb|1| gestellt, da es im Single Node Modus nur einen Node gibt und das Speichern mehrerer Block-Replika auf dem gleichen Node keinen Vorteil bringt.  
 
 \begin{figure}[ht]
     \centering
@@ -100,10 +100,40 @@ Im Tab \textit{Configs} kann man die sonst über viele XML-Dateien verstreuten E
 
 
 \subsubsection*{Fallstudie Globales Wetter}
-Als Fallstudie für die Nutzung von Hadoop werden die täglichen Zusammenfassungen aller Wetterstationen der Welt aus dem Katalog der National Centers for Environmental Information\footnote{https://www.ncei.noaa.gov/access/search/data-search/global-summary-of-the-day} benutzt. Dieses Beispiel wurde größtenteils entnommen aus \citefield[\textit{(S. 19-30, 693-695)}]{white_hadoop_2015}{title}. Da durch das lokale Setup die Kapazitäten von Hadoop auf die des Host-Computers beschränkt sind, werden hier nur die Datensätze der Jahre 2016 bis 2022 in komprimierten Archiven heruntergeladen\footnote{Download: https://www.ncei.noaa.gov/data/global-summary-of-the-day/archive/}. Das HDFS zeigt jedoch seine Stärken erst bei Datensätzen im Gigabyte- bis Terabyte-Bereich\footcite[vgl.][Assumptions and Goals -> Large Data Sets]{noauthor_apache_nodate-1}. Das HDFS und MapReduce arbeiten außerdem mit wenigen großen Dateien wesentlich besser als mit vielen kleinen Dateien. Deshalb wird der erste Schritt sein, die Daten mittels Ambaris \textbf{File View} in das HDFS zu laden. Anschließend wird ein MapReduce-Programm geschrieben, welches die Dateien säubert und zusammenführt. In späteren Abschnitten werden dann weitere Komponenten des Hadoop Ecosystems vorgestellt, mit denen die zusammengefassten Dateien weiter verarbeitet werden.
+Als Fallstudie für die Nutzung von Hadoop werden die täglichen Zusammenfassungen aller Wetterstationen der Welt aus dem Katalog der National Centers for Environmental Information\footnote{https://www.ncei.noaa.gov/access/search/data-search/global-summary-of-the-day} benutzt. Dieses Beispiel wurde größtenteils entnommen aus \citefield[\textit{(S. 19-30, 693-695)}]{white_hadoop_2015}{title}. Da durch das lokale Setup die Kapazitäten von Hadoop auf die des Host-Computers beschränkt sind, werden hier nur die Datensätze der Jahre 2016 bis 2022 in komprimierten Archiven heruntergeladen\footnote{Download: https://www.ncei.noaa.gov/data/global-summary-of-the-day/archive/}. Das HDFS zeigt jedoch seine Stärken erst bei Datensätzen im Gigabyte- bis Terabyte-Bereich\footcite[vgl.][Assumptions and Goals -> Large Data Sets]{noauthor_apache_nodate-1}.\\
+Das HDFS und MapReduce arbeiten außerdem mit wenigen großen Dateien wesentlich besser als mit vielen kleinen Dateien. Deshalb wird der erste Schritt sein, die Daten in das HDFS zu laden. Anschließend wird eine MapReduce-Applikation mit der MapReduce Streaming-API geschrieben. Diese wird nur aus einer Map-Phase bestehen und die Dateien säubern und zusammenzuführen. Zuguterletzt wird eine weitere MapReduce-Applikation mit der Java-API geschrieben, die die Daten auswertet. In späteren Abschnitten werden weitere Komponenten des Hadoop Ecosystems vorgestellt, mit denen die Dateien weiter verarbeitet werden.
 \subsubsection*{Umgang mit dem HDFS}
 \label{chap:fund sec:core sub:handson hdfs}
-Es gibt viele verschiedene Wege, um Dateien ins HDFS zu laden. Vom hier verwendeten NOAA Datensatz stellt Tom White auch eine fertig bereinigte Version in einem S3 Bucket zur Verfügung, die man direkt auf einem Amazon EMR Cluster bearbeiten kann\footnote{Einschränkungen und Anleitung unter: http://www.hadoopbook.com/code.html}.
+Es gibt verschiedene Wege, um Dateien ins HDFS zu laden\footnote{3 Beispiele: https://community.cloudera.com/t5/Support-Questions/Import-data-from-remote-server-to-HDFS/m-p/233149/highlight/true\#M194979}. Viele Tutorials nutzen dabei den HDFS Befehl \verb|hdfs dfs -copyFromLocal <local path> <hdfs path>|. Dieser Befehl kann nur von einem Rechner abgesetzt werden, auf dem ein HDFS Client Prozess läuft, welcher für den angesteuerten Hadoop Cluster konfiguriert ist. Man müsste also Hadoop lokal installiert haben, oder man kopiert erst per \verb|scp| die Dateien auf das lokale Dateisystem eines Nodes im Cluster, auf dem ein HDFS Client läuft. Hierfür verwendet man zum Beispiel den NameNode. Führt man sich vor Augen, dass Hadoop für \textit{Big Data} ausgelegt ist, würden diese Herangehensweisen in der Praxis dazu führen, dass riesige Dateien über das Netzwerk verschickt werden müssten und die Festplatten des NameNodes füllen würden.
+\par
+In der Sandbox wurde ein Ambari View, der \textbf{Files View}\footnote{https://docs.cloudera.com/HDPDocuments/Ambari-2.7.4.0/using-ambari-views/content/\\amb\_using\_files\_view.html}, erstellt. Diesen erreicht man über das Kachel-Icon im Header des Dashboards\footnote{http://<localhost oder Sandbox Hostname>:8080/\#/main/view/FILES/auto\_files\_instance}. Der Files View bietet einen HDFS Dateibrowser mit Funktionalitäten wie Datei-Upload, Ordnererstellung und Rechteverwaltung. Nicht alle Nutzer der Sandbox haben die nötigen Rechte zur Ausführung der Befehle. Daher sollte man sich mit dem dafür vorgesehenen Nutzer\footnote{https://www.cloudera.com/tutorials/learning-the-ropes-of-the-hdp-sandbox.html\#login-credentials} \verb|user: amy_ds password: amy_ds| in Ambari einloggen. Man kann über den Files View nur eine Datei zur Zeit hochladen. Daher wird in diesem Beispiel stattdessen das \textbf{WebHDFS}\footnote{https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-hdfs/WebHDFS.html} benutzt.
+\par
+Das WebHDFS ist in der Sandbox bereits vollständig eingerichtet. Mit dessen Hilfe kann man ohne lokale Hadoop Installation per REST API mit dem HDFS interagieren. Man kann zum Beispiel auf seiner lokalen Maschine den Befehl zum Auflisten aller Dateien im \verb|/tmp/| Verzeichnis des HDFS mittels \verb|curl| absetzen. Dieser lautet 
+\begin{lstlisting}[breaklines]
+    curl -i "http://<hostname>:<port>/webhdfs/v1/tmp/?op=LISTSTATUS"
+\end{lstlisting}
+\begin{itemize}
+    \item Mit der Option \verb|-i| werden die Response Header angezeigt.
+    \item \verb|hostname| kann \verb|localhost| oder ein in der \verb|/etc/hosts| festgelegter Hostname für die Sandbox sein.
+    \item Der Port ist standardmäßig \verb|50070|.
+    \item Alles zwischen \verb|/v1| und \verb|?op| ist der Dateipfad.
+    \item Der Parameter \verb|LISTSTATUS| ist der auszuführende HDFS Befehl.    
+\end{itemize}
+
+    
+
+Abbildung \ref{fig:tmp list} zeigt die Ausgabe. Die Antwort ist ähnlich der eines typischen \verb|ls -l| Befehls: Zu sehen sind Dateien, deren Typ (hier vier mal 'DIRECTORY'), Zugriffsrechte, etc. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{webhdfs_list_tmp}
+    \caption[Dateiauflistung per WebHDFS]{Dateiauflistung per WebHDFS}
+    \label{fig:tmp list}
+\end{figure}
+
+
+Von der kompletten Version des hier verwendeten NOAA Datensatzes stellt Tom White auch eine fertig bereinigte Version in einem S3 Bucket zur Verfügung, die man direkt auf einem Amazon EMR Cluster verwenden kann\footnote{Einschränkungen und Anleitung unter: http://www.hadoopbook.com/code.html}.
+
 \label{chap:fund sec:core sub:handson mapred}
 Workflow für eine MapReduce-Applikation zeigen:
 Code
