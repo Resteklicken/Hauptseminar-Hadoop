@@ -1,12 +1,12 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'Main.blg'
-[71] biber:340> INFO - === Di Dez 13, 2022, 21:55:53
-[84] Biber.pm:418> INFO - Reading 'Main.bcf'
+[69] biber:340> INFO - === Di Dez 13, 2022, 21:58:22
+[82] Biber.pm:418> INFO - Reading 'Main.bcf'
 [143] Biber.pm:978> INFO - Found 19 citekeys in bib section 0
-[154] Biber.pm:4401> INFO - Processing section 0
-[164] Biber.pm:4592> INFO - Looking for bibtex file 'Hauptseminar Hadoop.bib' for section 0
+[155] Biber.pm:4401> INFO - Processing section 0
+[165] Biber.pm:4592> INFO - Looking for bibtex file 'Hauptseminar Hadoop.bib' for section 0
 [166] bibtex.pm:1713> INFO - LaTeX decoding ...
-[189] bibtex.pm:1518> INFO - Found BibTeX data source 'Hauptseminar Hadoop.bib'
+[188] bibtex.pm:1518> INFO - Found BibTeX data source 'Hauptseminar Hadoop.bib'
 [282] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
 [282] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
 [282] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'

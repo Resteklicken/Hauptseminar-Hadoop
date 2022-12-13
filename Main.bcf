@@ -2371,4 +2371,60 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">noauthor_apache_nodate</bcf:citekey>
-    <bcf:citekey o
+    <bcf:citekey order="2" intorder="1">noauthor_big_nodate</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">griffiths_search_2007</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">zakon_hobbes_2018</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">beaumont_how_2014</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">gustafson_amdahls_2011</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">noauthor_horizontal_nodate</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">noauthor_pricing_nodate</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">athow_at_2020</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">athow_at_2020</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">noauthor_who_nodate</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">noauthor_what_nodate</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">noauthor_horizontal_nodate</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">noauthor_apache_nodate</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">ghemawat_google_2003</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">dean_mapreduce_2004</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">cutting_next_2016</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">noauthor_apache_nodate</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">white_hadoop_2015</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">white_hadoop_2015</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">white_hadoop_2015</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">white_hadoop_2015</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">freiknecht_big_2018</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">white_hadoop_2015</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">white_hadoop_2015</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">white_hadoop_2015</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">infrabot_howmanymapsandreduces_2019</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">white_hadoop_2015</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">white_hadoop_2015</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">keim_datenvisualisierung_nodate</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">freiknecht_big_2018</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">freiknecht_big_2018</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">freiknecht_big_2018</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">freiknecht_big_2018</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">white_hadoop_2015</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">noauthor_apache_nodate-1</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">white_hadoop_2015</bcf:citekey>
+  </bcf:section>
+  <!-- SORTING TEMPLATES -->
+  <bcf:sortingtemplate name="none">
+    <bcf:sort order="1">
+      <bcf:sortitem order="1">citeorder</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2">
+      <bcf:sortitem order="1">intciteorder</bcf:sortitem>
+    </bcf:sort>
+  </bcf:sortingtemplate>
+  <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="none/global//global/global"
+                type="entry"
+                sortingtemplatename="none"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+</bcf:controlfile>

@@ -812,4 +812,234 @@ Package biblatex Info: ... file 'english.lbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
 ))
-Package biblatex Info: Trying
+Package biblatex Info: Trying to load language 'german' -> 'german-iso'...
+Package biblatex Info: ... file 'german-iso.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex-iso690/german-iso.lbx
+File: german-iso.lbx 2022/03/20 v0.4.1 ISO 690 extended biblatex localization
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
+))
+
+Package biblatex Warning: File 'american-iso.lbx' not found!
+(biblatex)                Ignoring mapping 'american' -> 'american-iso'.
+
+Package biblatex Info: Trying to load language 'american'...
+Package biblatex Info: ... file 'american.lbx' found.
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/american.lbx
+File: american.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'english' -> 'english-iso'...
+Package biblatex Info: ... file 'english-iso.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex-iso690/english-iso.lbx
+File: english-iso.lbx 2022/03/20 v0.4.1 ISO 690 extended biblatex localization
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
+))
+Package biblatex Info: Trying to load language 'english' -> 'english-iso'...
+Package biblatex Info: ... file 'english-iso.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex-iso690/english-iso.lbx
+File: english-iso.lbx 2022/03/20 v0.4.1 ISO 690 extended biblatex localization
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
+)))
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout4 = `Main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'Main.bbl' found.
+ (./Main.bbl)
+Package biblatex Info: Reference section=0 on input line 98.
+Package biblatex Info: Reference segment=0 on input line 98.
+<./img//mni-logo.pdf, id=4, 1133.23375pt x 146.5475pt>
+File: ./img//mni-logo.pdf Graphic file (type pdf)
+<use ./img//mni-logo.pdf>
+Package pdftex.def Info: ./img//mni-logo.pdf  used on input line 105.
+(pdftex.def)             Requested size: 387.47061pt x 50.10722pt.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 111.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+) [1
+
+
+
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img//mni-logo.pdf>] [2
+
+
+] (./Main.toc [3])
+\tf@toc=\write6
+\openout6 = `Main.toc'.
+
+ [4] (./Main.lof)
+\tf@lof=\write7
+\openout7 = `Main.lof'.
+
+ [5
+
+
+] [6
+
+
+] (./Kapitel/Fundamentals.tex
+chapter 1.
+[1
+
+
+] [2] Excluding 'comment' comment. (./Kapitel/Sections/Hadoop Core.tex [3]
+<./img//hdfsarchitecture.png, id=257, 1003.75pt x 604.2575pt>
+File: ./img//hdfsarchitecture.png Graphic file (type png)
+<use ./img//hdfsarchitecture.png>
+Package pdftex.def Info: ./img//hdfsarchitecture.png  used on input line 21.
+(pdftex.def)             Requested size: 344.42197pt x 207.3442pt.
+ [4]
+<./img//MapReduce.jpg, id=269, 1003.75pt x 540.0175pt>
+File: ./img//MapReduce.jpg Graphic file (type jpg)
+<use ./img//MapReduce.jpg>
+Package pdftex.def Info: ./img//MapReduce.jpg  used on input line 37.
+(pdftex.def)             Requested size: 430.52583pt x 231.62619pt.
+ [5 <./img//hdfsarchitecture.png>]
+<./img//MapReduce Dataflow.jpg, id=282, 1003.75pt x 192.72pt>
+File: ./img//MapReduce Dataflow.jpg Graphic file (type jpg)
+<use ./img//MapReduce Dataflow.jpg>
+Package pdftex.def Info: ./img//MapReduce Dataflow.jpg  used on input line 51.
+(pdftex.def)             Requested size: 430.52583pt x 82.66212pt.
+ [6 <./img//MapReduce.jpg> <./img//MapReduce Dataflow.jpg>] [7]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 74.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+) [8]
+<./img//cluster_startup.png, id=329, 1831.84375pt x 595.22375pt>
+File: ./img//cluster_startup.png Graphic file (type png)
+<use ./img//cluster_startup.png>
+Package pdftex.def Info: ./img//cluster_startup.png  used on input line 78.
+(pdftex.def)             Requested size: 430.52583pt x 139.88667pt.
+<./img//hdp_core_processes.png, id=333, 655.44875pt x 526.96875pt>
+File: ./img//hdp_core_processes.png Graphic file (type png)
+<use ./img//hdp_core_processes.png>
+Package pdftex.def Info: ./img//hdp_core_processes.png  used on input line 87.
+(pdftex.def)             Requested size: 258.31812pt x 207.67998pt.
+<./img//block_repl_factor.png, id=335, 1329.96875pt x 916.42375pt>
+File: ./img//block_repl_factor.png Graphic file (type png)
+<use ./img//block_repl_factor.png>
+Package pdftex.def Info: ./img//block_repl_factor.png  used on input line 96.
+(pdftex.def)             Requested size: 365.94958pt x 252.16414pt.
+ [9 <./img//cluster_startup.png>]
+<./img//ncdc_files.png, id=349, 1089.06876pt x 82.3075pt>
+File: ./img//ncdc_files.png Graphic file (type png)
+<use ./img//ncdc_files.png>
+Package pdftex.def Info: ./img//ncdc_files.png  used on input line 107.
+(pdftex.def)             Requested size: 301.36676pt x 22.77591pt.
+<./img//ncdc_archive_content.png, id=350, 615.29875pt x 237.88875pt>
+File: ./img//ncdc_archive_content.png Graphic file (type png)
+<use ./img//ncdc_archive_content.png>
+Package pdftex.def Info: ./img//ncdc_archive_content.png  used on input line 108.
+(pdftex.def)             Requested size: 301.36676pt x 116.51567pt.
+ [10 <./img//hdp_core_processes.png>] [11 <./img//block_repl_factor.png>]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 122.
+ (./code/concatenate_ncdc_data.sh
+consecutive:
+[12 <./img//ncdc_files.png> <./img//ncdc_archive_content.png>])
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+
+ []
+
+<./img//ncdc_jar_local.png, id=412, 591.20876pt x 58.2175pt>
+File: ./img//ncdc_jar_local.png Graphic file (type png)
+<use ./img//ncdc_jar_local.png>
+Package pdftex.def Info: ./img//ncdc_jar_local.png  used on input line 131.
+(pdftex.def)             Requested size: 322.89436pt x 31.79674pt.
+<./img//file_name_list.png, id=413, 536.0025pt x 277.035pt>
+File: ./img//file_name_list.png Graphic file (type png)
+<use ./img//file_name_list.png>
+Package pdftex.def Info: ./img//file_name_list.png  used on input line 134.
+(pdftex.def)             Requested size: 322.89436pt x 166.88594pt.
+<./img//ncdc_files_on_hdfs.png, id=414, 1182.4175pt x 316.18124pt>
+File: ./img//ncdc_files_on_hdfs.png Graphic file (type png)
+<use ./img//ncdc_files_on_hdfs.png>
+Package pdftex.def Info: ./img//ncdc_files_on_hdfs.png  used on input line 141.
+(pdftex.def)             Requested size: 430.52583pt x 115.12296pt.
+Excluding 'comment' comment. [13 <./img//ncdc_jar_local.png> <./img//file_name_list.png> <./img//ncdc_files_on_hdfs.png>] Excluding 'comment' comment.)) (./Kapitel/Pig.tex [14]
+chapter 2.
+) (./Kapitel/Data Ingestion.tex [15
+
+
+] [16
+
+
+]
+chapter 3.
+) (./Kapitel/Hive.tex [17] [18
+
+
+]
+chapter 4.
+) (./Kapitel/HBase.tex [19] [20
+
+
+]
+chapter 5.
+) (./Kapitel/Streaming.tex [21] [22
+
+
+]
+chapter 6.
+) (./Kapitel/Hadoop heute.tex [23] [24
+
+
+]
+chapter 7.
+) [25] [26
+
+
+]
+chapter without number
+[27
+
+
+]
+
+Package biblatex Warning: No driver for 'video'.
+(biblatex)                Using fallback driver on input line 146.
+
+[28] (./Main.aux)
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `Main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package biblatex Warning: Please rerun LaTeX.
+
+Package logreq Info: Writing requests to 'Main.run.xml'.
+\openout1 = `Main.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 25045 strings out of 479930
+ 460678 string characters out of 5885661
+ 1673996 words of memory out of 5000000
+ 42654 multiletter control sequences out of 15000+600000
+ 495272 words of font info for 67 fonts, out of 8000000 for 9000
+ 18 hyphenation exceptions out of 8191
+ 108i,9n,106p,10629b,4783s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
+Output written on Main.pdf (34 pages, 865571 bytes).
+PDF statistics:
+ 1205 PDF objects out of 1440 (max. 8388607)
+ 732 compressed objects within 8 object streams
+ 189 named destinations out of 1000 (max. 500000)
+ 565 words of extra memory for PDF output out of 10000 (max. 10000000)
+
