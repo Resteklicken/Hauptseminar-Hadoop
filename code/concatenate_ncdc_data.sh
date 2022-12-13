@@ -15,13 +15,13 @@
 # ncdc.jar/2022.tar.gz
 
 # Für jede Zeile in der Eingabedatei wird von Hadoop ein Map-Prozess gestaret.
-# NLineInputFormat gibt jedem Mapper eine einzige Zeile aus der Eingabedatei als Key-Value-Paar als Input.
-# Der Key ist der Offset der Zeile zum Dateianfang, an dieser Stelle nicht weiter interessant.
-# Der Value ist der Inhalt der Zeile, der hier in die Variable inputfile gelesen wird.
 # ncdc.jar ist ein JAR, welches im HDFS abliegt und die Ordner der einzelnen Jahre bündelt.
 # Dies ist nötig, da man Hadoop nur eine Liste mit Dateien oder JARs auf einen Job Run mitgeben kann.
 # Das Skript sollte wenigstens etwas flexibel bleiben, daher wurde davon abgesehen, alle Dateinamen
 # als Liste bei der Ausführung des Befehls zu übergeben.
+# NLineInputFormat gibt jedem Mapper eine einzige Zeile aus der Eingabedatei als Key-Value-Paar als Input.
+# Der Key ist der Offset der Zeile zum Dateianfang, an dieser Stelle nicht weiter interessant.
+# Der Value ist der Inhalt der Zeile, der hier in die Variable inputfile gelesen wird.
 # Nachrichten auf STDERR mit dem Präfix "reporter:status:" werden von Hadoop als MapReduce Statusupdates interpretiert.
 # Dadurch denkt Hadoop nicht, der Job hätte sich aufgehängt. 
 read offset inputfile

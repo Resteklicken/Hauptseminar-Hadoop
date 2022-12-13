@@ -110,12 +110,31 @@ Als Fallstudie für die Nutzung von Hadoop werden die täglichen Zusammenfassung
     \label{fig:ncdc files local}
 \end{figure}
 
-Das HDFS und MapReduce arbeiten außerdem mit wenigen großen Dateien wesentlich besser als mit vielen kleinen Dateien. Deshalb wird der erste Schritt sein, die Daten in das HDFS zu laden. Anschließend wird eine MapReduce-Applikation mit der MapReduce Streaming-API geschrieben. Diese wird nur aus einer Map-Phase bestehen und die Dateien säubern und zusammenzuführen. Zuguterletzt wird eine weitere MapReduce-Applikation mit der Java-API geschrieben, die die Daten auswertet. In späteren Abschnitten werden weitere Komponenten des Hadoop Ecosystems vorgestellt, mit denen die Dateien weiter verarbeitet werden.
+Das HDFS und MapReduce arbeiten außerdem mit wenigen großen Dateien wesentlich besser als mit vielen kleinen Dateien.\cite[\textit{(S. 19-30, 693-695)}]{white_hadoop_2015} Deshalb wird der erste Schritt sein, die Daten in das HDFS zu laden. Anschließend wird eine MapReduce-Applikation mit der MapReduce Streaming-API geschrieben. Diese wird nur aus einer Map-Phase bestehen und die Dateien säubern und zusammenzuführen. Zuguterletzt wird eine weitere MapReduce-Applikation mit der Java-API geschrieben, die die Daten auswertet. In späteren Abschnitten werden weitere Komponenten des Hadoop Ecosystems vorgestellt, mit denen die Dateien weiter verarbeitet werden.
 \subsubsection*{Umgang mit dem HDFS}
 \label{chap:fund sec:core sub:handson hdfs}
-Es gibt verschiedene Wege, um Dateien ins HDFS zu laden\footnote{3 Beispiele: https://community.cloudera.com/t5/Support-Questions/Import-data-from-remote-server-to-HDFS/m-p/233149/highlight/true\#M194979}. Viele Tutorials nutzen dabei den HDFS Befehl \verb|hdfs dfs -copyFromLocal <local path> <hdfs path>|. Dieser Befehl kann nur von einem Rechner abgesetzt werden, auf dem ein HDFS Client Prozess läuft, welcher für den angesteuerten Hadoop Cluster konfiguriert ist. Man müsste also Hadoop lokal installiert haben, oder man kopiert erst per \verb|scp| die Dateien auf das lokale Dateisystem eines Nodes im Cluster, auf dem ein HDFS Client läuft. Hierfür verwendet man zum Beispiel den NameNode. Führt man sich vor Augen, dass Hadoop für \textit{Big Data} ausgelegt ist, würden diese Herangehensweisen in der Praxis dazu führen, dass riesige Dateien über das Netzwerk verschickt werden müssten und die Festplatten des NameNodes füllen würden.
+Es gibt verschiedene Wege, um Dateien ins HDFS zu laden\footnote{3 Beispiele: https://community.cloudera.com/t5/Support-Questions/Import-data-from-remote-server-to-HDFS/m-p/233149/highlight/true\#M194979}. In der Sandbox wurde ein Ambari View, der \textbf{Files View}\footnote{https://docs.cloudera.com/HDPDocuments/Ambari-2.7.4.0/using-ambari-views/content/\\amb\_using\_files\_view.html}, erstellt. Diesen erreicht man über das Kachel-Icon im Header des Dashboards\footnote{http://<localhost oder Sandbox Hostname>:8080/\#/main/view/FILES/auto\_files\_instance}. Der Files View bietet einen HDFS Dateibrowser mit Funktionalitäten wie Datei-Upload direkt von der lokalen Maschine, Ordnererstellung und Rechteverwaltung. Nicht alle Nutzer der Sandbox haben die nötigen Rechte zur Ausführung der Befehle. Daher sollte man sich mit dem dafür vorgesehenen Nutzer\footnote{https://www.cloudera.com/tutorials/learning-the-ropes-of-the-hdp-sandbox.html\#login-credentials} \verb|user: amy_ds password: amy_ds| in Ambari einloggen. Man kann über den Files View aber nur eine Datei zur Zeit hochladen. Das Hochladen von Archiven (gestestet mit \verb|.tar.gz| und \verb|.jar|) schließt ebenfalls nie ab. 
 \par
-In der Sandbox wurde ein Ambari View, der \textbf{Files View}\footnote{https://docs.cloudera.com/HDPDocuments/Ambari-2.7.4.0/using-ambari-views/content/\\amb\_using\_files\_view.html}, erstellt. Diesen erreicht man über das Kachel-Icon im Header des Dashboards\footnote{http://<localhost oder Sandbox Hostname>:8080/\#/main/view/FILES/auto\_files\_instance}. Der Files View bietet einen HDFS Dateibrowser mit Funktionalitäten wie Datei-Upload direkt von der lokalen Maschine, Ordnererstellung und Rechteverwaltung. Nicht alle Nutzer der Sandbox haben die nötigen Rechte zur Ausführung der Befehle. Daher sollte man sich mit dem dafür vorgesehenen Nutzer\footnote{https://www.cloudera.com/tutorials/learning-the-ropes-of-the-hdp-sandbox.html\#login-credentials} \verb|user: amy_ds password: amy_ds| in Ambari einloggen. Man kann über den Files View nur eine Datei zur Zeit hochladen. Komprimiert man alle Archive in ein \verb|.tar.gz| Archiv, um diese Restriktion zu umgehen, schließt der Hochladevorgang nie ab. Daher wird der Ordner \verb|input| für die Dateien im Verzeichnis \verb|/user/maria_dev/| erstellt und dort nacheinander die Archivdateien der einzelnen Jahre hochgeladen. Die fertige Ordnerstruktur sollte aussehen wie in Abbildung \ref{fig:ncdc files hdfs}.
+Da für den nachfolgenden Schritt ein JAR aus dem HDFS als Input eingebunden werden soll, wird stattdessen der HDFS Befehl \verb|hdfs dfs -put <local path> <hdfs path>| verwendet. Dieser Befehl kann nur von einem Rechner abgesetzt werden, auf dem ein HDFS Client Prozess läuft, der mit dem Hadoop Cluster verbunden ist. Man müsste also Hadoop lokal installiert haben, oder man kopiert erst per \verb|scp| die Dateien auf das lokale Dateisystem eines Nodes im Cluster, auf dem ein HDFS Client läuft. Hierfür verwendet man zum Beispiel den NameNode. \textbf{Schritt 1} ist das Erstellen des JARs \verb|ncdc.jar| mit den Eingabedateien des NCDC (siehe Abb. \ref{fig:ncdc jar local}). Hadoop wird dieses nachher dem MapReduce Job bereitstellen und automatisch entpacken. \textbf{Schritt 2} ist das Erstellen der Textdatei \verb|file_names.txt| mit den Dateipfaden der Unterordner des JARs (siehe Abb. \ref{fig:file names txt local}). Diese Datei wird der Input des MapReduce Jobs. 
+\par
+\textbf{Schritt 3} ist das Schreiben des Skripts, welches später als Mapper-Klasse fungiert. 
+
+\lstinputlisting[language=bash, caption={Bash Skript als Mapper-Klasse}, linerange={22-51}]{code/concatenate_ncdc_data.sh}
+
+
+
+
+Für jede Zeile in der Datei wird später ein Mapper gestartet, der die Zeile mit dem Dateinamen als Input erhält. Dieser wird dann das jeweilige \verb|20xx.tar.gz| Archiv aus dem \verb|ncdc.jar| entpacken und alle darin befindlichen CSV-Dateien zu einer Datei vereinen. Diese Datei wird anschließend wieder im HDFS abgespeichert.\\
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\textwidth]{ncdc_jar_local}
+    \caption[Erstellung des JARs mit Wetterdaten]{Erstellung des JARs mit Wetterdaten}
+    \label{fig:ncdc jar local}
+    \includegraphics[width=0.75\textwidth]{file_name_list}
+    \caption[Inputdatei des MapReduce Jobs]{Inputdatei des MapReduce Jobs}
+    \label{fig:file names txt local}
+\end{figure}
 
 \begin{figure}[ht]
     \centering
@@ -124,7 +143,7 @@ In der Sandbox wurde ein Ambari View, der \textbf{Files View}\footnote{https://d
     \label{fig:ncdc files hdfs}
 \end{figure}
 
-Die Daten liegen in 
+Daher wird der Ordner \verb|input| für die Dateien im Verzeichnis \verb|/user/maria_dev/| erstellt und dort nacheinander die Archivdateien der einzelnen Jahre hochgeladen. Die fertige Ordnerstruktur sollte aussehen wie in Abbildung \ref{fig:ncdc files hdfs}.
 
 \begin{comment}
     
@@ -154,7 +173,7 @@ Abbildung \ref{fig:tmp list} zeigt die Ausgabe. Die Antwort ist ähnlich der ein
 \end{figure}
 \end{comment}
 
-Von der kompletten Version des hier verwendeten NOAA Datensatzes stellt Tom White auch eine fertig bereinigte Version in einem S3 Bucket zur Verfügung, die man direkt auf einem Amazon EMR Cluster verwenden kann\footnote{Einschränkungen und Anleitung unter: http://www.hadoopbook.com/code.html}.
+
 \subsubsection*{Datenbereinigung mit MapReduce}
 \label{chap:fund sec:core sub:handson mapred}
 Workflow für eine MapReduce-Applikation zeigen:

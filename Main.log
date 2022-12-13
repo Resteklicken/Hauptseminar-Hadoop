@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2022.11.9)  13 DEC 2022 13:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2022.11.9)  13 DEC 2022 21:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -209,7 +209,13 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count272
 \@lastruleclass=\count273
 \@thisrulewidth=\dimen154
-) (/usr/share/texlive/texmf-dist/tex/latex/listingsutf8/listingsutf8.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/usr/share/texlive/texmf-dist/tex/latex/listingsutf8/listingsutf8.sty
 Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
  (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count274
@@ -249,7 +255,11 @@ Package pdftexcmds Info: \pdfdraftmode found.
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-))) (/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
+))) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
 \CommentStream=\write3
  Excluding comment 'comment') (/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
 Package: import 2020/04/01  v 6.2
@@ -413,8 +423,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip67
 )
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 53.
-Package hyperref Info: Option `colorlinks' set `true' on input line 53.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 84.
+Package hyperref Info: Option `colorlinks' set `true' on input line 84.
  (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrhack.sty
 Package: scrhack 2022/07/04 v3.37 KOMA-Script package (hacking other packages)
  (/usr/share/texlive/texmf-dist/tex/latex/xpatch/xpatch.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
@@ -700,24 +710,24 @@ Package babel Info: Importing basic data for american
 ))
 \openout1 = `Main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count432
@@ -738,14 +748,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count438
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 149.
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 67.
+Package hyperref Info: Link coloring ON on input line 98.
  (./Main.out) (./Main.out)
 \@outlinefile=\write5
 \openout5 = `Main.out'.
@@ -757,14 +760,14 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 67.
+(scrbook)           before \begin{document} on input line 98.
  (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 \BKM@id=\count439
 ))
-Package scrhack Info: undefining \float@addtolists on input line 67.
+Package scrhack Info: undefining \float@addtolists on input line 98.
 Package biblatex Info: Trying to load language 'ngerman' -> 'ngerman-iso'...
 Package biblatex Info: ... file 'ngerman-iso.lbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex-iso690/ngerman-iso.lbx
@@ -809,216 +812,4 @@ Package biblatex Info: ... file 'english.lbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
 ))
-Package biblatex Info: Trying to load language 'german' -> 'german-iso'...
-Package biblatex Info: ... file 'german-iso.lbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex-iso690/german-iso.lbx
-File: german-iso.lbx 2022/03/20 v0.4.1 ISO 690 extended biblatex localization
-Package biblatex Info: Trying to load language 'german'...
-Package biblatex Info: ... file 'german.lbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/german.lbx
-File: german.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
-)
-Package biblatex Info: Trying to load language 'german'...
-Package biblatex Info: ... file 'german.lbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/german.lbx
-File: german.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
-))
-
-Package biblatex Warning: File 'american-iso.lbx' not found!
-(biblatex)                Ignoring mapping 'american' -> 'american-iso'.
-
-Package biblatex Info: Trying to load language 'american'...
-Package biblatex Info: ... file 'american.lbx' found.
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/american.lbx
-File: american.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
-Package biblatex Info: Trying to load language 'english' -> 'english-iso'...
-Package biblatex Info: ... file 'english-iso.lbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex-iso690/english-iso.lbx
-File: english-iso.lbx 2022/03/20 v0.4.1 ISO 690 extended biblatex localization
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
-))
-Package biblatex Info: Trying to load language 'english' -> 'english-iso'...
-Package biblatex Info: ... file 'english-iso.lbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex-iso690/english-iso.lbx
-File: english-iso.lbx 2022/03/20 v0.4.1 ISO 690 extended biblatex localization
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
-)))
-Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Automatic encoding selection.
-(biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `Main.bcf'.
-
-Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Main.bbl' found.
- (./Main.bbl)
-Package biblatex Info: Reference section=0 on input line 67.
-Package biblatex Info: Reference segment=0 on input line 67.
-<./img//mni-logo.pdf, id=4, 1133.23375pt x 146.5475pt>
-File: ./img//mni-logo.pdf Graphic file (type pdf)
-<use ./img//mni-logo.pdf>
-Package pdftex.def Info: ./img//mni-logo.pdf  used on input line 74.
-(pdftex.def)             Requested size: 387.47061pt x 50.10722pt.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 80.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
-File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
-) [1
-
-
-
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img//mni-logo.pdf>] [2
-
-
-] (./Main.toc [3])
-\tf@toc=\write6
-\openout6 = `Main.toc'.
-
- [4] (./Main.lof)
-\tf@lof=\write7
-\openout7 = `Main.lof'.
-
- [5
-
-
-] [6
-
-
-] (./Kapitel/Fundamentals.tex
-chapter 1.
-[1
-
-
-] [2] Excluding 'comment' comment. (./Kapitel/Sections/Hadoop Core.tex [3]
-<./img//hdfsarchitecture.png, id=253, 1003.75pt x 604.2575pt>
-File: ./img//hdfsarchitecture.png Graphic file (type png)
-<use ./img//hdfsarchitecture.png>
-Package pdftex.def Info: ./img//hdfsarchitecture.png  used on input line 21.
-(pdftex.def)             Requested size: 344.42197pt x 207.3442pt.
- [4]
-<./img//MapReduce.jpg, id=265, 1003.75pt x 540.0175pt>
-File: ./img//MapReduce.jpg Graphic file (type jpg)
-<use ./img//MapReduce.jpg>
-Package pdftex.def Info: ./img//MapReduce.jpg  used on input line 37.
-(pdftex.def)             Requested size: 430.52583pt x 231.62619pt.
- [5 <./img//hdfsarchitecture.png>]
-<./img//MapReduce Dataflow.jpg, id=278, 1003.75pt x 192.72pt>
-File: ./img//MapReduce Dataflow.jpg Graphic file (type jpg)
-<use ./img//MapReduce Dataflow.jpg>
-Package pdftex.def Info: ./img//MapReduce Dataflow.jpg  used on input line 51.
-(pdftex.def)             Requested size: 430.52583pt x 82.66212pt.
- [6 <./img//MapReduce.jpg> <./img//MapReduce Dataflow.jpg>] [7]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 74.
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [8]
-<./img//cluster_startup.png, id=325, 1831.84375pt x 595.22375pt>
-File: ./img//cluster_startup.png Graphic file (type png)
-<use ./img//cluster_startup.png>
-Package pdftex.def Info: ./img//cluster_startup.png  used on input line 78.
-(pdftex.def)             Requested size: 430.52583pt x 139.88667pt.
-<./img//hdp_core_processes.png, id=329, 655.44875pt x 526.96875pt>
-File: ./img//hdp_core_processes.png Graphic file (type png)
-<use ./img//hdp_core_processes.png>
-Package pdftex.def Info: ./img//hdp_core_processes.png  used on input line 87.
-(pdftex.def)             Requested size: 258.31812pt x 207.67998pt.
-<./img//block_repl_factor.png, id=331, 1329.96875pt x 916.42375pt>
-File: ./img//block_repl_factor.png Graphic file (type png)
-<use ./img//block_repl_factor.png>
-Package pdftex.def Info: ./img//block_repl_factor.png  used on input line 96.
-(pdftex.def)             Requested size: 365.94958pt x 252.16414pt.
- [9 <./img//cluster_startup.png>]
-<./img//ncdc_files.png, id=345, 1089.06876pt x 82.3075pt>
-File: ./img//ncdc_files.png Graphic file (type png)
-<use ./img//ncdc_files.png>
-Package pdftex.def Info: ./img//ncdc_files.png  used on input line 107.
-(pdftex.def)             Requested size: 301.36676pt x 22.77591pt.
-<./img//ncdc_archive_content.png, id=346, 615.29875pt x 237.88875pt>
-File: ./img//ncdc_archive_content.png Graphic file (type png)
-<use ./img//ncdc_archive_content.png>
-Package pdftex.def Info: ./img//ncdc_archive_content.png  used on input line 108.
-(pdftex.def)             Requested size: 301.36676pt x 116.51567pt.
- [10 <./img//hdp_core_processes.png>] [11 <./img//block_repl_factor.png>]
-<./img//ncdc_files_on_hdfs.png, id=371, 1617.04124pt x 585.18625pt>
-File: ./img//ncdc_files_on_hdfs.png Graphic file (type png)
-<use ./img//ncdc_files_on_hdfs.png>
-Package pdftex.def Info: ./img//ncdc_files_on_hdfs.png  used on input line 122.
-(pdftex.def)             Requested size: 430.52583pt x 155.79688pt.
- Excluding 'comment' comment. Excluding 'comment' comment.)) (./Kapitel/Pig.tex [12 <./img//ncdc_files.png> <./img//ncdc_archive_content.png> <./img//ncdc_files_on_hdfs.png>] [13] [14
-
-
-]
-chapter 2.
-) (./Kapitel/Data Ingestion.tex [15] [16
-
-
-]
-chapter 3.
-) (./Kapitel/Hive.tex [17] [18
-
-
-]
-chapter 4.
-) (./Kapitel/HBase.tex [19] [20
-
-
-]
-chapter 5.
-) (./Kapitel/Streaming.tex [21] [22
-
-
-]
-chapter 6.
-) (./Kapitel/Hadoop heute.tex [23] [24
-
-
-]
-chapter 7.
-) [25] [26
-
-
-]
-chapter without number
-[27
-
-
-]
-
-Package biblatex Warning: No driver for 'video'.
-(biblatex)                Using fallback driver on input line 115.
-
-[28] (./Main.aux)
-
-LaTeX Warning: There were undefined references.
-
-Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please rerun LaTeX.
-
-Package logreq Info: Writing requests to 'Main.run.xml'.
-\openout1 = `Main.run.xml'.
-
- ) 
-Here is how much of TeX's memory you used:
- 24560 strings out of 479930
- 455459 string characters out of 5885661
- 1358169 words of memory out of 5000000
- 42215 multiletter control sequences out of 15000+600000
- 494935 words of font info for 66 fonts, out of 8000000 for 9000
- 18 hyphenation exceptions out of 8191
- 108i,8n,106p,10629b,4783s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on Main.pdf (34 pages, 856310 bytes).
-PDF statistics:
- 1138 PDF objects out of 1200 (max. 8388607)
- 686 compressed objects within 7 object streams
- 157 named destinations out of 1000 (max. 500000)
- 555 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+Package biblatex Info: Trying
