@@ -4,7 +4,7 @@
 # komprimierten Archiven (.tar.gz) der einzelnen Jahre im NCDC Wetter-Datensatz.
 # Es basiert auf der Anleitung zum Präparieren des NCDC Datensatzes
 # aus White, T. E. (2015). Hadoop: The Definitive Guide (4th edition). O'Reilly Media. 
-# Tom White's Code 
+# Siehe auch: https://github.com/tomwhite/hadoop-book/tree/master/appc/src/main/sh
 
 # Als Eingabedatei wird eine Textdatei mit den Dateinamen der Archive erwartet:
 
