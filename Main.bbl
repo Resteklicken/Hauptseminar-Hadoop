@@ -636,6 +636,44 @@
       \verb https://fusion.cs.uni-magdeburg.de/pubs/spektrum.pdf
       \endverb
     \endentry
+    \entry{docnoaanesdisncdc_global_2022}{online}{}
+      \name{author}{1}{}{%
+        {{hash=6cdf95c57ceeb0b86c681c6c0f8d3ddc}{%
+           family={{DOC}/{NOAA}/{NESDIS}/{NCDC}},
+           familyi={D\bibinitperiod},
+           given={User\bibnamedelimb Engagement\bibnamedelimb \{and\} Services\bibnamedelima Branch},
+           giveni={U\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{6cdf95c57ceeb0b86c681c6c0f8d3ddc}
+      \strng{fullhash}{6cdf95c57ceeb0b86c681c6c0f8d3ddc}
+      \strng{bibnamehash}{6cdf95c57ceeb0b86c681c6c0f8d3ddc}
+      \strng{authorbibnamehash}{6cdf95c57ceeb0b86c681c6c0f8d3ddc}
+      \strng{authornamehash}{6cdf95c57ceeb0b86c681c6c0f8d3ddc}
+      \strng{authorfullhash}{6cdf95c57ceeb0b86c681c6c0f8d3ddc}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{7}
+      \field{month}{6}
+      \field{title}{Global Surface Summary of the Day - {GSOD}}
+      \field{titleaddon}{Dataset Overview {|} National Centers for Environmental Information ({NCEI})}
+      \field{urlday}{14}
+      \field{urlmonth}{12}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Dataset Overview | National Centers for Environmental Information (NCEI):/home/rene/Zotero/storage/7Q5GE2ER/html.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C00516/html
+      \endverb
+      \verb{url}
+      \verb https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C00516/html
+      \endverb
+    \endentry
     \entry{noauthor_apache_nodate-1}{online}{}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}

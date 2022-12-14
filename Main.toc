@@ -14,16 +14,21 @@
 \contentsline {section}{\numberline {3.3}Fallstudie Globales Wetter}{11}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Umgang mit dem HDFS}{12}{section.3.4}%
 \contentsline {section}{\numberline {3.5}MapReduce mit der Hadoop Streaming API}{16}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Die MapReduce Java API}{18}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Das Hadoop Ecosystem}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Datenhaltung}{21}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Cluster-Verwaltung / -Konfiguration}{23}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Datentransfer}{23}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Datenverarbeitung}{23}{section.4.4}%
-\contentsline {chapter}{\nonumberline Appendix}{25}{chapter*.20}%
-\contentsline {section}{\numberline {1}Mapper-Skript für NCDC Datenbereinigung}{25}{section.Alph0.1}%
-\contentsline {section}{\numberline {2}Startbefehl für die NCDC Datenbereinigung}{27}{section.Alph0.2}%
-\contentsline {chapter}{\nonumberline Literatur}{29}{chapter*.21}%
+\contentsline {section}{\numberline {3.6}Die MapReduce Java API}{20}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Struktur der Eingabedaten}{20}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Die Mapper-Klasse}{21}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Die Reducer-Klasse}{22}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Die Treiber-Klasse}{22}{subsection.3.6.4}%
+\contentsline {chapter}{\numberline {4}Das Hadoop Ecosystem}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Datenhaltung}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Cluster-Verwaltung / -Konfiguration}{25}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Datentransfer}{25}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Datenverarbeitung}{25}{section.4.4}%
+\contentsline {chapter}{\nonumberline Appendix}{27}{chapter*.20}%
+\contentsline {section}{\numberline {1}Mapper-Skript für NCDC Datenbereinigung}{27}{section.Alph0.1}%
+\contentsline {section}{\numberline {2}Startbefehl für die NCDC Datenbereinigung}{29}{section.Alph0.2}%
+\contentsline {section}{\numberline {3}MapReduce Job mit Java API}{30}{section.Alph0.3}%
+\contentsline {chapter}{\nonumberline Literatur}{32}{chapter*.21}%
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
@@ -133,6 +138,12 @@
 \babel@toc {german}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {german}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
