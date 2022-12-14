@@ -2,7 +2,7 @@ import java.io.IOException;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.LongWritable;
-import org.apache.hadoop.io.FloatWritable;
+import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
@@ -13,7 +13,7 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 public class MaxTemperature {
 
     public static class TemperatureMapper
-         extends Mapper<LongWritable, Text, Text, FloatWritable>{
+         extends Mapper<LongWritable, Text, Text, DoubleWritable>{
 
       private final static String invalidReading = "9999.9";
       private final static String headerLineStart = new String("\"STATION\"");
@@ -32,7 +32,7 @@ public class MaxTemperature {
             double tempCelsius = (tempFahrenheit - 32.0) / 1.8;
 
             Text outKey = new Text(monthYear);
-            FloatWritable outValue = new FloatWritable(tempCelsius);
+            DoubleWritable outValue = new DoubleWritable(tempCelsius);
             context.write(outKey, outValue);
           }
         }
@@ -41,14 +41,14 @@ public class MaxTemperature {
     }
   
     public static class TemperatureReducer
-         extends Reducer<Text,FloatWritable,Text,FloatWritable> {
-      private FloatWritable result = new FloatWritable();
+         extends Reducer<Text,DoubleWritable,Text,DoubleWritable> {
+      private DoubleWritable result = new DoubleWritable();
       
-      public void reduce(Text key, Iterable<FloatWritable> values,
+      public void reduce(Text key, Iterable<DoubleWritable> values,
                          Context context
                          ) throws IOException, InterruptedException {
         double max = -100000.0;
-        for (FloatWritable val : values) {
+        for (DoubleWritable val : values) {
           double nextTemp = val.get();
           if (nextTemp > max) max = nextTemp;
         }
@@ -63,9 +63,9 @@ public class MaxTemperature {
       job.setJarByClass(MaxTemperature.class);
       job.setMapperClass(TemperatureMapper.class);
       job.setCombinerClass(TemperatureReducer.class);
-      job.setReducerClass(TemperatureMapper.class);
+      job.setReducerClass(TemperatureReducer.class);
       job.setOutputKeyClass(Text.class);
-      job.setOutputValueClass(FloatWritable.class);
+      job.setOutputValueClass(DoubleWritable.class);
       FileInputFormat.addInputPath(job, new Path(args[0]));
       FileOutputFormat.setOutputPath(job, new Path(args[1]));
       System.exit(job.waitForCompletion(true) ? 0 : 1);
