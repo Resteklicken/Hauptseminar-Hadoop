@@ -30,8 +30,9 @@ public class MaxTemperature {
           if (!temperatureString.equals(invalidReadingOne) && !temperatureString.equals(invalidReadingTwo))  {
             String monthYear = csvFields[datePosition].replaceAll("\"","").trim().substring(0, 7);
       
-            double tempFahrenheit = (double) Math.round(Double.parseDouble(temperatureString) * 100) / 100;
+            double tempFahrenheit = Double.parseDouble(temperatureString);
             double tempCelsius = (tempFahrenheit - 32.0) / 1.8;
+            tempCelsius = (double) Math.round(tempCelsius * 100) / 100;
 
             Text outKey = new Text(monthYear);
             DoubleWritable outValue = new DoubleWritable(tempCelsius);
