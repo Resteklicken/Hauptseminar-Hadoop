@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2022.11.9)  14 DEC 2022 10:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2022.11.9)  14 DEC 2022 11:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -962,28 +962,30 @@ Package pdftex.def Info: ./img//file_name_list.png  used on input line 125.
 <./img//scp_ncdc_transfer.png, id=400, 922.44624pt x 221.82875pt>
 File: ./img//scp_ncdc_transfer.png Graphic file (type png)
 <use ./img//scp_ncdc_transfer.png>
-Package pdftex.def Info: ./img//scp_ncdc_transfer.png  used on input line 135.
+Package pdftex.def Info: ./img//scp_ncdc_transfer.png  used on input line 134.
 (pdftex.def)             Requested size: 322.89436pt x 77.64798pt.
 <./img//hdfs_ncdc_move.png, id=401, 867.24pt x 340.27126pt>
 File: ./img//hdfs_ncdc_move.png Graphic file (type png)
 <use ./img//hdfs_ncdc_move.png>
-Package pdftex.def Info: ./img//hdfs_ncdc_move.png  used on input line 138.
+Package pdftex.def Info: ./img//hdfs_ncdc_move.png  used on input line 137.
 (pdftex.def)             Requested size: 322.89436pt x 126.69278pt.
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 145.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 144.
  (./code/concatenate_ncdc_data.sh
 consecutive:
-[13 <./img//scp_ncdc_transfer.png> <./img//hdfs_ncdc_move.png>])
-<./img//ncdc_files_on_hdfs.png, id=415, 1182.4175pt x 316.18124pt>
+[13 <./img//scp_ncdc_transfer.png> <./img//hdfs_ncdc_move.png>]) [14] (./code/concat_files_start.sh
+consecutive:
+)
+<./img//ncdc_files_on_hdfs.png, id=448, 1182.4175pt x 316.18124pt>
 File: ./img//ncdc_files_on_hdfs.png Graphic file (type png)
 <use ./img//ncdc_files_on_hdfs.png>
-Package pdftex.def Info: ./img//ncdc_files_on_hdfs.png  used on input line 152.
+Package pdftex.def Info: ./img//ncdc_files_on_hdfs.png  used on input line 168.
 (pdftex.def)             Requested size: 430.52583pt x 115.12296pt.
- Excluding 'comment' comment. Excluding 'comment' comment.)) (./Kapitel/Pig.tex [14 <./img//ncdc_files_on_hdfs.png>] [15] [16
-
-
-]
+ Excluding 'comment' comment. Excluding 'comment' comment.)) (./Kapitel/Pig.tex [15] [16 <./img//ncdc_files_on_hdfs.png>]
 chapter 2.
-) (./Kapitel/Data Ingestion.tex [17] [18
+) (./Kapitel/Data Ingestion.tex [17
+
+
+] [18
 
 
 ]
@@ -1040,18 +1042,18 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25240 strings out of 479930
- 464487 string characters out of 5885661
- 1999288 words of memory out of 5000000
- 42715 multiletter control sequences out of 15000+600000
+ 25253 strings out of 479930
+ 464728 string characters out of 5885661
+ 1999372 words of memory out of 5000000
+ 42716 multiletter control sequences out of 15000+600000
  495272 words of font info for 67 fonts, out of 8000000 for 9000
  18 hyphenation exceptions out of 8191
  108i,9n,106p,10629b,4787s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on Main.pdf (40 pages, 1000185 bytes).
+Output written on Main.pdf (40 pages, 1006008 bytes).
 PDF statistics:
- 1428 PDF objects out of 1440 (max. 8388607)
- 918 compressed objects within 10 object streams
- 315 named destinations out of 1000 (max. 500000)
+ 1445 PDF objects out of 1728 (max. 8388607)
+ 933 compressed objects within 10 object streams
+ 325 named destinations out of 1000 (max. 500000)
  599 words of extra memory for PDF output out of 10000 (max. 10000000)
 
