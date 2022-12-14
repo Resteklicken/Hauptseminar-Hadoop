@@ -30,7 +30,7 @@ MapReduce heißt sowohl ein Programmiermodell zur parallelisierten Verarbeitung 
 \textbf{Parallelisierung}: InputSplits werden parallel auf mehreren Nodes bearbeitet und die Ausgaben zusammengeführt. Dadurch werden auch bei großen Datenmengen hohe Datendurchsatzraten erreicht.\\
 \textbf{Datenlokalität}: Der erste Teil der Verarbeitungslogik, die Mapping-Phase, wird möglichst nahe an den Daten durchgeführt; wenn möglich auf den Nodes, auf denen die Daten gespeichert sind. Ansonsten wird versucht, die Verarbeitung wenigstens auf dem gleichen Server Rack durchzuführen, um die Belastung der Netzwerkinfrastruktur so gering wie möglich zu halten.
 \par
-Ein MapReduce-Job besteht aus zwei Phasen: der \textbf{Map-Phase} und der \textbf{Reduce-Phase}. Logisch kann man dazwischen noch die \textbf{Sort- und Shuffle-Phase} unterscheiden (siehe Abb. \ref*{fig:mapred}).
+Ein MapReduce Job besteht aus zwei Phasen: der \textbf{Map-Phase} und der \textbf{Reduce-Phase}. Logisch kann man dazwischen noch die \textbf{Sort- und Shuffle-Phase} unterscheiden (siehe Abb. \ref*{fig:mapred}).
 
 \begin{figure}[ht]
     \centering
@@ -38,7 +38,7 @@ Ein MapReduce-Job besteht aus zwei Phasen: der \textbf{Map-Phase} und der \textb
     \caption[Die Phasen von MapReduce]{Die Phasen von MapReduce\parencite[Seite 34, Figure 2-4]{white_hadoop_2015}}
     \label{fig:mapred}
 \end{figure}
-Wie eingangs erwähnt, wird die Eingabe in InputSplits zerteilt. Diese werden wiederum in einzelne Datensätze, die \textbf{Records}, aufgespalten. Wie diese Aufteilung abläuft, wird durch das \textbf{InputFormat} bestimmt, welches vom Anwender im Programmcode festgelegt und auf das Format der Eingabedaten abgestimmt werden muss. Dabei stehen zum Beispiel \textit{TextInputFormat} oder \textit{KeyValueTextInputFormat} zur Verfügung. Es ist auch möglich, durch Ableiten der abstrakten Java-Klasse \textit{InputFormat} eigene InputFormats zu schreiben.\cite{white_hadoop_2015}
+Wie eingangs erwähnt, wird die Eingabe in InputSplits zerteilt. Diese werden wiederum in einzelne Datensätze, die \textbf{Records}, aufgespalten. Wie diese Aufteilung abläuft, wird durch das \textbf{InputFormat} bestimmt, welches vom Anwender im Programmcode festgelegt und auf das Format der Eingabedaten abgestimmt werden muss. Dabei stehen zum Beispiel \textit{TextInputFormat} oder \textit{KeyValueTextInputFormat} zur Verfügung. Es ist auch möglich, durch Ableiten der abstrakten Java Klasse \textit{InputFormat} eigene InputFormats zu schreiben.\cite{white_hadoop_2015}
 \par
 Für jeden InputSplit wird ein eigener Map-Prozess (\textbf{Mapper}) gestartet. Dieser erhält alle Records des InputSplits in Form von \textbf{Key-Value-Paaren} als Eingabe. Auf jeden Record wird eine vom Anwender geschriebene Map-Funktion angewendet, die oftmals die Daten filtert und vorbereitet, zum Beispiel durch Parsen von Strings in Integer. Die Daten werden vom Eingabeformat in bereinigte Key-Value-Paare \textbf{gemappt}. Das Ergebnis wird an Reduce-Prozesse (\textbf{Reducer}) weitergegeben. Ein Beispiel dazu wird in Abschnitt \ref{chap:fund sec:core sub:handson mapred} besprochen.
 \par
@@ -115,7 +115,7 @@ Das HDFS und MapReduce arbeiten außerdem mit wenigen großen Dateien wesentlich
 \label{chap:fund sec:core sub:handson hdfs}
 Es gibt verschiedene Wege, um Dateien ins HDFS zu laden\footnote{3 Beispiele: https://community.cloudera.com/t5/Support-Questions/Import-data-from-remote-server-to-HDFS/m-p/233149/highlight/true\#M194979}. In der Sandbox wurde ein Ambari View, der \textbf{Files View}\footnote{https://docs.cloudera.com/HDPDocuments/Ambari-2.7.4.0/using-ambari-views/content/\\amb\_using\_files\_view.html}, erstellt. Diesen erreicht man über das Kachel-Icon im Header des Dashboards\footnote{http://<localhost oder Sandbox Hostname>:8080/\#/main/view/FILES/auto\_files\_instance}. Der Files View bietet einen HDFS Dateibrowser mit Funktionalitäten wie Datei-Upload direkt von der lokalen Maschine, Ordnererstellung und Rechteverwaltung. Nicht alle Nutzer der Sandbox haben die nötigen Rechte zur Ausführung der Befehle. Daher sollte man sich mit dem dafür vorgesehenen Nutzer\footnote{https://www.cloudera.com/tutorials/learning-the-ropes-of-the-hdp-sandbox.html\#login-credentials} \verb|user: maria_dev| \verb|password: maria_dev| in Ambari einloggen. Man kann über den Files View aber nur eine Datei zur Zeit hochladen. Das Hochladen von Archiven (gestestet mit \verb|.tar.gz| und \verb|.jar|) schließt ebenfalls nie ab. Da für den nachfolgenden Schritt ein JAR aus dem HDFS als Input eingebunden werden soll, wird ein HDFS Client Prozess verwendet, der mit dem Hadoop Cluster verbunden ist. Dafür ist es nötig, Hadoop lokal installiert zu haben, oder man kopiert erst per \verb|scp| die Dateien auf das lokale Dateisystem eines Nodes im Cluster, auf dem ein HDFS Client läuft. Hierfür verwendet man zum Beispiel den NameNode. 
 \par
-\textbf{Schritt 1} ist das Erstellen des JARs \verb|ncdc.jar| mit den Eingabedateien des NCDC (siehe Abb. \ref{fig:ncdc jar local}). Hadoop wird dieses nachher dem MapReduce Job bereitstellen und automatisch entpacken. \textbf{Schritt 2} ist das Erstellen der Textdatei \verb|file_names.txt| mit den Dateipfaden der Unterordner des JARs (siehe Abb. \ref{fig:file names txt local}). Diese Datei wird der Input des MapReduce-Jobs. 
+\textbf{Schritt 1} ist das Erstellen des JARs \verb|ncdc.jar| mit den Eingabedateien des NCDC (siehe Abb. \ref{fig:ncdc jar local}). Hadoop wird dieses nachher dem MapReduce Job bereitstellen und automatisch entpacken. \textbf{Schritt 2} ist das Erstellen der Textdatei \verb|file_names.txt| mit den Dateipfaden der Unterordner des JARs (siehe Abb. \ref{fig:file names txt local}). Diese Datei wird der Input des MapReduce Jobs. 
 
 \begin{figure}[ht]
     \centering
@@ -127,7 +127,7 @@ Es gibt verschiedene Wege, um Dateien ins HDFS zu laden\footnote{3 Beispiele: ht
     \label{fig:file names txt local}
 \end{figure}
 
-In \textbf{Schritt 3} gilt es, die bisher erstellten Dateien ins HDFS zu übertragen. Dazu muss man sich per \verb|ssh| als Benutzer \verb|maria_dev| mit der Sandbox verbinden. Um die Ordnerstruktur im HDFS zu erstellen, nutzt man entweder den Ambari File View, oder den Befehl \verb|hdfs dfs -mkdir -p /user/maria_dev/input|. \verb|hdfs| ist das Programm zur Interaktion mit dem Hadoop Distributed File System. \verb|dfs| startet die \textbf{Filesystem Shell}, mit der man eine Reihe von ''shell-artigen'' Kommandos\footnote{https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/FileSystemShell.html} direkt auf dem HDFS anwenden kann. An dieser Stelle könnte zum Beispiel auch \verb|dfsadmin| stehen, wenn es um die Administration des Dateisystems als solches ginge (einen DataNode abschalten etc.). FS Shell Commands beginnen mit einem Bindestrich, darauf folgt ein Befehl und dahinter kommen die Parameter. \verb|-mkdir -p /user/maria_dev/input| funktoniert genau wie sein Gegenstück aus einer normalen Shell. Ist die Ordnerstruktur erstellt, kann man von seiner lokalen Maschine mit \verb|scp -P <Port> <lokaler Pfad> maria_dev@<Hostname>:<Host Pfad>| die bisher erstellten Dateien (JAR und Textdatei) auf das lokale Dateisystem des NameNodes (der Sandbox) kopieren(Abb. \ref{fig:scp transfer}). Anschließend werden diese per FS Shell mit dem Befehl \verb|-moveFromLocal| in das HDFS geladen, damit die Dateien vom lokalen Dateisystem des NameNodes entfernt werden, nachdem sie im HDFS gespeichert wurden (Abb. \ref{fig:hdfs move}).
+In \textbf{Schritt 3} gilt es, die bisher erstellten Dateien ins HDFS zu übertragen. Dazu muss man sich per \verb|ssh| als Benutzer \verb|maria_dev| mit der Sandbox verbinden. Um die Ordnerstruktur im HDFS zu erstellen, nutzt man entweder den Ambari File View, oder den Befehl \verb|hdfs dfs -mkdir -p /user/maria_dev/input|. \verb|hdfs| ist das Programm zur Interaktion mit dem Hadoop Distributed File System. \verb|dfs| startet die \textbf{Filesystem Shell}, mit der man eine Reihe von ''shell-artigen'' Kommandos\footnote{https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/FileSystemShell.html} direkt auf dem HDFS anwenden kann. An dieser Stelle könnte zum Beispiel auch \verb|dfsadmin| stehen, wenn es um die Administration des Dateisystems als solches ginge (einen DataNode abschalten etc.). FS Shell Commands beginnen mit einem Bindestrich, darauf folgt ein Befehl und dahinter kommen die Parameter. \verb|-mkdir -p /user/maria_dev/input| funktoniert genau wie sein Gegenstück aus einer normalen Shell. Der Ordner \verb|input| sollte noch für alle Benutzer als schreibbar markiert werden, da dort hin später die zusammengefassten CSV-Dateien geschrieben werden sollen. Dazu dient der Befehl \verb|hdfs dfs -chmod 777 /user/maria_dev/input|. Ist die Ordnerstruktur erstellt, kann man von seiner lokalen Maschine mit \verb|scp -P <Port> <lokaler Pfad> maria_dev@<Hostname>:<Host Pfad>| die bisher erstellten Dateien (JAR und Textdatei) auf das lokale Dateisystem des NameNodes (der Sandbox) kopieren(Abb. \ref{fig:scp transfer}). Anschließend werden diese per FS Shell mit dem Befehl \verb|-moveFromLocal| in das HDFS geladen, damit die Dateien vom lokalen Dateisystem des NameNodes entfernt werden, nachdem sie im HDFS gespeichert wurden (Abb. \ref{fig:hdfs move}).
 
 \begin{figure}[ht]
     \centering
@@ -139,16 +139,28 @@ In \textbf{Schritt 3} gilt es, die bisher erstellten Dateien ins HDFS zu übertr
     \label{fig:hdfs move}
 \end{figure}
 
-\textbf{Schritt 4} ist das Schreiben eines Bash Skripts, welches später als Mapper-Klasse fungiert. Zum Zusammenführen der Dateien wird nicht die Java API von MapReduce, sondern die Streaming API von Hadoop\footnote{https://hadoop.apache.org/docs/stable/hadoop-streaming/HadoopStreaming.html} verwendet. Diese erlaubt es, völlig sprachenunabhängig MapReduce-Jobs zu schreiben. Man kann als Mapper und/oder Reducer dabei jeweils eigene Skripte oder Binaries verwenden. Jeder Mapper-Prozess führt eine Instanz des angegebenen Mapper-Skripts aus und füttert ihm, sofern nicht ein anderes InputFormat bestimmt wurde, Zeile für Zeile den Inhalt des ihm zugeteilten InputSplits als Key-Value-Paare auf \verb|stdin|. \verb|stdout| des Skripts wird wiederum vom Mapper zeilenweise als Key-Value-Paar gesammelt und an die Reducer weitergeleitet, wo der Prozess genauso abläuft. Das Skript ist in Listing \ref{lst:ncdc concatenate script} bis auf einige Kommentare abgebildet. Das gesamte Skript findet sich im Appendix \ref{appendix lst:ncdc concatenate script}.    
+\textbf{Schritt 4} ist das Schreiben eines Bash Skripts, welches später als Mapper-Klasse fungiert. Zum Zusammenführen der Dateien wird nicht die Java API von MapReduce, sondern die Streaming API von Hadoop\footnote{https://hadoop.apache.org/docs/stable/hadoop-streaming/HadoopStreaming.html} verwendet. Diese erlaubt es, völlig sprachenunabhängig MapReduce Jobs zu schreiben. Man kann als Mapper und/oder Reducer dabei jeweils eigene Skripte oder Binaries verwenden. Jeder Mapper-Prozess führt eine Instanz des angegebenen Mapper-Skripts aus und füttert ihm, sofern nicht ein anderes InputFormat bestimmt wurde, Zeile für Zeile den Inhalt des ihm zugeteilten InputSplits als Key-Value-Paare auf \verb|stdin|. \verb|stdout| des Skripts wird wiederum vom Mapper zeilenweise als Key-Value-Paar gesammelt und an die Reducer weitergeleitet, wo der Prozess genauso abläuft. Das Skript ist in Listing \ref{lst:ncdc concatenate script} bis auf einige Kommentare abgebildet. Das gesamte Skript findet sich im Appendix \ref{appendix lst:ncdc concatenate script}.    
 
 \lstinputlisting[language=bash, caption={Bash Skript als Mapper-Klasse}, linerange={28-51}, label={lst:ncdc concatenate script}]{code/concatenate_ncdc_data.sh}
 
 Mit \verb|read offset inputfile| liest das Skript das Key-Value-Paar von \verb|stdin| ein. Durch das später bei der Ausführung angegebene InputFormat \verb|NLineInputFormat| ist das erste Wort der Zeile der Offset der Zeile zum Dateianfang. Diese Information ist für diesen Job nicht relevant. Im Rest der Zeile steht der Inhalt der ürsprünglichen Zeile, in diesem Fall ein Dateiname wie \verb|ncdc.jar/20xx.tar.gz|. 
-Das Archiv aus dem \verb|ncdc.jar| wird in einen Unterordner in der Laufzeitumgebung des MapReduce-Jobs entpackt. Anschließend werden alle darin befindlichen CSV-Dateien zu einer Datei vereint. Diese resultierende Datei wird zum Schluss wieder komprimiert und mit dem Befehl \verb|hdfs dfs -put - <Pfad>| im HDFS abgespeichert. 
+Das Archiv aus dem \verb|ncdc.jar| wird in einen Unterordner in der Laufzeitumgebung des MapReduce Jobs entpackt. Anschließend werden alle darin befindlichen CSV-Dateien zu einer Datei vereint. Diese resultierende Datei wird zum Schluss wieder komprimiert und mit dem Befehl \verb|hdfs dfs -put - <Pfad>| im HDFS abgespeichert. 
 \par
-\textbf{Schritt 5} besteht aus dem Zusammenstellen des Befehls zur Ausführung des MapReduce-Jobs (siehe Listing \ref{lst:ncdc concatenate start script}). Der vollständig dokumentierte Befehl ist in Appendix \ref{appendix lst:ncdc concatenate start script} zu finden. 
+\textbf{Schritt 5}:Ist das Skript geschrieben, könnte es wieder per \verb|scp| und \verb|hdfs dfs| in das HDFS übertragen werden. An dieser Stelle soll aber der Ambari File View gezeigt werden. Zu diesem navigiert man wie bereits in Abschnitt \ref{chap:fund sec:core sub:handson hdfs} beschrieben und wechselt über die grafische Oberfläche in den Zielordner \verb|/user/maria_dev/input|. Über den Upload Button oben rechts kann man die Datei direkt von seinem lokalen Rechner ins HDFS laden. Am Ende sollte der Inhalt des Ordners aussehen wie in Abbildung \ref{fig:ncdc files hdfs}. Das Skript muss noch für alle Nutzer als ausführbar markiert werden, damit der MapReduce Job es später benutzen kann. Dafür wählt man die Datei an, klickt oben links auf \verb|Permissions| und setzt sie entsprechend Abbildung \ref{fig:concat script permissions}. Man könnte hierfür auch das HDFS CLI mit dem Befehl \verb|hdfs dfs -chmod 755 <Pfad>| verwenden.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\textwidth]{ncdc_files_on_hdfs}
+    \caption[Upload der NCDC Datensätze]{Upload der NCDC Datensätze}
+    \label{fig:ncdc files hdfs}
+    \includegraphics[width=0.5\textwidth]{script_permissions}
+    \caption[Setzen von Dateiberechtigungen im Ambari File View]{Setzen von Dateiberechtigungen im Ambari File View}
+    \label{fig:concat script permissions}
+\end{figure}
+
+\textbf{Schritt 6} besteht aus dem Zusammenstellen des Befehls zur Ausführung des MapReduce Jobs (siehe Listing \ref{lst:ncdc concatenate start script}). Der vollständig dokumentierte Befehl ist in Appendix \ref{appendix lst:ncdc concatenate start script} zu finden. 
 \begin{itemize}
-    \item Zeile 1 weist Hadoop an, ein JAR auszuführen. Es wird der Class Path zum Hadoop Streaming JAR angegeben, welches mit dem Framework mitgeliefert wird.
+    \item Zeile 1 weist Hadoop an, ein JAR auszuführen. Dateipfad des Hadoop Streaming JARs angegeben, welches mit dem Framework mitgeliefert wird.
     \item Zeile 2 sorgt dafür, dass Hadoop das im HDFS gespeicherte JAR \verb|ncdc.jar| in die Laufzeitumgebung des MapReduce Jobs kopiert und automatisch entpackt. Prozesse können während des Jobs unter dem Pfad \verb|ncdc.jar| auf die darin enthaltenen Dateien (hier die TARs mit den jährlichen Datensätzen) zugreifen.
     \item Zeile 3 weist Hadoop eigentlich an, die Mapper-Klasse vom lokalen Dateisystem auf alle am Job beteiligten Nodes zu kopieren, damit sie dort lokal zur Verfügung steht. Durch das Präfix \verb|hdfs://host:port/| teilt man Hadoop mit, dass die Datei bereits im HDFS liegt. Mit \verb|\#concatenate\_ncdc\_data.sh| am Ende des Pfades gibt man der Datei einen Alias, damit man in der \verb|-mapper| Option nicht wieder den vollen Pfad angeben muss.      
     \item Mit \verb|-D| kriegt ein Parameter Priorität über eine Einstellung, die bereits in Konfigurationsdateien gesetzt sind.
@@ -157,26 +169,23 @@ Das Archiv aus dem \verb|ncdc.jar| wird in einen Unterordner in der Laufzeitumge
     \item Zeile 6 gibt den Pfad zur Datei im HDFS an. Anders als bei der Angabe des mitzuliefernden JARs muss bei den Parametern für Input und Output kein vollständiger HDFS-Pfad angegeben werden. MapReduce erwartet standardmäßig, dass es sich dabei um Verzeichnisse und Dateien im HDFS handelt.
     \item Zeile 7 gibt die Java Klasse des InputFormats an. Diese gehört zum Hadoop Framework und ist im Java Class Path der Ausführungsumgebung verfügbar. Mit \verb|NLineIn-| \verb|putFormat| werden einem Mapper \textit{N} Zeilen aus dem InputSplit als Eingabe gegeben. \textit{N} ist standardmäßig \verb|1|. 
     \item Zeile 8 gibt den Pfad an, unter dem die Reducer ihre Ausgabedateien ablegen werden. Es muss sich hierbei um einen Ordner handeln, der noch nicht existiert. Im HDFS können Dateien nicht einfach überschrieben werden. Daher dürfen Ausgabeordner grundsätzlich nicht vorher existieren.
-    \item Zeile 9 gibt die Mapper-Klasse an. Würde die Java API statt der Streaming API verwendet, stünde hier eine Java Klasse. Hier wird der Alias aus Zeile 3 angegeben.
+    \item Zeile 9 gibt die Mapper-Klasse an. Würde die Java API statt der Streaming API verwendet, stünde hier eine Java Klasse. Es wird der Alias aus Zeile 3 benutzt.
 \end{itemize}
-
 
 \lstinputlisting[language=bash, linerange={7-15}, caption={Startskript für den NCDC Concatenation MapReduce Job}, label={lst:ncdc concatenate start script}]{code/concat_files_start.sh}
 
+\textbf{Schritt 7} 
+Sind alle Dateien an den richtigen Orten platziert, kann man sich erneut als \verb|maria_dev| per \verb|ssh| auf den NameNode verbinden und den Befehl aus Schritt 6 absetzen. Die Ausführung kann mehrere Minuten dauern. Am Ende sollte die Konsole eine ähnliche Ausgabe wie in Abbildung \ref{fig:ncdc concat console output} zeigen. Es wurden der Übersicht halber viele Zeilen in der Abbildung entfernt.
+
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\textwidth]{ncdc_files_on_hdfs}
-    \caption[Upload der NCDC Datensätze]{Upload der NCDC Datensätze}
-    \label{fig:ncdc files hdfs}
+    \includegraphics[width=\textwidth]{ncdc_concat_output}
+    \caption[MapReduce Konsolenausgabe]{MapReduce Konsolenausgabe}
+    \label{fig:ncdc concat console output}
 \end{figure}
 
-
-
-
-
-
-
-
+\textbf{Schritt 8}
+Betrachtung der Ergebnisse
 \begin{comment}
 Daher wird in diesem Beispiel stattdessen das \textbf{WebHDFS}\footnote{https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-hdfs/WebHDFS.html} benutzt.
 \par
