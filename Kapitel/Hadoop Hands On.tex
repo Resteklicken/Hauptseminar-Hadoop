@@ -36,7 +36,7 @@ Im Tab \textit{Configs} kann man die sonst über viele XML-Dateien verstreuten E
 
 
 \section{Fallstudie Globales Wetter}
-Als Fallstudie für die Nutzung von Hadoop werden die täglichen Zusammenfassungen aller Wetterstationen der Welt aus dem Katalog der National Centers for Environmental Information\footnote{https://www.ncei.noaa.gov/access/search/data-search/global-summary-of-the-day} benutzt. Dieses Beispiel wurde größtenteils entnommen aus \citefield[\textit{(S. 19-30, 693-695)}]{white_hadoop_2015}{title}. Da durch das lokale Setup die Kapazitäten von Hadoop auf die des Host-Computers beschränkt sind, werden hier nur die Datensätze der Jahre 2016 bis 2022 in komprimierten Archiven heruntergeladen\footnote{Download: https://www.ncei.noaa.gov/data/global-summary-of-the-day/archive/}. Diese enthalten jeweils die gesammelten Aufzeichnungen eines Jahres in Form von CSV-Dateien mit geringer Dateigröße (siehe Abb. \ref{fig:ncdc files local}). Das HDFS zeigt jedoch seine Stärken erst bei Datensätzen im Gigabyte- bis Terabyte-Bereich und kann nicht effizient mit vielen kleinen Dateien umgehen\footcite[vgl.][Assumptions and Goals -> Large Data Sets]{noauthor_apache_nodate-1}. 
+Als Fallstudie für die Nutzung von Hadoop werden die täglichen Zusammenfassungen aller Wetterstationen der Welt aus dem Katalog der National Centers for Environmental Information\cite{docnoaanesdisncdc_global_2022} benutzt. Dieses Beispiel wurde größtenteils entnommen aus \citefield[\textit{(S. 19-30, 693-695)}]{white_hadoop_2015}{title}. Da durch das lokale Setup die Kapazitäten von Hadoop auf die des Host-Computers beschränkt sind, werden hier nur die Datensätze der Jahre 2016 bis 2022 in komprimierten Archiven heruntergeladen\footnote{Download: https://www.ncei.noaa.gov/data/global-summary-of-the-day/archive/}. Diese enthalten jeweils die gesammelten Aufzeichnungen eines Jahres in Form von CSV-Dateien mit geringer Dateigröße (siehe Abb. \ref{fig:ncdc files local}). Das HDFS zeigt jedoch seine Stärken erst bei Datensätzen im Gigabyte- bis Terabyte-Bereich und kann nicht effizient mit vielen kleinen Dateien umgehen\footcite[vgl.][Assumptions and Goals -> Large Data Sets]{noauthor_apache_nodate-1}. 
 
 \begin{figure}[ht]
     \centering
@@ -147,7 +147,7 @@ Im Ordner \verb|/user/maria_dev/input/processed| liegen die zusammengefassten un
 
 \section{Die MapReduce Java API}
 \label{chap:fund sec:core sub:handson mapred java}
-
+Jetzt wo die 12300 einzelnen CSV-Dateien zu sieben großen Dateien zusammengefasst wurden, soll die Maximaltemperatur jedes Monats in Grad Celsius bestimmt werden. Dafür wird ein neuer MapReduce Job geschrieben, diesmal mit der MapReduce Java API\footnote{https://hadoop.apache.org/docs/stable/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html}. Den Aufbau der Datensätzen kann man der offiziellen Referenz entnehmen\footnote{https://www.ncei.noaa.gov/data/global-summary-of-the-day/doc/readme.txt}. Jedes Feld einer Zeile ist in doppelte Anführungszeichen eingefasst und einzelne Felder sind mit Kommata voneinander getrennt. Das Datum steht im zweiten Feld im Format \verb|"jjjj-mm-tt"|, auch wenn in der Referenz \verb|"mm/dd/yyyy"| steht. Die Tageshöchsttemperatur steht im 21. Feld in Grad Fahrenheit mit einer Nachkommastelle Genauigkeit. Ein Wert von \verb|"9999.9"| denotiert hier einen fehlenden Messwert und muss dementsprechend gefiltert werden. Auch gilt es zu beachten, dass Headerzeilen herausgefiltert und die Ausgabewerte von Grad Fahrenheit zu Grad Celsius umgerechnet werden müssen.
 
 
 
