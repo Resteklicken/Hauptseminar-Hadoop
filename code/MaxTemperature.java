@@ -11,7 +11,7 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 public class MaxTemperature {
 
-    public static class WeatherMapper
+    public static class TemperatureMapper
          extends Mapper<LongWritable, Text, Text, FloatWritable>{
 
       private final static String invalidReading = "9999.9";
@@ -25,11 +25,13 @@ public class MaxTemperature {
         if (!line.startsWith(headerLineStart))  {
           String[] csvFields = line.split(",");
           if (!(csvFields[temperaturePosition].equals(invalidReading)))  {
-            String date = csvFields[datePosition];
-            double temperature = Double.parseDouble(csvFields[temperaturePosition]);
+            String monthYear = csvFields[datePosition].substring(0, 7);
+      
+            double tempFahrenheit = Double.parseDouble(csvFields[temperaturePosition]);
+            double tempCelsius = (tempFahrenheit - 32.0) / 1.8;
 
-            Text outKey = new Text(date);
-            FloatWritable outValue = new FloatWritable(temperature);
+            Text outKey = new Text(monthYear);
+            FloatWritable outValue = new FloatWritable(tempCelsius);
             context.write(outKey, outValue);
           }
         }
@@ -37,18 +39,19 @@ public class MaxTemperature {
       }
     }
   
-    public static class MonthReducer
+    public static class TemperatureReducer
          extends Reducer<Text,FloatWritable,Text,FloatWritable> {
       private FloatWritable result = new FloatWritable();
-  
-      public void reduce(Text key, Iterable<IntWritable> values,
+      
+      public void reduce(Text key, Iterable<FloatWritable> values,
                          Context context
                          ) throws IOException, InterruptedException {
-        int sum = 0;
-        for (IntWritable val : values) {
-          sum += val.get();
+        double max = -100000.0;
+        for (FloatWritable val : values) {
+          double nextTemp = val.get();
+          if (nextTemp > max) max = nextTemp;
         }
-        result.set(sum);
+        result.set(max);
         context.write(key, result);
       }
     }
@@ -56,12 +59,12 @@ public class MaxTemperature {
     public static void main(String[] args) throws Exception {
       Configuration conf = new Configuration();
       Job job = Job.getInstance(conf, "max temp");
-      job.setJarByClass(WordCount.class);
-      job.setMapperClass(TokenizerMapper.class);
-      job.setCombinerClass(IntSumReducer.class);
-      job.setReducerClass(IntSumReducer.class);
+      job.setJarByClass(MaxTemperature.class);
+      job.setMapperClass(TemperatureMapper.class);
+      job.setCombinerClass(TemperatureReducer.class);
+      job.setReducerClass(TemperatureMapper.class);
       job.setOutputKeyClass(Text.class);
-      job.setOutputValueClass(IntWritable.class);
+      job.setOutputValueClass(FloatWritable.class);
       FileInputFormat.addInputPath(job, new Path(args[0]));
       FileOutputFormat.setOutputPath(job, new Path(args[1]));
       System.exit(job.waitForCompletion(true) ? 0 : 1);
