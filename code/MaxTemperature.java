@@ -25,8 +25,9 @@ public class MaxTemperature {
         String line = value.toString();
         if (!line.startsWith(headerLineStart))  {
           String[] csvFields = line.split(",");
+          csvFields[temperaturePosition] = csvFields[temperaturePosition].replaceAll("\"","").strip();
           if (!(csvFields[temperaturePosition].equals(invalidReading)))  {
-            String monthYear = csvFields[datePosition].substring(0, 7);
+            String monthYear = csvFields[datePosition].replaceAll("\"","").strip().substring(0, 7);
       
             double tempFahrenheit = Double.parseDouble(csvFields[temperaturePosition]);
             double tempCelsius = (tempFahrenheit - 32.0) / 1.8;
