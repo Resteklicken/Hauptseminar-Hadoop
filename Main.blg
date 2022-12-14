@@ -1,15 +1,15 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'Main.blg'
-[44] biber:340> INFO - === Mi Dez 14, 2022, 20:49:36
-[52] Biber.pm:418> INFO - Reading 'Main.bcf'
-[86] Biber.pm:978> INFO - Found 21 citekeys in bib section 0
-[93] Biber.pm:4401> INFO - Processing section 0
-[99] Biber.pm:4592> INFO - Looking for bibtex file 'Hauptseminar Hadoop.bib' for section 0
-[100] bibtex.pm:1713> INFO - LaTeX decoding ...
-[112] bibtex.pm:1518> INFO - Found BibTeX data source 'Hauptseminar Hadoop.bib'
-[168] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[168] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[168] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[168] Biber.pm:4227> INFO - No sort tailoring available for locale 'de-DE'
-[175] bbl.pm:654> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
-[181] bbl.pm:757> INFO - Output to Main.bbl
+[88] biber:340> INFO - === Do Dez 15, 2022, 00:45:45
+[101] Biber.pm:418> INFO - Reading 'Main.bcf'
+[161] Biber.pm:978> INFO - Found 21 citekeys in bib section 0
+[172] Biber.pm:4401> INFO - Processing section 0
+[182] Biber.pm:4592> INFO - Looking for bibtex file 'Hauptseminar Hadoop.bib' for section 0
+[184] bibtex.pm:1713> INFO - LaTeX decoding ...
+[207] bibtex.pm:1518> INFO - Found BibTeX data source 'Hauptseminar Hadoop.bib'
+[307] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[307] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[307] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[307] Biber.pm:4227> INFO - No sort tailoring available for locale 'de-DE'
+[321] bbl.pm:654> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
+[328] bbl.pm:757> INFO - Output to Main.bbl

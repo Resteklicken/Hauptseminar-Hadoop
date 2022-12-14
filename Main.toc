@@ -19,11 +19,12 @@
 \contentsline {subsection}{\numberline {3.6.2}Die Mapper-Klasse}{21}{subsection.3.6.2}%
 \contentsline {subsection}{\numberline {3.6.3}Die Reducer-Klasse}{22}{subsection.3.6.3}%
 \contentsline {subsection}{\numberline {3.6.4}Die Treiber-Klasse}{22}{subsection.3.6.4}%
-\contentsline {chapter}{\numberline {4}Das Hadoop Ecosystem}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Datenhaltung}{23}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Cluster-Verwaltung / -Konfiguration}{25}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Datentransfer}{25}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Datenverarbeitung}{25}{section.4.4}%
+\contentsline {subsection}{\numberline {3.6.5}Ausführung der MapReduce-Applikation}{23}{subsection.3.6.5}%
+\contentsline {chapter}{\numberline {4}Das Hadoop Ecosystem}{24}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Datenhaltung}{24}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Cluster-Verwaltung / -Konfiguration}{26}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Datentransfer}{26}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Datenverarbeitung}{26}{section.4.4}%
 \contentsline {chapter}{\nonumberline Appendix}{27}{chapter*.20}%
 \contentsline {section}{\numberline {1}Mapper-Skript für NCDC Datenbereinigung}{27}{section.Alph0.1}%
 \contentsline {section}{\numberline {2}Startbefehl für die NCDC Datenbereinigung}{29}{section.Alph0.2}%
