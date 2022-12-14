@@ -15,21 +15,22 @@ public class MaxTemperature {
     public static class TemperatureMapper
          extends Mapper<LongWritable, Text, Text, DoubleWritable>{
 
-      private final static String invalidReading = "9999.9";
+      private final static String invalidReadingOne = "9999.9";
+      private final static String invalidReadingTwo = "999.9";
       private final static String headerLineStart = new String("\"STATION\"");
       private final static int temperaturePosition = 20;
-      private final static int datePosition = 20;
+      private final static int datePosition = 1;
   
       public void map(LongWritable key, Text value, Context context
                       ) throws IOException, InterruptedException {
         String line = value.toString();
         if (!line.startsWith(headerLineStart))  {
           String[] csvFields = line.split(",");
-          csvFields[temperaturePosition] = csvFields[temperaturePosition].replaceAll("\"","").strip();
-          if (!(csvFields[temperaturePosition].equals(invalidReading)))  {
-            String monthYear = csvFields[datePosition].replaceAll("\"","").strip().substring(0, 7);
+          String temperatureString = csvFields[temperaturePosition].replaceAll("\"","").trim();
+          if (!temperatureString.equals(invalidReadingOne) && !temperatureString.equals(invalidReadingTwo))  {
+            String monthYear = csvFields[datePosition].replaceAll("\"","").trim().substring(0, 7);
       
-            double tempFahrenheit = Double.parseDouble(csvFields[temperaturePosition]);
+            double tempFahrenheit = (double) Math.round(Double.parseDouble(temperatureString) * 100) / 100;
             double tempCelsius = (tempFahrenheit - 32.0) / 1.8;
 
             Text outKey = new Text(monthYear);
