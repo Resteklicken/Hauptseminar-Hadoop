@@ -1,70 +1,29 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {chapter}{\numberline {1}Hadoop Grundlagen}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Technischer und geschichtlicher Hintergrund}{1}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Anforderungen von Big Data}{1}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Vertikale Skalierung}{2}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Horizontale Skalierung}{2}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}Historie}{3}{subsection.1.1.4}%
-\contentsline {section}{\numberline {1.2}Hadoop Core}{3}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}HDFS}{4}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}MapReduce}{4}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}YARN}{7}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}Umgang mit HDFS und MapReduce}{8}{subsection.1.2.4}%
-\contentsline {chapter}{\numberline {2}ETL mit Pig}{21}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Anwendungsfälle}{21}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Architektur}{21}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Pig Latin}{21}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Praxis}{21}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Hinzufügen zum Cluster}{21}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Anwendung auf dem Cluster}{21}{subsection.2.4.2}%
-\contentsline {chapter}{\numberline {3}Data Ingestion}{23}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Sqoop}{23}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Flume}{23}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Datawarehousing mit Hive}{25}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Anwendungsfälle}{25}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Unterschiede zu Pig}{25}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}Architektur}{25}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Interaktion}{25}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}HiveQL}{25}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}CLI}{25}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Java API}{25}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Praxis}{25}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Hinzufügen zum Cluster}{25}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Einrichtung einer Datenbank}{25}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Einlesen von Daten im CLI}{25}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Einlesen von Daten mit Sqoop}{25}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Absetzen einer Query}{25}{subsection.4.4.5}%
-\contentsline {chapter}{\numberline {5}NoSQL mit HBase}{27}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Anwendungsfälle}{27}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}CAP-Theorem}{27}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}ACID und BASE}{27}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}Architektur}{27}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Interaktion}{27}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}HBase Shell}{27}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Java API}{27}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}Praxis}{27}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Hinzufügen zum Cluster}{27}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Einrichtung einer Datenbank}{27}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}Einlesen von Daten}{27}{subsection.5.4.3}%
-\contentsline {subsection}{\numberline {5.4.4}Datenmigration aus einem RDBMS}{27}{subsection.5.4.4}%
-\contentsline {subsection}{\numberline {5.4.5}Absetzen einer Query}{27}{subsection.5.4.5}%
-\contentsline {chapter}{\numberline {6}Streaming mit Kafka}{29}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Anwendungsfälle}{29}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Architektur}{29}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Interaktion}{29}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Who knows}{29}{subsection.6.3.1}%
-\contentsline {section}{\numberline {6.4}Praxis}{29}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Hinzufügen zum Cluster}{29}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Maybe, vielleicht kann man ja was zeigen}{29}{subsection.6.4.2}%
-\contentsline {chapter}{\numberline {7}Hadoop heute}{31}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Aktuelle Anwendungsbeispiele zu Hadoop}{31}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}AirBnB}{31}{subsection.7.1.1}%
-\contentsline {section}{\numberline {7.2}Apache Spark als Gold Standard}{31}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Kann eh alles besser}{31}{subsection.7.2.1}%
-\contentsline {chapter}{\nonumberline Appendix}{33}{chapter*.9}%
-\contentsline {section}{\numberline {1}Mapper-Skript für Hadoop Streaming}{33}{section.Alph0.1}%
-\contentsline {section}{\numberline {2}Startskript für den NCDC Concatenation Job}{35}{section.Alph0.2}%
-\contentsline {chapter}{\nonumberline Literatur}{37}{chapter*.10}%
+\contentsline {chapter}{\numberline {1}Technischer und geschichtlicher Hintergrund}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Anforderungen von Big Data}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Vertikale Skalierung}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Horizontale Skalierung}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Historie}{3}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Hadoop Core}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}HDFS}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}MapReduce}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}YARN}{9}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Umgang mit HDFS und MapReduce}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Single Node Setup}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Hadoop und Ambari in der HDP Sandbox VM}{11}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Fallstudie Globales Wetter}{13}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Umgang mit dem HDFS}{14}{section.3.4}%
+\contentsline {section}{\numberline {3.5}MapReduce mit der Hadoop Streaming API}{18}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Die MapReduce Java API}{20}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Das Hadoop Ecosystem}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Datenhaltung}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Cluster-Verwaltung / -Konfiguration}{25}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Datentransfer}{25}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Datenverarbeitung}{25}{section.4.4}%
+\contentsline {chapter}{\nonumberline Appendix}{27}{chapter*.20}%
+\contentsline {section}{\numberline {1}Mapper-Skript für Hadoop Streaming}{27}{section.Alph0.1}%
+\contentsline {section}{\numberline {2}Startskript für den NCDC Concatenation Job}{29}{section.Alph0.2}%
+\contentsline {chapter}{\nonumberline Literatur}{31}{chapter*.21}%
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
@@ -174,6 +133,12 @@
 \babel@toc {german}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {german}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 

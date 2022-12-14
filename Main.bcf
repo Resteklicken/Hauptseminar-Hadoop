@@ -2407,6 +2407,8 @@
     <bcf:citekey order="35" intorder="1">white_hadoop_2015</bcf:citekey>
     <bcf:citekey order="36" intorder="1">noauthor_apache_nodate-1</bcf:citekey>
     <bcf:citekey order="37" intorder="1">white_hadoop_2015</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">van_der_weel_hadoop_2015</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">van_der_weel_hadoop_2015</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

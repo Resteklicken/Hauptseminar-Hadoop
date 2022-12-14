@@ -655,6 +655,48 @@
       \verb https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html
       \endverb
     \endentry
+    \entry{van_der_weel_hadoop_2015}{online}{}
+      \name{author}{1}{}{%
+        {{hash=09fe77997d8e9bc48400c82acf4ce0fd}{%
+           family={Weel},
+           familyi={W\bibinitperiod},
+           given={Harald},
+           giveni={H\bibinitperiod},
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+      }
+      \strng{namehash}{09fe77997d8e9bc48400c82acf4ce0fd}
+      \strng{fullhash}{09fe77997d8e9bc48400c82acf4ce0fd}
+      \strng{bibnamehash}{09fe77997d8e9bc48400c82acf4ce0fd}
+      \strng{authorbibnamehash}{09fe77997d8e9bc48400c82acf4ce0fd}
+      \strng{authornamehash}{09fe77997d8e9bc48400c82acf4ce0fd}
+      \strng{authorfullhash}{09fe77997d8e9bc48400c82acf4ce0fd}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Hadoop has evolved into a complex ecosystem, consisting of several open source products , frameworks and initiatives by the Apache organization. This article aims to provide an overview of the eco-system in a structured way. The diagram is organized in four tiers: Management / Configuration: Central functions to manage resources and configurations Storage: Functions for}
+      \field{day}{26}
+      \field{langid}{dutch}
+      \field{month}{1}
+      \field{title}{The Hadoop ecosystem}
+      \field{titleaddon}{{SynTouch}}
+      \field{urlday}{8}
+      \field{urlmonth}{12}
+      \field{urlyear}{2022}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Hadoop_ecosystem_overview.png:/home/rene/Documents/Hauptseminar/img/Hadoop_ecosystem_overview.png:image/png;Snapshot:/home/rene/Zotero/storage/XPLAK9AK/the-hadoop-ecosystem.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.syntouch.nl/the-hadoop-ecosystem/
+      \endverb
+      \verb{url}
+      \verb https://www.syntouch.nl/the-hadoop-ecosystem/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
