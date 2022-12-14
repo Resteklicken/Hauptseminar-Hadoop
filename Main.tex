@@ -82,7 +82,11 @@
 	citecolor=blue,
 	linkcolor=blue,
 }
-\usepackage{scrhack}				 % unterdrückt Fehlermeldung von listings
+\usepackage{scrhack}				 % Unterdrückt Fehlermeldung von listings
+\usepackage{etoolbox}				 % Entfernt doppelte leere Seite zwischen Kapiteln
+\makeatletter
+\patchcmd{\scr@startchapter}{\if@openright\cleardoublepage\else\clearpage\fi}{\clearpage}{}{}
+\makeatother
 \usepackage[
 	sorting = none,
 	style = iso-numeric,

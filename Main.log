@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2022.11.9)  14 DEC 2022 16:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2022.11.9)  14 DEC 2022 16:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -710,24 +710,24 @@ Package babel Info: Importing basic data for american
 ))
 \openout1 = `Main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count432
@@ -748,7 +748,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count438
-Package hyperref Info: Link coloring ON on input line 98.
+Package hyperref Info: Link coloring ON on input line 102.
  (./Main.out) (./Main.out)
 \@outlinefile=\write5
 \openout5 = `Main.out'.
@@ -760,14 +760,14 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 98.
+(scrbook)           before \begin{document} on input line 102.
  (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 \BKM@id=\count439
 ))
-Package scrhack Info: undefining \float@addtolists on input line 98.
+Package scrhack Info: undefining \float@addtolists on input line 102.
 Package biblatex Info: Trying to load language 'ngerman' -> 'ngerman-iso'...
 Package biblatex Info: ... file 'ngerman-iso.lbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex-iso690/ngerman-iso.lbx
@@ -860,14 +860,14 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Main.bbl' found.
  (./Main.bbl)
-Package biblatex Info: Reference section=0 on input line 98.
-Package biblatex Info: Reference segment=0 on input line 98.
+Package biblatex Info: Reference section=0 on input line 102.
+Package biblatex Info: Reference segment=0 on input line 102.
 <./img//mni-logo.pdf, id=4, 1133.23375pt x 146.5475pt>
 File: ./img//mni-logo.pdf Graphic file (type pdf)
 <use ./img//mni-logo.pdf>
-Package pdftex.def Info: ./img//mni-logo.pdf  used on input line 105.
+Package pdftex.def Info: ./img//mni-logo.pdf  used on input line 109.
 (pdftex.def)             Requested size: 387.47061pt x 50.10722pt.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 111.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 115.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 ) [1
@@ -876,178 +876,170 @@ File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img//mni-logo.pdf>] [2
-
-
-] (./Main.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img//mni-logo.pdf>] (./Main.toc)
 \tf@toc=\write6
 \openout6 = `Main.toc'.
 
- [3] [4
-
+ [2
 
 ] (./Main.lof)
 \tf@lof=\write7
 \openout7 = `Main.lof'.
 
- [5] [6
+ [3
+
+] [4
 
 
 ] (./Kapitel/Background.tex
 chapter 1.
 [1
 
-
-] [2] Excluding 'comment' comment.) (./Kapitel/Hadoop Core.tex [3] [4
-
+] [2] Excluding 'comment' comment.) (./Kapitel/Hadoop Core.tex [3]
+chapter 2.
+[4
 
 ]
-chapter 2.
-[5]
-<./img//hdfsarchitecture.png, id=207, 1003.75pt x 604.2575pt>
+<./img//hdfsarchitecture.png, id=195, 1003.75pt x 604.2575pt>
 File: ./img//hdfsarchitecture.png Graphic file (type png)
 <use ./img//hdfsarchitecture.png>
 Package pdftex.def Info: ./img//hdfsarchitecture.png  used on input line 21.
 (pdftex.def)             Requested size: 344.42197pt x 207.3442pt.
- [6 <./img//hdfsarchitecture.png>]
-<./img//MapReduce.jpg, id=218, 1003.75pt x 540.0175pt>
+ [5 <./img//hdfsarchitecture.png>]
+<./img//MapReduce.jpg, id=206, 1003.75pt x 540.0175pt>
 File: ./img//MapReduce.jpg Graphic file (type jpg)
 <use ./img//MapReduce.jpg>
 Package pdftex.def Info: ./img//MapReduce.jpg  used on input line 37.
 (pdftex.def)             Requested size: 430.52583pt x 231.62619pt.
- [7 <./img//MapReduce.jpg>]
-<./img//MapReduce Dataflow.jpg, id=230, 1003.75pt x 192.72pt>
+ [6 <./img//MapReduce.jpg>]
+<./img//MapReduce Dataflow.jpg, id=217, 1003.75pt x 192.72pt>
 File: ./img//MapReduce Dataflow.jpg Graphic file (type jpg)
 <use ./img//MapReduce Dataflow.jpg>
 Package pdftex.def Info: ./img//MapReduce Dataflow.jpg  used on input line 51.
 (pdftex.def)             Requested size: 430.52583pt x 82.66212pt.
- [8 <./img//MapReduce Dataflow.jpg>]) (./Kapitel/Hadoop Hands On.tex [9] [10
-
-
-]
+ [7 <./img//MapReduce Dataflow.jpg>]) (./Kapitel/Hadoop Hands On.tex [8]
 chapter 3.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 10.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [11]
-<./img//cluster_startup.png, id=277, 1831.84375pt x 595.22375pt>
+) [9
+
+]
+<./img//cluster_startup.png, id=261, 1831.84375pt x 595.22375pt>
 File: ./img//cluster_startup.png Graphic file (type png)
 <use ./img//cluster_startup.png>
 Package pdftex.def Info: ./img//cluster_startup.png  used on input line 14.
 (pdftex.def)             Requested size: 430.52583pt x 139.88667pt.
-<./img//hdp_core_processes.png, id=281, 655.44875pt x 526.96875pt>
+<./img//hdp_core_processes.png, id=265, 655.44875pt x 526.96875pt>
 File: ./img//hdp_core_processes.png Graphic file (type png)
 <use ./img//hdp_core_processes.png>
 Package pdftex.def Info: ./img//hdp_core_processes.png  used on input line 23.
 (pdftex.def)             Requested size: 258.31812pt x 207.67998pt.
-<./img//block_repl_factor.png, id=283, 1329.96875pt x 916.42375pt>
+<./img//block_repl_factor.png, id=267, 1329.96875pt x 916.42375pt>
 File: ./img//block_repl_factor.png Graphic file (type png)
 <use ./img//block_repl_factor.png>
 Package pdftex.def Info: ./img//block_repl_factor.png  used on input line 32.
 (pdftex.def)             Requested size: 365.94958pt x 252.16414pt.
- [12 <./img//cluster_startup.png>]
-<./img//ncdc_files.png, id=297, 1089.06876pt x 82.3075pt>
+ [10 <./img//cluster_startup.png>]
+<./img//ncdc_files.png, id=281, 1089.06876pt x 82.3075pt>
 File: ./img//ncdc_files.png Graphic file (type png)
 <use ./img//ncdc_files.png>
 Package pdftex.def Info: ./img//ncdc_files.png  used on input line 43.
 (pdftex.def)             Requested size: 301.36676pt x 22.77591pt.
-<./img//ncdc_archive_content.png, id=298, 615.29875pt x 237.88875pt>
+<./img//ncdc_archive_content.png, id=282, 615.29875pt x 237.88875pt>
 File: ./img//ncdc_archive_content.png Graphic file (type png)
 <use ./img//ncdc_archive_content.png>
 Package pdftex.def Info: ./img//ncdc_archive_content.png  used on input line 44.
 (pdftex.def)             Requested size: 301.36676pt x 116.51567pt.
- [13 <./img//hdp_core_processes.png>] [14 <./img//block_repl_factor.png>]
-<./img//ncdc_jar_local.png, id=326, 591.20876pt x 58.2175pt>
+ [11 <./img//hdp_core_processes.png>] [12 <./img//block_repl_factor.png>]
+<./img//ncdc_jar_local.png, id=309, 591.20876pt x 58.2175pt>
 File: ./img//ncdc_jar_local.png Graphic file (type png)
 <use ./img//ncdc_jar_local.png>
 Package pdftex.def Info: ./img//ncdc_jar_local.png  used on input line 59.
 (pdftex.def)             Requested size: 322.89436pt x 31.79674pt.
-<./img//file_name_list.png, id=327, 536.0025pt x 277.035pt>
+<./img//file_name_list.png, id=310, 536.0025pt x 277.035pt>
 File: ./img//file_name_list.png Graphic file (type png)
 <use ./img//file_name_list.png>
 Package pdftex.def Info: ./img//file_name_list.png  used on input line 62.
 (pdftex.def)             Requested size: 322.89436pt x 166.88594pt.
- [15 <./img//ncdc_files.png> <./img//ncdc_archive_content.png> <./img//ncdc_jar_local.png> <./img//file_name_list.png>]
-<./img//scp_ncdc_transfer.png, id=339, 922.44624pt x 221.82875pt>
+ [13 <./img//ncdc_files.png> <./img//ncdc_archive_content.png> <./img//ncdc_jar_local.png> <./img//file_name_list.png>]
+<./img//scp_ncdc_transfer.png, id=322, 922.44624pt x 221.82875pt>
 File: ./img//scp_ncdc_transfer.png Graphic file (type png)
 <use ./img//scp_ncdc_transfer.png>
 Package pdftex.def Info: ./img//scp_ncdc_transfer.png  used on input line 71.
 (pdftex.def)             Requested size: 322.89436pt x 77.64798pt.
-<./img//hdfs_ncdc_move.png, id=340, 867.24pt x 340.27126pt>
+<./img//hdfs_ncdc_move.png, id=323, 867.24pt x 340.27126pt>
 File: ./img//hdfs_ncdc_move.png Graphic file (type png)
 <use ./img//hdfs_ncdc_move.png>
 Package pdftex.def Info: ./img//hdfs_ncdc_move.png  used on input line 74.
 (pdftex.def)             Requested size: 322.89436pt x 126.69278pt.
- [16 <./img//scp_ncdc_transfer.png> <./img//hdfs_ncdc_move.png>]
+ [14 <./img//scp_ncdc_transfer.png> <./img//hdfs_ncdc_move.png>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 81.
  (./code/concatenate_ncdc_data.sh
 consecutive:
 )
-<./img//ncdc_files_on_hdfs.png, id=355, 1543.7675pt x 534.99875pt>
+<./img//ncdc_files_on_hdfs.png, id=338, 1543.7675pt x 534.99875pt>
 File: ./img//ncdc_files_on_hdfs.png Graphic file (type png)
 <use ./img//ncdc_files_on_hdfs.png>
 Package pdftex.def Info: ./img//ncdc_files_on_hdfs.png  used on input line 90.
 (pdftex.def)             Requested size: 387.47061pt x 134.27997pt.
-<./img//script_permissions.png, id=356, 352.31625pt x 321.2pt>
+<./img//script_permissions.png, id=339, 352.31625pt x 321.2pt>
 File: ./img//script_permissions.png Graphic file (type png)
 <use ./img//script_permissions.png>
 Package pdftex.def Info: ./img//script_permissions.png  used on input line 93.
 (pdftex.def)             Requested size: 215.26291pt x 196.25029pt.
- [17] [18 <./img//ncdc_files_on_hdfs.png> <./img//script_permissions.png>] (./code/concat_files_start.sh
+ [15] [16 <./img//ncdc_files_on_hdfs.png> <./img//script_permissions.png>] (./code/concat_files_start.sh
 consecutive:
-) [19]
-<./img//ncdc_concat_console_output.png, id=412, 1344.02126pt x 987.69pt>
+) [17]
+<./img//ncdc_concat_console_output.png, id=395, 1344.02126pt x 987.69pt>
 File: ./img//ncdc_concat_console_output.png Graphic file (type png)
 <use ./img//ncdc_concat_console_output.png>
 Package pdftex.def Info: ./img//ncdc_concat_console_output.png  used on input line 122.
 (pdftex.def)             Requested size: 430.52583pt x 316.38374pt.
-<./img//ncdc_concat_mr_output_files.png, id=414, 1163.34625pt x 546.04pt>
+<./img//ncdc_concat_mr_output_files.png, id=397, 1163.34625pt x 546.04pt>
 File: ./img//ncdc_concat_mr_output_files.png Graphic file (type png)
 <use ./img//ncdc_concat_mr_output_files.png>
 Package pdftex.def Info: ./img//ncdc_concat_mr_output_files.png  used on input line 131.
 (pdftex.def)             Requested size: 344.42197pt x 161.66364pt.
-<./img//ncdc_concat_combined_output_files.png, id=417, 1165.35374pt x 496.85625pt>
+<./img//ncdc_concat_combined_output_files.png, id=400, 1165.35374pt x 496.85625pt>
 File: ./img//ncdc_concat_combined_output_files.png Graphic file (type png)
 <use ./img//ncdc_concat_combined_output_files.png>
 Package pdftex.def Info: ./img//ncdc_concat_combined_output_files.png  used on input line 140.
 (pdftex.def)             Requested size: 344.42197pt x 146.84425pt.
-<./img//buggy_web_view.png, id=418, 956.57375pt x 544.0325pt>
+<./img//buggy_web_view.png, id=401, 956.57375pt x 544.0325pt>
 File: ./img//buggy_web_view.png Graphic file (type png)
 <use ./img//buggy_web_view.png>
 Package pdftex.def Info: ./img//buggy_web_view.png  used on input line 143.
 (pdftex.def)             Requested size: 344.42197pt x 195.88475pt.
-) (./Kapitel/Hadoop Ecosystem.tex [20] [21 <./img//ncdc_concat_console_output.png> <./img//ncdc_concat_mr_output_files.png>] [22 <./img//ncdc_concat_combined_output_files.png> <./img//buggy_web_view.png>]
+) (./Kapitel/Hadoop Ecosystem.tex [18] [19 <./img//ncdc_concat_console_output.png> <./img//ncdc_concat_mr_output_files.png>] [20 <./img//ncdc_concat_combined_output_files.png> <./img//buggy_web_view.png>]
 chapter 4.
-<./img//Hadoop_ecosystem_overview.png, id=438, 1009.7725pt x 807.015pt>
+<./img//Hadoop_ecosystem_overview.png, id=421, 1009.7725pt x 807.015pt>
 File: ./img//Hadoop_ecosystem_overview.png Graphic file (type png)
 <use ./img//Hadoop_ecosystem_overview.png>
 Package pdftex.def Info: ./img//Hadoop_ecosystem_overview.png  used on input line 7.
 (pdftex.def)             Requested size: 430.52583pt x 344.07895pt.
-) [23
+) [21
 
-
-] [24 <./img//Hadoop_ecosystem_overview.png>] [25] [26
+] [22 <./img//Hadoop_ecosystem_overview.png>] [23] [24
 
 
 ] (./Kapitel/Appendix.tex
 chapter without number
-(./code/concatenate_ncdc_data.sh [27
+(./code/concatenate_ncdc_data.sh [25
 
-
-] [28]) (./code/concat_files_start.sh [29])) [30]
+] [26]) (./code/concat_files_start.sh [27])) [28]
 chapter without number
-[31
-
+[29
 
 ]
 
 Package biblatex Warning: No driver for 'video'.
-(biblatex)                Using fallback driver on input line 151.
+(biblatex)                Using fallback driver on input line 155.
 
 
-Package biblatex Warning: No hyphenation patterns for 'dutch' on input line 151.
+Package biblatex Warning: No hyphenation patterns for 'dutch' on input line 155.
 
-[32] (./Main.aux)
+[30] (./Main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1061,18 +1053,18 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25226 strings out of 479930
- 465926 string characters out of 5885661
- 1999856 words of memory out of 5000000
+ 25222 strings out of 479930
+ 465899 string characters out of 5885661
+ 2000872 words of memory out of 5000000
  42730 multiletter control sequences out of 15000+600000
  495272 words of font info for 67 fonts, out of 8000000 for 9000
  18 hyphenation exceptions out of 8191
  108i,9n,106p,10629b,4787s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on Main.pdf (38 pages, 1503091 bytes).
+Output written on Main.pdf (34 pages, 1501811 bytes).
 PDF statistics:
- 1300 PDF objects out of 1440 (max. 8388607)
- 756 compressed objects within 8 object streams
- 301 named destinations out of 1000 (max. 500000)
+ 1278 PDF objects out of 1440 (max. 8388607)
+ 740 compressed objects within 8 object streams
+ 297 named destinations out of 1000 (max. 500000)
  301 words of extra memory for PDF output out of 10000 (max. 10000000)
 
