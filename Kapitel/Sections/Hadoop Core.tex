@@ -68,7 +68,7 @@ Weiterhin haben diverse kommerzielle Anbieter wie Cloudera\footnote{https://de.c
 Cloudanbieter wie Amazon, Google und Microsoft bieten fertig konfigurierte und voll verwaltete Cluster auf ihren jeweiligen Cloudplattformen an (Amazon EMR\footnote{https://aws.amazon.com/emr/features/hadoop/}, Google Dataproc\footnote{https://cloud.google.com/dataproc} und Azure HDInsight\footnote{https://azure.microsoft.com/en-us/products/hdinsight/\#overview}). 
 
 \subsubsection*{Single Node Setup}
-Hadoop bietet unzählige Einstellungsmöglichkeiten während der Installation und sie alle zu behandeln würde den Rahmen dieser Arbeit sprengen. Daher wird in diesem Abschnitt ein VirtualBox Image von Cloudera (die Hortonworks Data Platform (HDP) Sandbox)\footnote{Download: https://www.cloudera.com/downloads/hortonworks-sandbox/hdp.html} genutzt. Dieses kann auf dem eigenen Rechner oder auf einem Remote-Host gestartet werden\footnote{Installation: https://www.cloudera.com/tutorials/sandbox-deployment-and-install-guide.html} und bietet Zugriff auf eine voll konfigurierte Installation von Hadoop im Single Node Modus. Zusätzlich sind noch ergänzende Komponenten aus dem Hadoop Ecosystem installiert, auf die in späteren Kapiteln eingegangen wird.\par
+Hadoop bietet unzählige Einstellungsmöglichkeiten während der Installation und sie alle zu behandeln würde den Rahmen dieser Arbeit sprengen. Daher wird in diesem Abschnitt ein VirtualBox Image von Cloudera (die Hortonworks Data Platform (HDP) Sandbox)\footnote{Download: https://www.cloudera.com/downloads/hortonworks-sandbox/hdp.html} genutzt. Dieses kann auf dem eigenen Rechner oder auf einem Remote-Host gestartet werden\footnote{Installation: https://www.cloudera.com/tutorials/sandbox-deployment-and-install-guide.html} und bietet Zugriff auf eine voll konfigurierte Installation von Hadoop im Single Node Modus. Zusätzlich sind noch ergänzende Komponenten aus dem Hadoop Ecosystem installiert, auf die in späteren Kapiteln eingegangen wird.
 
 \subsubsection*{Hadoop und Ambari in der HDP Sandbox VM}
 Im Single Node Modus laufen alle Hadoop-Prozesse auf \textit{einem} Host(sprich Rechner). Dieser Modus ist für die Entwicklung und zum Testen von Hadoop gedacht, da es keinen praktischen Nutzen bringt, ein Framework zur verteilten Datenverarbeitung ohne die entsprechende Verteilung über einen Cluster zu betreiben. Auch wenn in dieser VM nur ein Cluster bestehend aus einem Node aufgesetzt wurde, steht das Cluster-Verwaltungs-Tool \textbf{Apache Ambari}\footnote{https://ambari.apache.org/} zur Verfügung. Normalerweise ist das Aufsetzen eines Hadoop Clusters mit dem Bearbeiten vieler XML-Konfigurationsdateien und der Ausführung von Start-Bash-Skripten auf allen Nodes verbunden. Auf diese Weise bestimmt man, welcher Node der NameNode des HDFS werden soll, welche Nodes DataNodes werden, wo der ResourceManager von YARN läuft und so weiter. Ambari bietet einem für all das (und noch viel mehr) eine übersichtliche Weboberfläche. Diese erreicht man nach Starten der HDP Sandbox unter \verb|http://localhost:8080|. Die Rechte und Anwendungsszenarien der verschiedenen Nutzeraccounts, eine Anleitung zum (Zurück)setzen des Admin-Passworts und weitere Schrite nach der Installation findet man auf Clouderas Hilfeseite zur Sandbox\footnote{https://www.cloudera.com/tutorials/learning-the-ropes-of-the-hdp-sandbox.html}. Loggt man sich als 'admin' zeitnah nach dem Start der VM in das das Ambari Dashboard ein, kann man im Header des Dashboards auf das Zahnrad klicken und den Prozess in Arbeit sehen, der die Dienste aller Hadoop Komponenten startet (siehe Abb. \ref{fig:cluster startup}). 
@@ -113,18 +113,9 @@ Als Fallstudie für die Nutzung von Hadoop werden die täglichen Zusammenfassung
 Das HDFS und MapReduce arbeiten außerdem mit wenigen großen Dateien wesentlich besser als mit vielen kleinen Dateien.\cite[\textit{(S. 19-30, 693-695)}]{white_hadoop_2015} Deshalb wird der erste Schritt sein, die Daten in das HDFS zu laden. Anschließend wird eine MapReduce-Applikation mit der MapReduce Streaming-API geschrieben. Diese wird nur aus einer Map-Phase bestehen und die Dateien säubern und zusammenzuführen. Zuguterletzt wird eine weitere MapReduce-Applikation mit der Java-API geschrieben, die die Daten auswertet. In späteren Abschnitten werden weitere Komponenten des Hadoop Ecosystems vorgestellt, mit denen die Dateien weiter verarbeitet werden.
 \subsubsection*{Umgang mit dem HDFS}
 \label{chap:fund sec:core sub:handson hdfs}
-Es gibt verschiedene Wege, um Dateien ins HDFS zu laden\footnote{3 Beispiele: https://community.cloudera.com/t5/Support-Questions/Import-data-from-remote-server-to-HDFS/m-p/233149/highlight/true\#M194979}. In der Sandbox wurde ein Ambari View, der \textbf{Files View}\footnote{https://docs.cloudera.com/HDPDocuments/Ambari-2.7.4.0/using-ambari-views/content/\\amb\_using\_files\_view.html}, erstellt. Diesen erreicht man über das Kachel-Icon im Header des Dashboards\footnote{http://<localhost oder Sandbox Hostname>:8080/\#/main/view/FILES/auto\_files\_instance}. Der Files View bietet einen HDFS Dateibrowser mit Funktionalitäten wie Datei-Upload direkt von der lokalen Maschine, Ordnererstellung und Rechteverwaltung. Nicht alle Nutzer der Sandbox haben die nötigen Rechte zur Ausführung der Befehle. Daher sollte man sich mit dem dafür vorgesehenen Nutzer\footnote{https://www.cloudera.com/tutorials/learning-the-ropes-of-the-hdp-sandbox.html\#login-credentials} \verb|user: amy_ds password: amy_ds| in Ambari einloggen. Man kann über den Files View aber nur eine Datei zur Zeit hochladen. Das Hochladen von Archiven (gestestet mit \verb|.tar.gz| und \verb|.jar|) schließt ebenfalls nie ab. 
+Es gibt verschiedene Wege, um Dateien ins HDFS zu laden\footnote{3 Beispiele: https://community.cloudera.com/t5/Support-Questions/Import-data-from-remote-server-to-HDFS/m-p/233149/highlight/true\#M194979}. In der Sandbox wurde ein Ambari View, der \textbf{Files View}\footnote{https://docs.cloudera.com/HDPDocuments/Ambari-2.7.4.0/using-ambari-views/content/\\amb\_using\_files\_view.html}, erstellt. Diesen erreicht man über das Kachel-Icon im Header des Dashboards\footnote{http://<localhost oder Sandbox Hostname>:8080/\#/main/view/FILES/auto\_files\_instance}. Der Files View bietet einen HDFS Dateibrowser mit Funktionalitäten wie Datei-Upload direkt von der lokalen Maschine, Ordnererstellung und Rechteverwaltung. Nicht alle Nutzer der Sandbox haben die nötigen Rechte zur Ausführung der Befehle. Daher sollte man sich mit dem dafür vorgesehenen Nutzer\footnote{https://www.cloudera.com/tutorials/learning-the-ropes-of-the-hdp-sandbox.html\#login-credentials} \verb|user: maria_dev| \verb|password: maria_dev| in Ambari einloggen. Man kann über den Files View aber nur eine Datei zur Zeit hochladen. Das Hochladen von Archiven (gestestet mit \verb|.tar.gz| und \verb|.jar|) schließt ebenfalls nie ab. Da für den nachfolgenden Schritt ein JAR aus dem HDFS als Input eingebunden werden soll, wird ein HDFS Client Prozess verwendet, der mit dem Hadoop Cluster verbunden ist. Dafür ist es nötig, Hadoop lokal installiert zu haben, oder man kopiert erst per \verb|scp| die Dateien auf das lokale Dateisystem eines Nodes im Cluster, auf dem ein HDFS Client läuft. Hierfür verwendet man zum Beispiel den NameNode. 
 \par
-Da für den nachfolgenden Schritt ein JAR aus dem HDFS als Input eingebunden werden soll, wird stattdessen der HDFS Befehl \verb|hdfs dfs -put <local path> <hdfs path>| verwendet. Dieser Befehl kann nur von einem Rechner abgesetzt werden, auf dem ein HDFS Client Prozess läuft, der mit dem Hadoop Cluster verbunden ist. Man müsste also Hadoop lokal installiert haben, oder man kopiert erst per \verb|scp| die Dateien auf das lokale Dateisystem eines Nodes im Cluster, auf dem ein HDFS Client läuft. Hierfür verwendet man zum Beispiel den NameNode. \textbf{Schritt 1} ist das Erstellen des JARs \verb|ncdc.jar| mit den Eingabedateien des NCDC (siehe Abb. \ref{fig:ncdc jar local}). Hadoop wird dieses nachher dem MapReduce Job bereitstellen und automatisch entpacken. \textbf{Schritt 2} ist das Erstellen der Textdatei \verb|file_names.txt| mit den Dateipfaden der Unterordner des JARs (siehe Abb. \ref{fig:file names txt local}). Diese Datei wird der Input des MapReduce Jobs. 
-\par
-\textbf{Schritt 3} ist das Schreiben des Skripts, welches später als Mapper-Klasse fungiert. 
-
-\lstinputlisting[language=bash, caption={Bash Skript als Mapper-Klasse}, linerange={22-51}]{code/concatenate_ncdc_data.sh}
-
-
-
-
-Für jede Zeile in der Datei wird später ein Mapper gestartet, der die Zeile mit dem Dateinamen als Input erhält. Dieser wird dann das jeweilige \verb|20xx.tar.gz| Archiv aus dem \verb|ncdc.jar| entpacken und alle darin befindlichen CSV-Dateien zu einer Datei vereinen. Diese Datei wird anschließend wieder im HDFS abgespeichert.\\
+\textbf{Schritt 1} ist das Erstellen des JARs \verb|ncdc.jar| mit den Eingabedateien des NCDC (siehe Abb. \ref{fig:ncdc jar local}). Hadoop wird dieses nachher dem MapReduce Job bereitstellen und automatisch entpacken. \textbf{Schritt 2} ist das Erstellen der Textdatei \verb|file_names.txt| mit den Dateipfaden der Unterordner des JARs (siehe Abb. \ref{fig:file names txt local}). Diese Datei wird der Input des MapReduce-Jobs. 
 
 \begin{figure}[ht]
     \centering
@@ -136,6 +127,26 @@ Für jede Zeile in der Datei wird später ein Mapper gestartet, der die Zeile mi
     \label{fig:file names txt local}
 \end{figure}
 
+
+In \textbf{Schritt 3} gilt es, die bisher erstellten Dateien ins HDFS zu übertragen. Dazu muss man sich per \verb|ssh| als Benutzer \verb|maria_dev| mit der Sandbox verbinden. Um die Ordnerstruktur im HDFS zu erstellen, nutzt man entweder den Ambari File View, oder den Befehl \verb|hdfs dfs -mkdir -p /user/maria_dev/input|. \verb|hdfs| ist das Programm zur Interaktion mit dem Hadoop Distributed File System. \verb|dfs| startet die \textbf{Filesystem Shell}, mit der man eine Reihe von ''shell-artigen'' Kommandos\footnote{https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/FileSystemShell.html} direkt auf dem HDFS anwenden kann. An dieser Stelle könnte zum Beispiel auch \verb|dfsadmin| stehen, wenn es um die Administration des Dateisystems als solches ginge (einen DataNode abschalten etc.). FS Shell Commands beginnen mit einem Bindestrich, darauf folgt ein Befehl und dahinter kommen die Parameter. \verb|-mkdir -p /user/maria_dev/input| funktoniert genau wie sein Gegenstück aus einer normalen Shell. Ist die Ordnerstruktur erstellt, kann man von seiner lokalen Maschine mit \verb|scp -P <Port> <lokaler Pfad> maria_dev@<Hostname>:<Host Pfad>| die bisher erstellten Dateien (JAR und Textdatei) auf das lokale Dateisystem des NameNodes (der Sandbox) kopieren(Abb. \ref{fig:scp transfer}). Anschließend werden diese per FS Shell mit dem Befehl \verb|-moveFromLocal| in das HDFS geladen, damit die Dateien vom lokalen Dateisystem des NameNodes entfernt werden, nachdem sie im HDFS gespeichert wurden (Abb. \ref{fig:hdfs move}).
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\textwidth]{scp_ncdc_transfer}
+    \caption[Dateitransfer mit scp]{Dateitransfer mit scp}
+    \label{fig:scp transfer}
+    \includegraphics[width=0.75\textwidth]{hdfs_ncdc_move}
+    \caption[Dateiupload in das HDFS]{Dateiupload in das HDFS}
+    \label{fig:hdfs move}
+\end{figure}
+
+\textbf{Schritt 5} ist das Schreiben eines Bash Skripts, welches später als Mapper-Klasse fungiert. Zum Zusammenführen der Dateien wird nicht die Java API von MapReduce, sondern die Streaming API von Hadoop\footnote{https://hadoop.apache.org/docs/stable/hadoop-streaming/HadoopStreaming.html} verwendet. Diese erlaubt es, völlig sprachenunabhängig MapReduce-Jobs zu schreiben. Man kann als Mapper und/oder Reducer dabei jeweils eigene Skripte oder Binaries verwenden. Jeder Mapper-Prozess führt eine Instanz des angegebenen Mapper-Skripts aus und füttert ihm, sofern nicht ein anderes InputFormat bestimmt wurde, Zeile für Zeile den Inhalt des ihm zugeteilten InputSplits als Key-Value-Paare auf \verb|stdin|. \verb|stdout| des Skripts wird wiederum vom Mapper zeilenweise als Key-Value-Paar gesammelt und an die Reducer weitergeleitet, wo der Prozess genauso abläuft. Das Skript ist in Listing \ref{lst:ncdc concatenate script} bis auf einige Kommentare abgebildet. Das gesamte Skript findet sich im Appendix \ref{appendix lst:ncdc concatenate script}.    
+
+\lstinputlisting[language=bash, caption={Bash Skript als Mapper-Klasse}, linerange={28-51}, label={lst:ncdc concatenate script}]{code/concatenate_ncdc_data.sh}
+
+Mit \verb|read offset inputfile| liest das Skript das Key-Value-Paar von \verb|stdin| ein. Wie im Kommentar beschrieben, ist durch das später bei der Ausführung bestimmte InputFormat \verb|NLineInputFormat| das erste Wort der Zeile der Offset der Zeile zum Dateianfang. Diese Information kann hier ignoriert werden. Im Rest der Zeile steht der Inhalt der ürsprünglichen Zeile, in diesem Fall ein Dateiname wie \verb|ncdc.jar/20xx.tar.gz|. 
+Das Archiv aus dem \verb|ncdc.jar| wird in einen Unterordner in der Laufzeitumgebung des MapReduce-Jobs entpackt. Anschließend werden alle darin befindlichen CSV-Dateien zu einer Datei vereint. Diese resultierende Datei wird zum Schluss wieder komprimiert und mit dem Befehl \verb|hdfs dfs -put - <Pfad>| im HDFS abgespeichert. 
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{ncdc_files_on_hdfs}
@@ -143,7 +154,12 @@ Für jede Zeile in der Datei wird später ein Mapper gestartet, der die Zeile mi
     \label{fig:ncdc files hdfs}
 \end{figure}
 
-Daher wird der Ordner \verb|input| für die Dateien im Verzeichnis \verb|/user/maria_dev/| erstellt und dort nacheinander die Archivdateien der einzelnen Jahre hochgeladen. Die fertige Ordnerstruktur sollte aussehen wie in Abbildung \ref{fig:ncdc files hdfs}.
+
+
+
+
+
+
 
 \begin{comment}
     
@@ -174,15 +190,9 @@ Abbildung \ref{fig:tmp list} zeigt die Ausgabe. Die Antwort ist ähnlich der ein
 \end{comment}
 
 
-\subsubsection*{Datenbereinigung mit MapReduce}
+\subsubsection*{Die MapReduce Java API}
 \label{chap:fund sec:core sub:handson mapred}
-Workflow für eine MapReduce-Applikation zeigen:
-Code
-Klassen
-Map und Reduce Funktion
-InputFormat
-Jar in HDFS kopieren
-Jar ausführen
+
 \begin{comment}
     \subsubsection*{Fully-distributed Cluster}
 Installation von Hadoop auf allen beteiligten Maschinen

@@ -5,6 +5,7 @@
 # Es basiert auf der Anleitung zum Präparieren des NCDC Datensatzes
 # aus White, T. E. (2015). Hadoop: The Definitive Guide (4th edition). O'Reilly Media. 
 # Siehe auch: https://github.com/tomwhite/hadoop-book/tree/master/appc/src/main/sh
+# bzw. https://github.com/Resteklicken/Hauptseminar-Hadoop für Code und Write-Up
 
 # Als Eingabedatei wird eine Textdatei mit den Dateinamen der Archive erwartet:
 
@@ -23,7 +24,7 @@
 # Der Key ist der Offset der Zeile zum Dateianfang, an dieser Stelle nicht weiter interessant.
 # Der Value ist der Inhalt der Zeile, der hier in die Variable inputfile gelesen wird.
 # Nachrichten auf STDERR mit dem Präfix "reporter:status:" werden von Hadoop als MapReduce Statusupdates interpretiert.
-# Dadurch denkt Hadoop nicht, der Job hätte sich aufgehängt. 
+# Dadurch denkt Hadoop nicht, dass der Job sich aufgehängt hätte. 
 read offset inputfile
 echo "reporter:status:Verarbeite $inputfile" >&2
 
@@ -63,7 +64,7 @@ echo "report:status:Fertig" >&2
 # -output /user/maria_dev/output \
 # -mapper concatenate_ncdc_data.sh
 
-# Hadoop wird angewiesen, ein JAR auszuführen. Dafür wird das Hadoop Streaming Jar ausgewählt,
+# hadoop jar weist Hadoop an, ein JAR auszuführen. Dafür wird das Hadoop Streaming Jar ausgewählt,
 #   welches mit dem Framework mitgeliefert wird und Eingaben von STDIN entgegen nimmt.
 # -archives hdfs://sandbox-hdp.hortonworks.com:8020/user/maria_dev/input/ncdc.jar sorgt dafür, dass Hadoop das im HDFS
 #   gespeicherte JAR ncdc.jar in die Laufzeitumgebung des MapReduce Jobs kopiert und automatisch entpackt. Prozesse können
@@ -73,7 +74,7 @@ echo "report:status:Fertig" >&2
 #   zur Verfügung steht. Durch das Präfix hdfs://host:port/ teilt man Hadoop mit, dass die Datei bereits im HDFS liegt.
 #   Mit #concatenate_ncdc_data.sh am Ende des Pfades gibt man der Datei einen Alias, damit man in der -mapper Option
 #   nicht wieder den vollen Pfad angeben muss.      
-# Die Option -D überschreibt priorisiert Werte, die bereits in Konfigurationsdateien gesetzt sind.
+# -D überschreibt priorisiert Werte, die bereits in Konfigurationsdateien gesetzt sind.
 # mapred.reduce.tasks=0 macht aus diesem Job einen reinen Map-Job ohne Reduce-Phase, 
 #   da für die Umwandlung der Dateien keine Reduce-Phase nötig ist.
 # mapred.map.tasks.speculative.execution=false verhindert die sogenannte spekulative Ausführung.
