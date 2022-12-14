@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2022.11.9)  14 DEC 2022 16:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2022.11.9)  14 DEC 2022 16:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -910,12 +910,8 @@ File: ./img//MapReduce.jpg Graphic file (type jpg)
 <use ./img//MapReduce.jpg>
 Package pdftex.def Info: ./img//MapReduce.jpg  used on input line 37.
 (pdftex.def)             Requested size: 430.52583pt x 231.62619pt.
-
-
-LaTeX Warning: Reference `chap:fund sec:core sub:handson mapred' on page 5 undefined on input line 43.
-
-[5 <./img//hdfsarchitecture.png>]
-<./img//MapReduce Dataflow.jpg, id=303, 1003.75pt x 192.72pt>
+ [5 <./img//hdfsarchitecture.png>]
+<./img//MapReduce Dataflow.jpg, id=304, 1003.75pt x 192.72pt>
 File: ./img//MapReduce Dataflow.jpg Graphic file (type jpg)
 <use ./img//MapReduce Dataflow.jpg>
 Package pdftex.def Info: ./img//MapReduce Dataflow.jpg  used on input line 51.
@@ -925,50 +921,50 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 74
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [8]
-<./img//cluster_startup.png, id=350, 1831.84375pt x 595.22375pt>
+<./img//cluster_startup.png, id=351, 1831.84375pt x 595.22375pt>
 File: ./img//cluster_startup.png Graphic file (type png)
 <use ./img//cluster_startup.png>
 Package pdftex.def Info: ./img//cluster_startup.png  used on input line 78.
 (pdftex.def)             Requested size: 430.52583pt x 139.88667pt.
-<./img//hdp_core_processes.png, id=354, 655.44875pt x 526.96875pt>
+<./img//hdp_core_processes.png, id=355, 655.44875pt x 526.96875pt>
 File: ./img//hdp_core_processes.png Graphic file (type png)
 <use ./img//hdp_core_processes.png>
 Package pdftex.def Info: ./img//hdp_core_processes.png  used on input line 87.
 (pdftex.def)             Requested size: 258.31812pt x 207.67998pt.
-<./img//block_repl_factor.png, id=356, 1329.96875pt x 916.42375pt>
+<./img//block_repl_factor.png, id=357, 1329.96875pt x 916.42375pt>
 File: ./img//block_repl_factor.png Graphic file (type png)
 <use ./img//block_repl_factor.png>
 Package pdftex.def Info: ./img//block_repl_factor.png  used on input line 96.
 (pdftex.def)             Requested size: 365.94958pt x 252.16414pt.
  [9 <./img//cluster_startup.png>]
-<./img//ncdc_files.png, id=370, 1089.06876pt x 82.3075pt>
+<./img//ncdc_files.png, id=371, 1089.06876pt x 82.3075pt>
 File: ./img//ncdc_files.png Graphic file (type png)
 <use ./img//ncdc_files.png>
 Package pdftex.def Info: ./img//ncdc_files.png  used on input line 107.
 (pdftex.def)             Requested size: 301.36676pt x 22.77591pt.
-<./img//ncdc_archive_content.png, id=371, 615.29875pt x 237.88875pt>
+<./img//ncdc_archive_content.png, id=372, 615.29875pt x 237.88875pt>
 File: ./img//ncdc_archive_content.png Graphic file (type png)
 <use ./img//ncdc_archive_content.png>
 Package pdftex.def Info: ./img//ncdc_archive_content.png  used on input line 108.
 (pdftex.def)             Requested size: 301.36676pt x 116.51567pt.
  [10 <./img//hdp_core_processes.png>] [11 <./img//block_repl_factor.png>]
-<./img//ncdc_jar_local.png, id=398, 591.20876pt x 58.2175pt>
+<./img//ncdc_jar_local.png, id=399, 591.20876pt x 58.2175pt>
 File: ./img//ncdc_jar_local.png Graphic file (type png)
 <use ./img//ncdc_jar_local.png>
 Package pdftex.def Info: ./img//ncdc_jar_local.png  used on input line 122.
 (pdftex.def)             Requested size: 322.89436pt x 31.79674pt.
-<./img//file_name_list.png, id=399, 536.0025pt x 277.035pt>
+<./img//file_name_list.png, id=400, 536.0025pt x 277.035pt>
 File: ./img//file_name_list.png Graphic file (type png)
 <use ./img//file_name_list.png>
 Package pdftex.def Info: ./img//file_name_list.png  used on input line 125.
 (pdftex.def)             Requested size: 322.89436pt x 166.88594pt.
  [12 <./img//ncdc_files.png> <./img//ncdc_archive_content.png> <./img//ncdc_jar_local.png> <./img//file_name_list.png>]
-<./img//scp_ncdc_transfer.png, id=411, 922.44624pt x 221.82875pt>
+<./img//scp_ncdc_transfer.png, id=412, 922.44624pt x 221.82875pt>
 File: ./img//scp_ncdc_transfer.png Graphic file (type png)
 <use ./img//scp_ncdc_transfer.png>
 Package pdftex.def Info: ./img//scp_ncdc_transfer.png  used on input line 134.
 (pdftex.def)             Requested size: 322.89436pt x 77.64798pt.
-<./img//hdfs_ncdc_move.png, id=412, 867.24pt x 340.27126pt>
+<./img//hdfs_ncdc_move.png, id=413, 867.24pt x 340.27126pt>
 File: ./img//hdfs_ncdc_move.png Graphic file (type png)
 <use ./img//hdfs_ncdc_move.png>
 Package pdftex.def Info: ./img//hdfs_ncdc_move.png  used on input line 137.
@@ -978,12 +974,12 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
  (./code/concatenate_ncdc_data.sh
 consecutive:
 )
-<./img//ncdc_files_on_hdfs.png, id=428, 1543.7675pt x 534.99875pt>
+<./img//ncdc_files_on_hdfs.png, id=429, 1543.7675pt x 534.99875pt>
 File: ./img//ncdc_files_on_hdfs.png Graphic file (type png)
 <use ./img//ncdc_files_on_hdfs.png>
 Package pdftex.def Info: ./img//ncdc_files_on_hdfs.png  used on input line 153.
 (pdftex.def)             Requested size: 387.47061pt x 134.27997pt.
-<./img//script_permissions.png, id=429, 352.31625pt x 321.2pt>
+<./img//script_permissions.png, id=430, 352.31625pt x 321.2pt>
 File: ./img//script_permissions.png Graphic file (type png)
 <use ./img//script_permissions.png>
 Package pdftex.def Info: ./img//script_permissions.png  used on input line 156.
@@ -991,22 +987,22 @@ Package pdftex.def Info: ./img//script_permissions.png  used on input line 156.
  [14] [15 <./img//ncdc_files_on_hdfs.png> <./img//script_permissions.png>] (./code/concat_files_start.sh
 consecutive:
 ) [16]
-<./img//ncdc_concat_console_output.png, id=485, 1344.02126pt x 987.69pt>
+<./img//ncdc_concat_console_output.png, id=486, 1344.02126pt x 987.69pt>
 File: ./img//ncdc_concat_console_output.png Graphic file (type png)
 <use ./img//ncdc_concat_console_output.png>
 Package pdftex.def Info: ./img//ncdc_concat_console_output.png  used on input line 185.
 (pdftex.def)             Requested size: 430.52583pt x 316.38374pt.
-<./img//ncdc_concat_mr_output_files.png, id=487, 1163.34625pt x 546.04pt>
+<./img//ncdc_concat_mr_output_files.png, id=488, 1163.34625pt x 546.04pt>
 File: ./img//ncdc_concat_mr_output_files.png Graphic file (type png)
 <use ./img//ncdc_concat_mr_output_files.png>
 Package pdftex.def Info: ./img//ncdc_concat_mr_output_files.png  used on input line 194.
 (pdftex.def)             Requested size: 344.42197pt x 161.66364pt.
-<./img//ncdc_concat_combined_output_files.png, id=490, 1165.35374pt x 496.85625pt>
+<./img//ncdc_concat_combined_output_files.png, id=491, 1165.35374pt x 496.85625pt>
 File: ./img//ncdc_concat_combined_output_files.png Graphic file (type png)
 <use ./img//ncdc_concat_combined_output_files.png>
 Package pdftex.def Info: ./img//ncdc_concat_combined_output_files.png  used on input line 203.
 (pdftex.def)             Requested size: 344.42197pt x 146.84425pt.
-<./img//buggy_web_view.png, id=491, 956.57375pt x 544.0325pt>
+<./img//buggy_web_view.png, id=492, 956.57375pt x 544.0325pt>
 File: ./img//buggy_web_view.png Graphic file (type png)
 <use ./img//buggy_web_view.png>
 Package pdftex.def Info: ./img//buggy_web_view.png  used on input line 206.
@@ -1073,18 +1069,18 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25325 strings out of 479930
- 467100 string characters out of 5885661
+ 25324 strings out of 479930
+ 467061 string characters out of 5885661
  2000775 words of memory out of 5000000
- 42778 multiletter control sequences out of 15000+600000
+ 42777 multiletter control sequences out of 15000+600000
  495272 words of font info for 67 fonts, out of 8000000 for 9000
  18 hyphenation exceptions out of 8191
  108i,9n,106p,10629b,4787s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on Main.pdf (44 pages, 1439788 bytes).
+Output written on Main.pdf (44 pages, 1439556 bytes).
 PDF statistics:
  1497 PDF objects out of 1728 (max. 8388607)
- 966 compressed objects within 10 object streams
+ 967 compressed objects within 10 object streams
  335 named destinations out of 1000 (max. 500000)
  624 words of extra memory for PDF output out of 10000 (max. 10000000)
 

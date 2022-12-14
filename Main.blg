@@ -1,15 +1,15 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'Main.blg'
-[36] biber:340> INFO - === Mi Dez 14, 2022, 16:05:03
+[37] biber:340> INFO - === Mi Dez 14, 2022, 16:15:47
 [45] Biber.pm:418> INFO - Reading 'Main.bcf'
-[80] Biber.pm:978> INFO - Found 19 citekeys in bib section 0
+[79] Biber.pm:978> INFO - Found 19 citekeys in bib section 0
 [86] Biber.pm:4401> INFO - Processing section 0
 [92] Biber.pm:4592> INFO - Looking for bibtex file 'Hauptseminar Hadoop.bib' for section 0
-[94] bibtex.pm:1713> INFO - LaTeX decoding ...
-[106] bibtex.pm:1518> INFO - Found BibTeX data source 'Hauptseminar Hadoop.bib'
-[161] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[161] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[161] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[161] Biber.pm:4227> INFO - No sort tailoring available for locale 'de-DE'
-[169] bbl.pm:654> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
-[173] bbl.pm:757> INFO - Output to Main.bbl
+[93] bibtex.pm:1713> INFO - LaTeX decoding ...
+[105] bibtex.pm:1518> INFO - Found BibTeX data source 'Hauptseminar Hadoop.bib'
+[158] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[159] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[159] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[159] Biber.pm:4227> INFO - No sort tailoring available for locale 'de-DE'
+[166] bbl.pm:654> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
+[170] bbl.pm:757> INFO - Output to Main.bbl
