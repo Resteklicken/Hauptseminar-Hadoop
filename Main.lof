@@ -13,7 +13,10 @@
 \contentsline {figure}{\numberline {1.11}{\ignorespaces Dateiupload in das HDFS}}{13}{figure.1.11}%
 \contentsline {figure}{\numberline {1.12}{\ignorespaces Upload der NCDC Datensätze}}{15}{figure.1.12}%
 \contentsline {figure}{\numberline {1.13}{\ignorespaces Setzen von Dateiberechtigungen im Ambari File View}}{15}{figure.1.13}%
-\contentsline {figure}{\numberline {1.14}{\ignorespaces MapReduce Konsolenausgabe}}{17}{figure.1.14}%
+\contentsline {figure}{\numberline {1.14}{\ignorespaces MapReduce Konsolenausgabe}}{18}{figure.1.14}%
+\contentsline {figure}{\numberline {1.15}{\ignorespaces MapReduce Ausgabedateien}}{18}{figure.1.15}%
+\contentsline {figure}{\numberline {1.16}{\ignorespaces Zusammengefügte, komprimierte Wetterdaten im HDFS}}{19}{figure.1.16}%
+\contentsline {figure}{\numberline {1.17}{\ignorespaces Fehlerhafte Anzeige der Daten im File View}}{19}{figure.1.17}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
