@@ -79,6 +79,68 @@
  
 \begin{figure}[ht]
     \centering
+    \includegraphics[width=0.9\textwidth]{ncdc_files_on_hdfs}
+    \caption[Upload der NCDC Datensätze]{Upload der NCDC Datensätze}
+    \label{fig:ncdc files hdfs}
+    \includegraphics[width=0.3\textwidth]{script_permissions}
+    \caption[Setzen von Dateiberechtigungen im Ambari File View]{Setzen von Dateiberechtigungen im Ambari File View}
+    \label{fig:concat script permissions}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{ncdc_concat_console_output}
+    \caption[MapReduce Konsolenausgabe]{MapReduce Konsolenausgabe}
+    \label{fig:ncdc concat console output}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ncdc_concat_mr_output_files}
+    \caption[MapReduce Ausgabedateien]{MapReduce Ausgabedateien}
+    \label{fig:ncdc concat mr output}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ncdc_concat_combined_output_files}
+    \caption[Zusammengefügte, komprimierte Wetterdaten im HDFS]{Zusammengefügte, komprimierte Wetterdaten im HDFS}
+    \label{fig:ncdc concat final output}
+    \includegraphics[width=0.8\textwidth]{buggy_web_view}
+    \caption[Fehlerhafte Anzeige der Daten im File View]{Fehlerhafte Anzeige der Daten im File View}
+    \label{fig:buggy web output}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{mr_java_compile}
+    \caption[Kompilieren der MapReduce Java-Applikation]{Kompilieren der MapReduce Java-Applikation}
+    \label{fig:mr java api compile}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{mr_java_output}
+    \caption[Ausführen der MapReduce Java-Applikation]{Ausführen der MapReduce Java-Applikation}
+    \label{fig:mr java api command}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{mr_java_result}
+    \caption[Ergebnis der MapReduce Java-Applikation]{Ergebnis der MapReduce Java-Applikation}
+    \label{fig:mr java api result}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[ht]
+    \centering
     \includegraphics[width=\textwidth]{Hadoop_ecosystem_overview}
     \caption[Komponenten des Hadoop Ecosystems]{Komponenten des Hadoop Ecosystems\parencite{van_der_weel_hadoop_2015}}
     \label{fig:ecosys}
