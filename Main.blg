@@ -1,15 +1,15 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'Main.blg'
-[78] biber:340> INFO - === Do Dez 15, 2022, 17:11:48
-[91] Biber.pm:418> INFO - Reading 'Main.bcf'
-[150] Biber.pm:978> INFO - Found 24 citekeys in bib section 0
-[162] Biber.pm:4401> INFO - Processing section 0
-[172] Biber.pm:4592> INFO - Looking for bibtex file 'Hauptseminar Hadoop.bib' for section 0
-[174] bibtex.pm:1713> INFO - LaTeX decoding ...
-[199] bibtex.pm:1518> INFO - Found BibTeX data source 'Hauptseminar Hadoop.bib'
-[307] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[308] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[308] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[308] Biber.pm:4227> INFO - No sort tailoring available for locale 'de-DE'
-[322] bbl.pm:654> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
-[331] bbl.pm:757> INFO - Output to Main.bbl
+[71] biber:340> INFO - === Do Dez 15, 2022, 19:16:11
+[84] Biber.pm:418> INFO - Reading 'Main.bcf'
+[144] Biber.pm:978> INFO - Found 25 citekeys in bib section 0
+[157] Biber.pm:4401> INFO - Processing section 0
+[167] Biber.pm:4592> INFO - Looking for bibtex file 'Hauptseminar Hadoop.bib' for section 0
+[169] bibtex.pm:1713> INFO - LaTeX decoding ...
+[194] bibtex.pm:1518> INFO - Found BibTeX data source 'Hauptseminar Hadoop.bib'
+[303] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[303] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[303] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[303] Biber.pm:4227> INFO - No sort tailoring available for locale 'de-DE'
+[318] bbl.pm:654> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
+[327] bbl.pm:757> INFO - Output to Main.bbl

@@ -8,44 +8,44 @@
 \contentsline {section}{\numberline {2.1}HDFS}{4}{section.2.1}%
 \contentsline {section}{\numberline {2.2}MapReduce}{5}{section.2.2}%
 \contentsline {section}{\numberline {2.3}YARN}{8}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Umgang mit HDFS und MapReduce}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Single Node Setup}{9}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Hadoop und Ambari in der HDP Sandbox VM}{9}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Fallstudie Globales Wetter}{11}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Umgang mit dem HDFS}{12}{section.3.4}%
-\contentsline {section}{\numberline {3.5}MapReduce mit der Hadoop Streaming API}{14}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Funktionsweise der Streaming API}{14}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Das Mapper-Skript}{15}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Ausführung des MapReduce Jobs}{16}{subsection.3.5.3}%
-\contentsline {section}{\numberline {3.6}Die MapReduce Java API}{21}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Struktur der Eingabedaten}{21}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Die Mapper-Klasse}{21}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Die Reducer-Klasse}{22}{subsection.3.6.3}%
-\contentsline {subsection}{\numberline {3.6.4}Die Treiber-Klasse}{23}{subsection.3.6.4}%
-\contentsline {subsection}{\numberline {3.6.5}Ausführung der MapReduce Java-Applikation}{24}{subsection.3.6.5}%
-\contentsline {chapter}{\numberline {4}Das Hadoop Ecosystem}{26}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Datenhaltung}{27}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}HDFS}{27}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}HBase}{27}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Cluster-Verwaltung / -Konfiguration}{27}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}YARN}{27}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Oozie}{27}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}ZooKeeper}{28}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Ambari}{28}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Datentransfer}{28}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Sqoop}{28}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}AVRO}{29}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Datenverarbeitung}{29}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}MapReduce}{29}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Tez}{29}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Pig}{29}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Hive}{29}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Spark}{30}{subsection.4.4.5}%
-\contentsline {chapter}{\nonumberline Appendix}{33}{chapter*.4}%
-\contentsline {section}{\numberline {1}Mapper-Skript für NCDC Datenbereinigung}{33}{section.Alph0.1}%
-\contentsline {section}{\numberline {2}Startbefehl für die NCDC Datenbereinigung}{35}{section.Alph0.2}%
-\contentsline {section}{\numberline {3}MapReduce Job mit Java API}{36}{section.Alph0.3}%
-\contentsline {chapter}{\nonumberline Literatur}{38}{chapter*.5}%
+\contentsline {chapter}{\numberline {3}Umgang mit HDFS und MapReduce}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Single Node Setup}{10}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Hadoop und Ambari in der HDP Sandbox VM}{11}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Fallstudie Globales Wetter}{12}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Umgang mit dem HDFS}{14}{section.3.4}%
+\contentsline {section}{\numberline {3.5}MapReduce mit der Hadoop Streaming API}{16}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Funktionsweise der Streaming API}{16}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Das Mapper-Skript}{17}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Ausführung des MapReduce Jobs}{18}{subsection.3.5.3}%
+\contentsline {section}{\numberline {3.6}Die MapReduce Java API}{23}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Struktur der Eingabedaten}{23}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Die Mapper-Klasse}{23}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Die Reducer-Klasse}{24}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Die Treiber-Klasse}{25}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.6.5}Ausführung der MapReduce Java-Applikation}{26}{subsection.3.6.5}%
+\contentsline {chapter}{\numberline {4}Das Hadoop Ecosystem}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Datenhaltung}{29}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}HDFS}{29}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}HBase}{29}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Cluster-Verwaltung / -Konfiguration}{30}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}YARN}{30}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Oozie}{31}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}ZooKeeper}{31}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Ambari}{31}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Datentransfer}{32}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Sqoop}{32}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}AVRO}{32}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Datenverarbeitung}{32}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}MapReduce}{32}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Tez}{33}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Pig}{33}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Hive}{33}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Spark}{33}{subsection.4.4.5}%
+\contentsline {chapter}{\nonumberline Appendix}{35}{chapter*.4}%
+\contentsline {section}{\numberline {1}Mapper-Skript für NCDC Datenbereinigung}{35}{section.Alph0.1}%
+\contentsline {section}{\numberline {2}Startbefehl für die NCDC Datenbereinigung}{37}{section.Alph0.2}%
+\contentsline {section}{\numberline {3}MapReduce Job mit Java API}{38}{section.Alph0.3}%
+\contentsline {chapter}{\nonumberline Literatur}{41}{chapter*.5}%
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
@@ -191,6 +191,12 @@
 \babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {english}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 

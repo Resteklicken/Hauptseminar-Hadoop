@@ -34,10 +34,9 @@ Apache AVRO\footnote{https://avro.apache.org/} ist ein System zur Datenserialisa
 \subsection{MapReduce}
 Hadoop MapReduce ist Hadoops natives Processing Framework, mit dessen Hilfe große, verteilt gespeicherte Datenmengen parallelisiert auf Clustern von tausenden Maschinen verarbeitet werden können. Es wird tiefergehend, mit Anwendungsbeispielen versehen, in Kapitel \ref{chap:fund sec:core sub:mapred} behandelt. MapReduce ist, wie alle Hadoop Core-Komponenten, für den Betrieb auf \textit{Commodity-Hardware} bestimmt. Dadurch werden die Zwischenergebnisse der einzelnen Arbeitsschritte (\textit{Map} und \textit{Reduce}) nicht im Arbeitsspeicher gehalten, sondern auf die Festplatte ausgelagert. Modernere Processing Frameworks wie Apache Spark hingegen nutzen den Umstand, dass RAM immer erschwinglicher wird, und bieten bis zu 40-mal schnellere Verarbeitungszeiten durch \textit{In-Memory-Processing} \cite[vgl.][Kap. 3.19]{freiknecht_big_2018}.
 \subsection{Tez}
-MapReduce Alternative
-Ermöglicht mit Hive on Tez Echtzeitabfragen in Hive
+Apache Tez\footnote{https://tez.apache.org/} ist ein auf YARN aufsetzendes, generalisiertes Framework zur Erstellung von Datenverarbeitungs-Pipelines. Während das MapReduce Framework nur eine Art von Ablauf ermöglicht (Mapper speisen Reducer, wobei zusammen gehörende Daten durch den gleichen Key gekennzeichnet werden; Reducer geben Ergebnisse aus) kann man mit TEZ flexible Abläufe definieren. So kann man Dataflows, die vorher mehrere verkettete MapReduce Jobs benötigt haben, mit einem einzigen TEZ Job erledigen. TEZ unterstützt Batch-Processing und interaktive Datenverarbeitung und kann von Apache Tools wie Hive und Pig komplett als Ersatz für MapReduce verwendet werden \parencite[vgl.][]{noauthor_apache_nodate-2}.
 \subsection{Pig}
-High-Level Skript-Sprache für ETL und Datenanalyse
+Apache Pig\footnote{https://pig.apache.org/} dient zum Analysieren großer Datensätze durch eine High-Level Skript-Sprache -- Pig Latin. für ETL und Datenanalyse
 generiert MapReduce Jobs
 Eine Zeile Pig -> 120 Zeilen MapReduce
 Evtl. kleines Beispiel mit Wetterdaten

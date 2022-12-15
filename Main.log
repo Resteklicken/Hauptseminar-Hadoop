@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2022.11.9)  15 DEC 2022 17:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2022.11.9)  15 DEC 2022 19:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -31,10 +31,15 @@ Package: tocbasic 2022/07/04 v3.37 KOMA-Script package (handling toc-files)
 )
 Package tocbasic Info: babel extension for `toc' omitted
 (tocbasic)             because of missing \bbl@set@language on input line 137.
-Class scrbook Info: File `scrsize11pt.clo' used instead of
-(scrbook)           file `scrsize11.clo' to setup font sizes on input line 2569.
- (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
-File: scrsize11pt.clo 2022/07/04 v3.37 KOMA-Script font size class option (11pt)
+Package scrbook Info: You've used standard option `12pt'.
+(scrbook)             This is correct!
+(scrbook)             Internally I'm using `fontsize=12pt'.
+(scrbook)             If you'd like to set the option with \KOMAoptions,
+(scrbook)             you'd have to use `fontsize=12pt' there
+(scrbook)             instead of `12pt', too.
+Class scrbook Info: File `scrsize12pt.clo' used to setup font sizes on input line 2569.
+ (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
+File: scrsize12pt.clo 2022/07/04 v3.37 KOMA-Script font size class option (12pt)
 ) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
 Package: typearea 2022/07/04 v3.37 KOMA-Script package (type area)
 \ta@bcor=\skip48
@@ -48,17 +53,17 @@ Package typearea Info: These are the values describing the layout:
 (typearea)             BCOR = 23.47351pt
 (typearea)             \paperwidth      = 597.50793pt
 (typearea)              \textwidth      = 430.52583pt
-(typearea)              DIV departure   = -9%
+(typearea)              DIV departure   = -2%
 (typearea)              \evensidemargin = 23.4024pt
 (typearea)              \oddsidemargin  = -0.96028pt
 (typearea)             \paperheight     = 845.04694pt
-(typearea)              \textheight     = 609.40027pt
+(typearea)              \textheight     = 606.5pt
 (typearea)              \topmargin      = -1.84941pt
-(typearea)              \headheight     = 17.0pt
-(typearea)              \headsep        = 20.40001pt
-(typearea)              \topskip        = 11.0pt
-(typearea)              \footskip       = 47.6pt
-(typearea)              \baselineskip   = 13.6pt
+(typearea)              \headheight     = 18.125pt
+(typearea)              \headsep        = 21.75pt
+(typearea)              \topskip        = 12.0pt
+(typearea)              \footskip       = 50.75pt
+(typearea)              \baselineskip   = 14.5pt
 (typearea)              on input line 1766.
 )
 \c@part=\count186
@@ -143,10 +148,10 @@ Package babel Info: Importing font and identification data for ngerman
 ) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
+) (/usr/local/share/texmf/tex/latex/ua1/uarial.sty
+Package: uarial 2006/03/21 1.0 (WaS)
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
-Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks17
@@ -423,8 +428,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip67
 )
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 84.
-Package hyperref Info: Option `colorlinks' set `true' on input line 84.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 85.
+Package hyperref Info: Option `colorlinks' set `true' on input line 85.
  (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrhack.sty
 Package: scrhack 2022/07/04 v3.37 KOMA-Script package (hacking other packages)
  (/usr/share/texlive/texmf-dist/tex/latex/xpatch/xpatch.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
@@ -707,24 +712,24 @@ Package babel Info: Importing basic data for german
 ))
 \openout1 = `Main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count432
@@ -745,7 +750,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count438
-Package hyperref Info: Link coloring ON on input line 106.
+Package hyperref Info: Link coloring ON on input line 107.
  (./Main.out) (./Main.out)
 \@outlinefile=\write5
 \openout5 = `Main.out'.
@@ -757,14 +762,14 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 106.
+(scrbook)           before \begin{document} on input line 107.
  (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 \BKM@id=\count439
 ))
-Package scrhack Info: undefining \float@addtolists on input line 106.
+Package scrhack Info: undefining \float@addtolists on input line 107.
 Package biblatex Info: Trying to load language 'ngerman' -> 'ngerman-iso'...
 Package biblatex Info: ... file 'ngerman-iso.lbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex-iso690/ngerman-iso.lbx
@@ -831,16 +836,16 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Main.bbl' found.
  (./Main.bbl)
-Package biblatex Info: Reference section=0 on input line 106.
-Package biblatex Info: Reference segment=0 on input line 106.
+Package biblatex Info: Reference section=0 on input line 107.
+Package biblatex Info: Reference segment=0 on input line 107.
 <./img//mni-logo.pdf, id=4, 1133.23375pt x 146.5475pt>
 File: ./img//mni-logo.pdf Graphic file (type pdf)
 <use ./img//mni-logo.pdf>
-Package pdftex.def Info: ./img//mni-logo.pdf  used on input line 113.
+Package pdftex.def Info: ./img//mni-logo.pdf  used on input line 114.
 (pdftex.def)             Requested size: 387.47061pt x 50.10722pt.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 119.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
-File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+LaTeX Font Info:    Trying to load font information for T1+ua1 on input line 120.
+ (/usr/local/share/texmf/tex/latex/ua1/t1ua1.fd
+File: t1ua1.fd 2006/03/21 Fontinst v1.928 font definitions for T1/ua1.
 ) [1
 
 
@@ -861,11 +866,21 @@ File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 
 ] (./Kapitel/Background.tex
 chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--4
+  [][][]\T1/cmr/m/n/10 https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-
+ []
+
 [1
 
 
 
-] [2] Excluding 'comment' comment.) (./Kapitel/Hadoop Core.tex [3]
+] [2]
+Overfull \hbox (1.99019pt too wide) in paragraph at lines 20--22
+\T1/cmr/m/n/12 stei-ge-rung zu-sätz-li-che No-des hin-zu-ge-fügt. So kann ein Rech-ner zum Bei-spiel 500 MB/s
+ []
+
+Excluding 'comment' comment.) (./Kapitel/Hadoop Core.tex [3]
 chapter 2.
 [4
 
@@ -876,7 +891,7 @@ File: ./img//hdfsarchitecture.png Graphic file (type png)
 Package pdftex.def Info: ./img//hdfsarchitecture.png  used on input line 21.
 (pdftex.def)             Requested size: 344.42197pt x 207.3442pt.
  [5 <./img//hdfsarchitecture.png>]
-<./img//MapReduce.jpg, id=256, 1003.75pt x 540.0175pt>
+<./img//MapReduce.jpg, id=255, 1003.75pt x 540.0175pt>
 File: ./img//MapReduce.jpg Graphic file (type jpg)
 <use ./img//MapReduce.jpg>
 Package pdftex.def Info: ./img//MapReduce.jpg  used on input line 37.
@@ -887,170 +902,220 @@ File: ./img//MapReduce Dataflow.jpg Graphic file (type jpg)
 <use ./img//MapReduce Dataflow.jpg>
 Package pdftex.def Info: ./img//MapReduce Dataflow.jpg  used on input line 51.
 (pdftex.def)             Requested size: 430.52583pt x 82.66212pt.
- [7 <./img//MapReduce Dataflow.jpg>]) (./Kapitel/Hadoop Hands On.tex [8]
+ [7 <./img//MapReduce Dataflow.jpg>]) (./Kapitel/Hadoop Hands On.tex
+Overfull \hbox (27.24243pt too wide) in paragraph at lines 63--1
+\T1/cmr/m/n/12 MapReduce-Programmiermodell hal-ten muss. Star-tet man in Ha-doop 2.x ei-ne MapReduce-
+ []
+
+[8] [9]
 chapter 3.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 11.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [9
+) [10
 
 ]
-<./img//cluster_startup.png, id=311, 1831.84375pt x 595.22375pt>
+<./img//cluster_startup.png, id=315, 1831.84375pt x 595.22375pt>
 File: ./img//cluster_startup.png Graphic file (type png)
 <use ./img//cluster_startup.png>
 Package pdftex.def Info: ./img//cluster_startup.png  used on input line 15.
 (pdftex.def)             Requested size: 430.52583pt x 139.88667pt.
-<./img//hdp_core_processes.png, id=315, 655.44875pt x 526.96875pt>
+ [11 <./img//cluster_startup.png>]
+<./img//hdp_core_processes.png, id=328, 655.44875pt x 526.96875pt>
 File: ./img//hdp_core_processes.png Graphic file (type png)
 <use ./img//hdp_core_processes.png>
 Package pdftex.def Info: ./img//hdp_core_processes.png  used on input line 24.
 (pdftex.def)             Requested size: 258.31812pt x 207.67998pt.
-<./img//block_repl_factor.png, id=317, 1329.96875pt x 916.42375pt>
+<./img//block_repl_factor.png, id=330, 1329.96875pt x 916.42375pt>
 File: ./img//block_repl_factor.png Graphic file (type png)
 <use ./img//block_repl_factor.png>
 Package pdftex.def Info: ./img//block_repl_factor.png  used on input line 33.
 (pdftex.def)             Requested size: 365.94958pt x 252.16414pt.
- [10 <./img//cluster_startup.png>]
-<./img//ncdc_files.png, id=332, 1089.06876pt x 82.3075pt>
+ [12 <./img//hdp_core_processes.png>]
+<./img//ncdc_files.png, id=343, 1089.06876pt x 82.3075pt>
 File: ./img//ncdc_files.png Graphic file (type png)
 <use ./img//ncdc_files.png>
 Package pdftex.def Info: ./img//ncdc_files.png  used on input line 44.
 (pdftex.def)             Requested size: 301.36676pt x 22.77591pt.
-<./img//ncdc_archive_content.png, id=333, 615.29875pt x 237.88875pt>
+<./img//ncdc_archive_content.png, id=344, 615.29875pt x 237.88875pt>
 File: ./img//ncdc_archive_content.png Graphic file (type png)
 <use ./img//ncdc_archive_content.png>
 Package pdftex.def Info: ./img//ncdc_archive_content.png  used on input line 45.
 (pdftex.def)             Requested size: 301.36676pt x 116.51567pt.
- [11 <./img//hdp_core_processes.png>] [12 <./img//block_repl_factor.png>]
-<./img//ncdc_jar_local.png, id=359, 591.20876pt x 58.2175pt>
+ [13 <./img//block_repl_factor.png> <./img//ncdc_files.png> <./img//ncdc_archive_content.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+  [][][]\T1/cmr/m/n/10 https://www.cloudera.com/tutorials/learning-the-ropes-of-the-hdp-sandbox.html#login-
+ []
+
+[14]
+<./img//ncdc_jar_local.png, id=369, 591.20876pt x 58.2175pt>
 File: ./img//ncdc_jar_local.png Graphic file (type png)
 <use ./img//ncdc_jar_local.png>
 Package pdftex.def Info: ./img//ncdc_jar_local.png  used on input line 61.
 (pdftex.def)             Requested size: 322.89436pt x 31.79674pt.
-<./img//file_name_list.png, id=360, 536.0025pt x 277.035pt>
+<./img//file_name_list.png, id=370, 536.0025pt x 277.035pt>
 File: ./img//file_name_list.png Graphic file (type png)
 <use ./img//file_name_list.png>
 Package pdftex.def Info: ./img//file_name_list.png  used on input line 64.
 (pdftex.def)             Requested size: 322.89436pt x 166.88594pt.
- [13 <./img//ncdc_files.png> <./img//ncdc_archive_content.png> <./img//ncdc_jar_local.png> <./img//file_name_list.png>]
-<./img//scp_ncdc_transfer.png, id=372, 922.44624pt x 221.82875pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+  [][][]\T1/cmr/m/n/10 https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-
+ []
+
+
+Overfull \hbox (10.61043pt too wide) in paragraph at lines 69--70
+\T1/cmr/m/n/12 wer-den sol-len. Da-zu dient der Be-fehl [][]\T1/cmtt/m/n/12 hdfs dfs -chmod 777 /user/maria_dev/input[]\T1/cmr/m/n/12 .
+ []
+
+
+Overfull \hbox (112.0332pt too wide) in paragraph at lines 69--70
+\T1/cmr/m/n/12 Ist die Ord-ner-struk-tur er-stellt, kann man von sei-ner lo-ka-len Ma-schi-ne mit [][]\T1/cmtt/m/n/12 scp -P <Port> <lokaler Pfad>
+ []
+
+[15 <./img//ncdc_jar_local.png> <./img//file_name_list.png>]
+<./img//scp_ncdc_transfer.png, id=382, 922.44624pt x 221.82875pt>
 File: ./img//scp_ncdc_transfer.png Graphic file (type png)
 <use ./img//scp_ncdc_transfer.png>
 Package pdftex.def Info: ./img//scp_ncdc_transfer.png  used on input line 73.
 (pdftex.def)             Requested size: 322.89436pt x 77.64798pt.
-<./img//hdfs_ncdc_move.png, id=373, 867.24pt x 340.27126pt>
+<./img//hdfs_ncdc_move.png, id=383, 867.24pt x 340.27126pt>
 File: ./img//hdfs_ncdc_move.png Graphic file (type png)
 <use ./img//hdfs_ncdc_move.png>
 Package pdftex.def Info: ./img//hdfs_ncdc_move.png  used on input line 76.
 (pdftex.def)             Requested size: 322.89436pt x 126.69278pt.
- [14 <./img//scp_ncdc_transfer.png> <./img//hdfs_ncdc_move.png>]
+ [16 <./img//scp_ncdc_transfer.png> <./img//hdfs_ncdc_move.png>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 86.
  (./code/concatenate_ncdc_data.sh
 consecutive:
-) [15]
-<./img//ncdc_files_on_hdfs.png, id=419, 1543.7675pt x 534.99875pt>
+) [17]
+<./img//ncdc_files_on_hdfs.png, id=428, 1543.7675pt x 534.99875pt>
 File: ./img//ncdc_files_on_hdfs.png Graphic file (type png)
 <use ./img//ncdc_files_on_hdfs.png>
 Package pdftex.def Info: ./img//ncdc_files_on_hdfs.png  used on input line 96.
 (pdftex.def)             Requested size: 387.47061pt x 134.27997pt.
-<./img//script_permissions.png, id=420, 352.31625pt x 321.2pt>
+<./img//script_permissions.png, id=429, 352.31625pt x 321.2pt>
 File: ./img//script_permissions.png Graphic file (type png)
 <use ./img//script_permissions.png>
 Package pdftex.def Info: ./img//script_permissions.png  used on input line 99.
 (pdftex.def)             Requested size: 129.15906pt x 117.74919pt.
- [16 <./img//ncdc_files_on_hdfs.png> <./img//script_permissions.png>] [17] (./code/concat_files_start.sh
+ [18 <./img//ncdc_files_on_hdfs.png> <./img//script_permissions.png>] [19] (./code/concat_files_start.sh
 consecutive:
 )
-<./img//ncdc_concat_console_output.png, id=437, 1344.02126pt x 987.69pt>
+Overfull \hbox (2.8683pt too wide) in paragraph at lines 123--124
+[]\T1/cmr/m/n/12 Sind al-le Da-tei-en an den rich-ti-gen Or-ten plat-ziert, kann man sich er-neut als [][]\T1/cmtt/m/n/12 maria_dev
+ []
+
+<./img//ncdc_concat_console_output.png, id=446, 1344.02126pt x 987.69pt>
 File: ./img//ncdc_concat_console_output.png Graphic file (type png)
 <use ./img//ncdc_concat_console_output.png>
 Package pdftex.def Info: ./img//ncdc_concat_console_output.png  used on input line 127.
 (pdftex.def)             Requested size: 430.52583pt x 316.38374pt.
- [18 <./img//ncdc_concat_console_output.png>]
-<./img//ncdc_concat_mr_output_files.png, id=452, 1163.34625pt x 546.04pt>
+
+Overfull \hbox (82.068pt too wide) in paragraph at lines 132--133
+\T1/cmr/m/n/12 sind ha-ben ih-re Ar-beit er-folg-reich be-en-det. Mit der [][]\T1/cmtt/m/n/12 applicationId []application_xxxxxxxxxxx_xxxx
+ []
+
+[20 <./img//ncdc_concat_console_output.png>]
+<./img//ncdc_concat_mr_output_files.png, id=461, 1163.34625pt x 546.04pt>
 File: ./img//ncdc_concat_mr_output_files.png Graphic file (type png)
 <use ./img//ncdc_concat_mr_output_files.png>
 Package pdftex.def Info: ./img//ncdc_concat_mr_output_files.png  used on input line 136.
 (pdftex.def)             Requested size: 344.42197pt x 161.66364pt.
-<./img//ncdc_concat_combined_output_files.png, id=454, 1165.35374pt x 496.85625pt>
+ [21 <./img//ncdc_concat_mr_output_files.png>]
+<./img//ncdc_concat_combined_output_files.png, id=469, 1165.35374pt x 496.85625pt>
 File: ./img//ncdc_concat_combined_output_files.png Graphic file (type png)
 <use ./img//ncdc_concat_combined_output_files.png>
 Package pdftex.def Info: ./img//ncdc_concat_combined_output_files.png  used on input line 145.
 (pdftex.def)             Requested size: 344.42197pt x 146.84425pt.
-<./img//buggy_web_view.png, id=455, 956.57375pt x 544.0325pt>
+<./img//buggy_web_view.png, id=470, 956.57375pt x 544.0325pt>
 File: ./img//buggy_web_view.png Graphic file (type png)
 <use ./img//buggy_web_view.png>
 Package pdftex.def Info: ./img//buggy_web_view.png  used on input line 148.
 (pdftex.def)             Requested size: 344.42197pt x 195.88475pt.
- [19 <./img//ncdc_concat_mr_output_files.png>] [20 <./img//ncdc_concat_combined_output_files.png> <./img//buggy_web_view.png>]
+ [22 <./img//ncdc_concat_combined_output_files.png> <./img//buggy_web_view.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 159--159
-  [][][]\T1/cmr/m/n/9 https://hadoop.apache.org/docs/stable/hadoop-mapreduce-client/hadoop-mapreduce-client-
+  [][][]\T1/cmr/m/n/10 https://hadoop.apache.org/docs/stable/hadoop-mapreduce-client/hadoop-mapreduce-client-
  []
 
-[21] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+
+Overfull \hbox (7.1701pt too wide) in paragraph at lines 162--164
+\T1/cmr/m/n/12 wei-tern und die Me-tho-de [][]\T1/cmtt/m/n/12 map(KEYIN key, []VALUEIN value, Context context) []\T1/cmr/m/n/12 über-
+ []
+
+[23] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (./code/MaxTemperature.java
 consecutive:
-) [22] (./code/MaxTemperature.java
+)
+Overfull \hbox (73.69414pt too wide) in paragraph at lines 170--171
+[]\T1/cmr/m/n/12 er-wei-tern und die Me-tho-de [][]\T1/cmtt/m/n/12 reduce(KEYIN key, []Iterable<VALUEIN> values, Context context)
+ []
+
+[24] (./code/MaxTemperature.java
 consecutive:
 ) (./code/MaxTemperature.java
 consecutive:
 consecutive:
-) [23]
-<./img//mr_java_compile.png, id=543, 1244.65pt x 130.4875pt>
+[25])
+<./img//mr_java_compile.png, id=546, 1244.65pt x 130.4875pt>
 File: ./img//mr_java_compile.png Graphic file (type png)
 <use ./img//mr_java_compile.png>
 Package pdftex.def Info: ./img//mr_java_compile.png  used on input line 184.
 (pdftex.def)             Requested size: 430.52583pt x 45.1357pt.
-<./img//mr_java_output.png, id=545, 1293.83376pt x 677.53125pt>
+<./img//mr_java_output.png, id=548, 1293.83376pt x 677.53125pt>
 File: ./img//mr_java_output.png Graphic file (type png)
 <use ./img//mr_java_output.png>
 Package pdftex.def Info: ./img//mr_java_output.png  used on input line 193.
 (pdftex.def)             Requested size: 430.52583pt x 225.44688pt.
- [24 <./img//mr_java_compile.png> <./img//mr_java_output.png>]
-<./img//mr_java_result.png, id=554, 1270.7475pt x 603.25375pt>
+ [26 <./img//mr_java_compile.png>]
+<./img//mr_java_result.png, id=562, 1270.7475pt x 603.25375pt>
 File: ./img//mr_java_result.png Graphic file (type png)
 <use ./img//mr_java_result.png>
 Package pdftex.def Info: ./img//mr_java_result.png  used on input line 204.
 (pdftex.def)             Requested size: 344.42197pt x 163.50662pt.
-) (./Kapitel/Hadoop Ecosystem.tex [25 <./img//mr_java_result.png>]
+) (./Kapitel/Hadoop Ecosystem.tex [27 <./img//mr_java_output.png>] [28 <./img//mr_java_result.png>]
 chapter 4.
-<./img//Hadoop_ecosystem_overview.png, id=561, 1009.7725pt x 807.015pt>
+<./img//Hadoop_ecosystem_overview.png, id=575, 1009.7725pt x 807.015pt>
 File: ./img//Hadoop_ecosystem_overview.png Graphic file (type png)
 <use ./img//Hadoop_ecosystem_overview.png>
 Package pdftex.def Info: ./img//Hadoop_ecosystem_overview.png  used on input line 6.
 (pdftex.def)             Requested size: 430.52583pt x 344.07895pt.
-[26
+[29
 
- <./img//Hadoop_ecosystem_overview.png>] [27]
-Overfull \hbox (32.28922pt too wide) in paragraph at lines 23--23
-  [][][]\T1/cmr/m/n/9 https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HDFSHighAvailabilityWithQJM.html| 
+] [30 <./img//Hadoop_ecosystem_overview.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+  [][][]\T1/cmr/m/n/10 https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 29--29
-  [][][]\T1/cmr/m/n/9 https://community.cloudera.com/t5/Product-Announcements/ANNOUNCE-Apache-Sqoop-Support-
+  [][][]\T1/cmr/m/n/10 https://community.cloudera.com/t5/Product-Announcements/ANNOUNCE-Apache-Sqoop-
  []
 
-[28] [29]) (./Kapitel/Fazit.tex [30]) [31
-
-] [32
-
+[31] [32]) (./Kapitel/Fazit.tex [33]) [34
 
 ] (./Kapitel/Appendix.tex
 chapter without number
-(./code/concatenate_ncdc_data.sh [33
+(./code/concatenate_ncdc_data.sh [35
 
-] [34]) (./code/concat_files_start.sh [35]) (./code/MaxTemperature.java [36])) [37]
+
+
+] [36]) (./code/concat_files_start.sh [37]) (./code/MaxTemperature.java [38] [39])) [40]
 chapter without number
-[38
+[41
 
 ]
 
 Package biblatex Warning: No driver for 'video'.
-(biblatex)                Using fallback driver on input line 160.
+(biblatex)                Using fallback driver on input line 161.
 
-[39] (./Main.aux)
+
+Overfull \hbox (13.12132pt too wide) in paragraph at lines 162--162
+\T1/cmtt/m/n/12 / / cwiki . apache . org / confluence / display / HADOOP2 / HowManyMapsAndReduces$[][]\T1/cmr/m/n/12 . 
+ []
+
+[42] [43] (./Main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1064,18 +1129,18 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25489 strings out of 479930
- 469998 string characters out of 5885661
- 1993719 words of memory out of 5000000
- 42848 multiletter control sequences out of 15000+600000
- 495653 words of font info for 68 fonts, out of 8000000 for 9000
+ 25476 strings out of 479930
+ 469890 string characters out of 5885661
+ 1930824 words of memory out of 5000000
+ 42829 multiletter control sequences out of 15000+600000
+ 511286 words of font info for 66 fonts, out of 8000000 for 9000
  18 hyphenation exceptions out of 8191
  108i,9n,106p,10629b,4787s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on Main.pdf (43 pages, 1756295 bytes).
+ </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti1200.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1200.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/rene/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/share/texmf/fonts/type1/urw/arial/ua1b8a.pfb>
+Output written on Main.pdf (47 pages, 1766841 bytes).
 PDF statistics:
- 1654 PDF objects out of 1728 (max. 8388607)
- 1074 compressed objects within 11 object streams
- 446 named destinations out of 1000 (max. 500000)
+ 1699 PDF objects out of 1728 (max. 8388607)
+ 1096 compressed objects within 11 object streams
+ 453 named destinations out of 1000 (max. 500000)
  492 words of extra memory for PDF output out of 10000 (max. 10000000)
 

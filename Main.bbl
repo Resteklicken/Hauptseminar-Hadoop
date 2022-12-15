@@ -811,6 +811,25 @@
       \verb https://community.cloudera.com/t5/Support-Questions/Using-Sqoop-to-import-data-from-SQL-server/m-p/319902/highlight/true#M228024
       \endverb
     \endentry
+    \entry{noauthor_apache_nodate-2}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Apache Tez – Welcome to Apache {TEZ}®}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Apache Tez – Welcome to Apache TEZ®:/home/rene/Zotero/storage/NCXNKARD/tez.apache.org.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://tez.apache.org/
+      \endverb
+      \verb{url}
+      \verb https://tez.apache.org/
+      \endverb
+    \endentry
     \entry{noauthor_apache_2020}{online}{}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}

@@ -5,25 +5,25 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Die Phasen von MapReduce}}{6}{figure.2.2}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Der MapReduce Dataflow}}{7}{figure.2.3}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Start aller Prozesse beim Cluster Startup}}{10}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Hadoop Core Prozesse in der HDP Sandbox}}{11}{figure.3.2}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Replication Factor Einstellung in Ambari}}{12}{figure.3.3}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Start aller Prozesse beim Cluster Startup}}{11}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Hadoop Core Prozesse in der HDP Sandbox}}{12}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Replication Factor Einstellung in Ambari}}{13}{figure.3.3}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces NCDC Archive für die Fallstudie}}{13}{figure.3.4}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Erstellung des JARs mit Wetterdaten}}{13}{figure.3.5}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Eingabedatei des MapReduce Jobs}}{13}{figure.3.6}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Dateitransfer mit scp}}{14}{figure.3.7}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Datei-Upload in das HDFS}}{14}{figure.3.8}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Upload der NCDC Datensätze}}{16}{figure.3.9}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Setzen von Dateiberechtigungen im Ambari File View}}{16}{figure.3.10}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces MapReduce Konsolenausgabe}}{18}{figure.3.11}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces MapReduce Ausgabedateien}}{19}{figure.3.12}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Zusammengefügte, komprimierte Wetterdaten im HDFS}}{20}{figure.3.13}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Fehlerhafte Anzeige der Daten im File View}}{20}{figure.3.14}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Kompilieren der MapReduce Java-Applikation}}{24}{figure.3.15}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Ausführen der MapReduce Java-Applikation}}{24}{figure.3.16}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Ergebnis der MapReduce Java-Applikation}}{25}{figure.3.17}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Erstellung des JARs mit Wetterdaten}}{15}{figure.3.5}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Eingabedatei des MapReduce Jobs}}{15}{figure.3.6}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Dateitransfer mit scp}}{16}{figure.3.7}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Datei-Upload in das HDFS}}{16}{figure.3.8}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Upload der NCDC Datensätze}}{18}{figure.3.9}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Setzen von Dateiberechtigungen im Ambari File View}}{18}{figure.3.10}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces MapReduce Konsolenausgabe}}{20}{figure.3.11}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces MapReduce Ausgabedateien}}{21}{figure.3.12}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Zusammengefügte, komprimierte Wetterdaten im HDFS}}{22}{figure.3.13}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Fehlerhafte Anzeige der Daten im File View}}{22}{figure.3.14}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Kompilieren der MapReduce Java-Applikation}}{26}{figure.3.15}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Ausführen der MapReduce Java-Applikation}}{27}{figure.3.16}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Ergebnis der MapReduce Java-Applikation}}{28}{figure.3.17}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Komponenten des Hadoop Ecosystems}}{26}{figure.4.1}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Komponenten des Hadoop Ecosystems}}{30}{figure.4.1}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \babel@toc {ngerman}{}\relax 
@@ -171,6 +171,12 @@
 \babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {english}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
