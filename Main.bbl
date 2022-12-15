@@ -159,7 +159,7 @@
       \field{labeltitlesource}{title}
       \field{abstract}{In this world of cloud, one of the biggest features is the ability to scale. There are different ways to accomplish scaling, which is a transformation that enlarges or diminishes. One is vertical scaling and the other is horizontal scaling. What is the difference between the two? If you look at just the definitions of […]}
       \field{day}{9}
-      \field{langid}{american}
+      \field{langid}{english}
       \field{month}{4}
       \field{title}{How to explain vertical and horizontal scaling in the cloud}
       \field{titleaddon}{Cloud computing news}
@@ -337,7 +337,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{A computer cluster is a set of connected computers (nodes) that work together to combine computing power as if they are a single (much more powerful) machine. You can learn more about computer clusters and their role in the enterprise linux software environment here.}
-      \field{langid}{american}
+      \field{langid}{english}
       \field{shorttitle}{What is a Computer Cluster?}
       \field{title}{What is a Computer Cluster? {|} Answer from {SUSE} Defines}
       \field{titleaddon}{{SUSE} Defines}
@@ -462,7 +462,7 @@
       \field{labeltitlesource}{title}
       \field{abstract}{Apache Hadoop co-founders Doug Cutting and Mike Cafarella explore the future of Hadoop.}
       \field{day}{31}
-      \field{langid}{american}
+      \field{langid}{english}
       \field{month}{3}
       \field{title}{The next 10 years of Apache Hadoop}
       \field{urlday}{8}
@@ -715,7 +715,7 @@
       \field{labeltitlesource}{title}
       \field{abstract}{Hadoop has evolved into a complex ecosystem, consisting of several open source products , frameworks and initiatives by the Apache organization. This article aims to provide an overview of the eco-system in a structured way. The diagram is organized in four tiers: Management / Configuration: Central functions to manage resources and configurations Storage: Functions for}
       \field{day}{26}
-      \field{langid}{dutch}
+      \field{langid}{english}
       \field{month}{1}
       \field{title}{The Hadoop ecosystem}
       \field{titleaddon}{{SynTouch}}
@@ -733,6 +733,106 @@
       \endverb
       \verb{url}
       \verb https://www.syntouch.nl/the-hadoop-ecosystem/
+      \endverb
+    \endentry
+    \entry{hbase_team_apache_2022}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=0043c7a1495a2e9d1d8877f663a25c2d}{%
+           family={{HBase}\bibnamedelima Team},
+           familyi={H\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Apache},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0043c7a1495a2e9d1d8877f663a25c2d}
+      \strng{fullhash}{0043c7a1495a2e9d1d8877f663a25c2d}
+      \strng{bibnamehash}{0043c7a1495a2e9d1d8877f663a25c2d}
+      \strng{authorbibnamehash}{0043c7a1495a2e9d1d8877f663a25c2d}
+      \strng{authornamehash}{0043c7a1495a2e9d1d8877f663a25c2d}
+      \strng{authorfullhash}{0043c7a1495a2e9d1d8877f663a25c2d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{14}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{note}{Version 3.0.0-Alpha-4-{SNAPSHOT}}
+      \field{title}{Apache {HBase} ™ Reference Guide}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Apache HBase ™ Reference Guide:/home/rene/Zotero/storage/SZ29QPBY/book.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://hbase.apache.org/book.html#conceptual.view
+      \endverb
+      \verb{url}
+      \verb https://hbase.apache.org/book.html#conceptual.view
+      \endverb
+    \endentry
+    \entry{cloudera_moderator_using_2021}{online}{}
+      \name{author}{1}{}{%
+        {{hash=7b69608b7b0de7a547cff555ceddddac}{%
+           family={Cloudera\bibnamedelima Moderator},
+           familyi={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={ask{\textbackslash}\_bill{\textbackslash}\_brooks},
+           giveni={a\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b69608b7b0de7a547cff555ceddddac}
+      \strng{fullhash}{7b69608b7b0de7a547cff555ceddddac}
+      \strng{bibnamehash}{7b69608b7b0de7a547cff555ceddddac}
+      \strng{authorbibnamehash}{7b69608b7b0de7a547cff555ceddddac}
+      \strng{authornamehash}{7b69608b7b0de7a547cff555ceddddac}
+      \strng{authorfullhash}{7b69608b7b0de7a547cff555ceddddac}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{What is the suggested method to extract data from {SQL} server to hdfs? Is there any performance advantage in using spark jdbc over sqoop import ? Also as per apache.org, apache sqoop project is retired as of June 2021, Is it better to go with the Spark approach in new {ETL} pipelines developments?}
+      \field{day}{5}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{note}{Section: Support Questions}
+      \field{title}{Using Sqoop to import data from {SQL} server}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://community.cloudera.com/t5/Support-Questions/Using-Sqoop-to-import-data-from-SQL-server/m-p/319902/highlight/true#M228024
+      \endverb
+      \verb{url}
+      \verb https://community.cloudera.com/t5/Support-Questions/Using-Sqoop-to-import-data-from-SQL-server/m-p/319902/highlight/true#M228024
+      \endverb
+    \endentry
+    \entry{noauthor_apache_2020}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{day}{6}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{title}{Apache Hive Confluence}
+      \field{urlday}{15}
+      \field{urlmonth}{12}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Home - Apache Hive - Apache Software Foundation:/home/rene/Zotero/storage/FAUBI7Z5/Home.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://cwiki.apache.org/confluence/display/Hive//Home
+      \endverb
+      \verb{url}
+      \verb https://cwiki.apache.org/confluence/display/Hive//Home
       \endverb
     \endentry
   \enddatalist

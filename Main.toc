@@ -24,15 +24,28 @@
 \contentsline {subsection}{\numberline {3.6.4}Die Treiber-Klasse}{23}{subsection.3.6.4}%
 \contentsline {subsection}{\numberline {3.6.5}Ausführung der MapReduce Java-Applikation}{24}{subsection.3.6.5}%
 \contentsline {chapter}{\numberline {4}Das Hadoop Ecosystem}{26}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Datenhaltung}{26}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Cluster-Verwaltung / -Konfiguration}{28}{section.4.2}%
+\contentsline {section}{\numberline {4.1}Datenhaltung}{27}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}HDFS}{27}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}HBase}{27}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Cluster-Verwaltung / -Konfiguration}{27}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}YARN}{27}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Oozie}{27}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}ZooKeeper}{28}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Ambari}{28}{subsection.4.2.4}%
 \contentsline {section}{\numberline {4.3}Datentransfer}{28}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Datenverarbeitung}{28}{section.4.4}%
-\contentsline {chapter}{\nonumberline Appendix}{29}{chapter*.20}%
-\contentsline {section}{\numberline {1}Mapper-Skript für NCDC Datenbereinigung}{29}{section.Alph0.1}%
-\contentsline {section}{\numberline {2}Startbefehl für die NCDC Datenbereinigung}{31}{section.Alph0.2}%
-\contentsline {section}{\numberline {3}MapReduce Job mit Java API}{32}{section.Alph0.3}%
-\contentsline {chapter}{\nonumberline Literatur}{34}{chapter*.21}%
+\contentsline {subsection}{\numberline {4.3.1}Sqoop}{28}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}AVRO}{29}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Datenverarbeitung}{29}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}MapReduce}{29}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Tez}{29}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Pig}{29}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Hive}{29}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Spark}{30}{subsection.4.4.5}%
+\contentsline {chapter}{\nonumberline Appendix}{33}{chapter*.4}%
+\contentsline {section}{\numberline {1}Mapper-Skript für NCDC Datenbereinigung}{33}{section.Alph0.1}%
+\contentsline {section}{\numberline {2}Startbefehl für die NCDC Datenbereinigung}{35}{section.Alph0.2}%
+\contentsline {section}{\numberline {3}MapReduce Job mit Java API}{36}{section.Alph0.3}%
+\contentsline {chapter}{\nonumberline Literatur}{38}{chapter*.5}%
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
@@ -59,13 +72,13 @@
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
-\babel@toc {american}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
-\babel@toc {american}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
-\babel@toc {american}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
-\babel@toc {american}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
@@ -103,15 +116,13 @@
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
-\babel@toc {american}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
-\babel@toc {american}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
-\babel@toc {american}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
-\babel@toc {american}{}\relax 
-\babel@toc {ngerman}{}\relax 
-\babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
@@ -119,13 +130,15 @@
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
-\babel@toc {american}{}\relax 
 \babel@toc {ngerman}{}\relax 
-\babel@toc {american}{}\relax 
 \babel@toc {ngerman}{}\relax 
-\babel@toc {american}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
-\babel@toc {american}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
@@ -155,10 +168,36 @@
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {ngerman}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

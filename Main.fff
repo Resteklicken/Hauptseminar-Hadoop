@@ -1,0 +1,85 @@
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{hdfsarchitecture}
+    \caption[Architektur des HDFS]{Architektur des HDFS\parencite[S.69, Figure 3-2]{white_hadoop_2015}}
+    \label{fig:hdfs}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{MapReduce}
+    \caption[Die Phasen von MapReduce]{Die Phasen von MapReduce\parencite[Seite 34, Figure 2-4]{white_hadoop_2015}}
+    \label{fig:mapred}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{MapReduce Dataflow}
+    \caption[Der MapReduce Dataflow]{Der MapReduce Dataflow\parencite[Seite 24, Figure 2-1]{white_hadoop_2015}}
+    \label{fig:mapred dataflow}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{cluster_startup}
+    \caption[Start aller Prozesse beim Cluster Startup]{Start aller Dienste beim Cluster Startup}
+    \label{fig:cluster startup}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width= 0.6\textwidth]{hdp_core_processes}
+    \caption[Hadoop Core Prozesse in der HDP Sandbox]{Hadoop Core Prozesse in der HDP Sandbox}
+    \label{fig:hdp core processes}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.85\textwidth]{block_repl_factor}
+    \caption[Replication Factor Einstellung in Ambari]{Replication Factor Einstellung in Ambari}
+    \label{fig:block replication factor}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{ncdc_files}
+    \includegraphics[width=0.7\textwidth]{ncdc_archive_content}
+    \caption[NCDC Archive für die Fallstudie]{NCDC Archive für die Fallstudie}
+    \label{fig:ncdc files local}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\textwidth]{ncdc_jar_local}
+    \caption[Erstellung des JARs mit Wetterdaten]{Erstellung des JARs mit Wetterdaten}
+    \label{fig:ncdc jar local}
+    \includegraphics[width=0.75\textwidth]{file_name_list}
+    \caption[Eingabedatei des MapReduce Jobs]{Eingabedatei des MapReduce Jobs}
+    \label{fig:file names txt local}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\textwidth]{scp_ncdc_transfer}
+    \caption[Dateitransfer mit scp]{Dateitransfer mit scp}
+    \label{fig:scp transfer}
+    \includegraphics[width=0.75\textwidth]{hdfs_ncdc_move}
+    \caption[Datei-Upload in das HDFS]{Datei-Upload in das HDFS}
+    \label{fig:hdfs move}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{Hadoop_ecosystem_overview}
+    \caption[Komponenten des Hadoop Ecosystems]{Komponenten des Hadoop Ecosystems\parencite{van_der_weel_hadoop_2015}}
+    \label{fig:ecosys}
+\end{figure}

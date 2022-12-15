@@ -98,6 +98,10 @@
 \setcounter{secnumdepth}{3} 		 % 3 Stufen in Abschnittnummerierung
 \raggedbottom 		 				 % Seiten nicht oben mit Whitespace auffüllen, damit der Inhalt unten abschließt
 
+%% Bilder entfernen, um Dokumentenlänge abzuschätzen; Listings bleiben bestehen  
+%\usepackage[figuresonly,nolists,nomarkers]{endfloat}
+%\renewcommand{\processdelayedfloats}{}
+
 % ----------------------------------------------------------------------------
 \begin{document}
 
@@ -139,6 +143,7 @@
 \import{Kapitel/}{Hadoop Core.tex}
 \import{Kapitel/}{Hadoop Hands On.tex}
 \import{Kapitel/}{Hadoop Ecosystem.tex}
+\import{Kapitel/}{Fazit.tex}
 %\import{Kapitel/}{Pig.tex}
 %\import{Kapitel/}{Data Ingestion.tex}
 %\import{Kapitel/}{Hive.tex}
