@@ -50,8 +50,9 @@ Das HDFS und MapReduce arbeiten außerdem mit wenigen großen Dateien wesentlich
 
 \section{Umgang mit dem HDFS}
 \label{chap:fund sec:core sub:handson hdfs}
-Es gibt verschiedene Wege, um Dateien ins HDFS zu laden\footnote{3 Beispiele: https://community.cloudera.com/t5/Support-Questions/Import-data-from-remote-server-to-HDFS/m-p/233149/highlight/true\#M194979}. In der Sandbox wurde ein Ambari View, der \textbf{Files View}\footnote{https://docs.cloudera.com/HDPDocuments/Ambari-2.7.4.0/using-ambari-views/content/\\amb\_using\_files\_view.html}, erstellt. Diesen erreicht man über das Kachel-Icon im Header des Dashboards\footnote{http://<localhost oder Sandbox Hostname>:8080/\#/main/view/FILES/auto\_files\_instance}. Der Files View bietet einen HDFS Dateibrowser mit Funktionalitäten wie Datei-Upload direkt von der lokalen Maschine, Ordnererstellung und Rechteverwaltung. Nicht alle Nutzer der Sandbox haben die nötigen Rechte zur Ausführung der Befehle. Daher sollte man sich mit dem dafür vorgesehenen Nutzer\footnote{https://www.cloudera.com/tutorials/learning-the-ropes-of-the-hdp-sandbox.html\#login-credentials} \verb|user: maria_dev| \verb|password: maria_dev| in Ambari einloggen. Man kann über den Files View aber nur eine Datei zur Zeit hochladen. Das Hochladen von Archiven (getestet mit \verb|.tar.gz| und \verb|.jar|) schließt ebenfalls nie ab. Da für den nachfolgenden Schritt ein JAR aus dem HDFS als Input eingebunden werden soll, wird ein HDFS Client Prozess verwendet, der mit dem Hadoop Cluster verbunden ist. Dafür ist es nötig, Hadoop lokal installiert zu haben, oder man kopiert erst per \verb|scp| die Dateien auf das lokale Dateisystem eines Nodes im Cluster, auf dem ein HDFS Client läuft. Hierfür verwendet man zum Beispiel den NameNode. 
-\par
+Es gibt verschiedene Wege, um Dateien ins HDFS zu laden\footnote{3 Beispiele: https://community.cloudera.com/t5/Support-Questions/Import-data-from-remote-server-to-HDFS/m-p/233149/highlight/true\#M194979}. In der Sandbox wurde ein Ambari View, der \textbf{Files View}\footnote{https://docs.cloudera.com/HDPDocuments/Ambari-2.7.4.0/using-ambari-views/content/\\amb\_using\_files\_view.html}, erstellt. Diesen erreicht man über das Kachel-Icon im Header des Dashboards\footnote{http://<localhost oder Sandbox Hostname>:8080/\#/main/view/FILES/auto\_files\_instance}. Der Files View bietet einen HDFS Dateibrowser mit Funktionalitäten wie Datei-Upload direkt von der lokalen Maschine, Ordnererstellung und Rechteverwaltung. Nicht alle Nutzer der Sandbox haben die nötigen Rechte zur Ausführung der Befehle. Daher sollte man sich mit dem dafür vorgesehenen Nutzer\footnote{https://www.cloudera.com/tutorials/learning-the-ropes-of-the-hdp-sandbox.html\#login-credentials} \verb|user: maria_dev| \verb|password: maria_dev| in Ambari einloggen. Man kann über den Files View aber nur eine Datei zur Zeit hochladen. Das Hochladen von Archiven (getestet mit \verb|.tar.gz| und \verb|.jar|) schließt ebenfalls nie ab. Da für den nachfolgenden Schritt ein JAR aus dem HDFS als Input eingebunden werden soll, wird ein HDFS Client Prozess verwendet, der mit dem Hadoop Cluster verbunden ist. Dafür ist es nötig, Hadoop lokal installiert zu haben, oder man kopiert erst per \verb|scp| die Dateien auf das lokale Dateisystem eines Nodes im Cluster, auf dem ein HDFS Client läuft. Hierfür verwendet man beispielsweise den NameNode. 
+\pagebreak
+
 \textbf{Schritt 1} ist das Erstellen des JARs \verb|ncdc.jar| mit den Eingabedateien des NCDC (siehe Abb. \ref{fig:ncdc jar local}). Hadoop wird dieses nachher dem MapReduce Job bereitstellen und automatisch entpacken. \textbf{Schritt 2} ist das Erstellen der Textdatei \verb|file_names.txt| mit den Dateipfaden der Unterordner des JARs (siehe Abb. \ref{fig:file names txt local}). Diese Datei wird der Input des MapReduce Jobs. 
 
 \begin{figure}[ht]
@@ -76,33 +77,35 @@ In \textbf{Schritt 3} gilt es, die bisher erstellten Dateien ins HDFS zu übertr
     \label{fig:hdfs move}
 \end{figure}
 
-\textbf{Schritt 4} ist das Schreiben eines Bash Skripts, welches später als Mapper-Klasse fungiert. Zum Zusammenführen der Dateien wird nicht die Java API von MapReduce, sondern die Streaming API von Hadoop\footnote{https://hadoop.apache.org/docs/stable/hadoop-streaming/HadoopStreaming.html} verwendet. Diese erlaubt es, völlig sprachunabhängig MapReduce Jobs zu schreiben. Man kann als Mapper und/oder Reducer dabei jeweils eigene Skripte oder Binaries verwenden. Jeder Mapper-Prozess führt eine Instanz des angegebenen Mapper-Skripts aus und füttert ihm, sofern nicht ein anderes InputFormat bestimmt wurde, Zeile für Zeile den Inhalt des ihm zugeteilten InputSplits als Key-Value-Paare auf \verb|stdin|. \verb|stdout| des Skripts wird wiederum vom Mapper zeilenweise als Key-Value-Paar gesammelt und an die Reducer weitergeleitet, wo der Prozess genauso abläuft. Das Skript ist in Listing \ref{lst:ncdc concatenate script} bis auf einige Kommentare abgebildet. Das gesamte Skript findet sich im Appendix \ref{appendix lst:ncdc concatenate script}.    
+\section{MapReduce mit der Hadoop Streaming API}
+\label{chap:fund sec:core sub:handson mapred streaming}
+\subsection{Funktionsweise der Streaming API}
+Sind die Eingabedateien ins HDFS geladen, muss ein Bash Skript geschrieben werden, welches später als Mapper-Klasse fungiert. Zum Zusammenführen der Dateien wird nicht die Java API von MapReduce, sondern die Streaming API von Hadoop\footnote{https://hadoop.apache.org/docs/stable/hadoop-streaming/HadoopStreaming.html} verwendet. Diese erlaubt es, völlig sprachunabhängig MapReduce Jobs zu schreiben. Man kann als Mapper und/oder Reducer dabei jeweils Skripte oder Binaries verwenden, solange diese entsprechend des gewählten In-/OutputFormats von der Standardeingabe lesen und auf die Standardausgabe schreiben. Jeder Mapper-Prozess führt eine Instanz des angegebenen Mapper-Skripts aus und füttert ihm, sofern nicht ein anderes InputFormat bestimmt wurde, Zeile für Zeile den Inhalt des ihm zugeteilten InputSplits als Key-Value-Paare auf \verb|stdin|. \verb|stdout| des Skripts wird wiederum vom Mapper zeilenweise als Key-Value-Paar gesammelt und an die Reducer weitergeleitet, wo der Prozess genauso abläuft. Das Skript ist in Listing \ref{lst:ncdc concatenate script} bis auf einige Kommentare abgebildet. Das gesamte Skript findet sich im Appendix \ref{appendix lst:ncdc concatenate script}.    
 
 \lstinputlisting[language=bash, caption={Bash Skript als Mapper-Klasse}, linerange={28-51}, label={lst:ncdc concatenate script}]{code/concatenate_ncdc_data.sh}
 
+\subsection{Das Mapper-Skript}
 Mit \verb|read offset inputfile| liest das Skript das Key-Value-Paar von \verb|stdin| ein. Durch das später bei der Ausführung angegebene InputFormat \verb|NLineInputFormat| ist das erste Wort der Zeile der Offset der Zeile zum Dateianfang. Diese Information ist für diesen Job nicht relevant. Im Rest der Zeile steht der Inhalt der ursprünglichen Zeile, in diesem Fall ein Dateiname wie \verb|ncdc.jar/20xx.tar.gz|. 
 Das Archiv aus dem \verb|ncdc.jar| wird in einen Unterordner in der Laufzeitumgebung des MapReduce Jobs entpackt. Anschließend werden alle darin befindlichen CSV-Dateien zu einer Datei vereint. Diese resultierende Datei wird zum Schluss wieder komprimiert und mit dem Befehl \verb|hdfs dfs -put - <Pfad>| im HDFS abgespeichert. 
 \par
-\textbf{Schritt 5}: Ist das Skript geschrieben, könnte es wieder per \verb|scp| und \verb|hdfs dfs| in das HDFS übertragen werden. An dieser Stelle soll aber der Ambari File View gezeigt werden. Zu diesem navigiert man wie bereits in Abschnitt \ref{chap:fund sec:core sub:handson hdfs} beschrieben und wechselt über die grafische Oberfläche in den Zielordner \verb|/user/maria_dev/input|. Über den Upload Button oben rechts kann man die Datei direkt von seinem lokalen Rechner ins HDFS laden. Am Ende sollte der Inhalt des Ordners aussehen wie in Abbildung \ref{fig:ncdc files hdfs}. Das Skript muss noch für alle Nutzer als ausführbar markiert werden, damit der MapReduce Job es später benutzen kann. Dafür wählt man die Datei an, klickt oben links auf \verb|Permissions| und setzt sie entsprechend Abbildung \ref{fig:concat script permissions}. Man könnte hierfür auch das HDFS CLI mit dem Befehl \verb|hdfs dfs -chmod 755 <Pfad>| verwenden.
+Ist das Skript geschrieben, könnte es wieder per \verb|scp| und \verb|hdfs dfs| in das HDFS übertragen werden. An dieser Stelle soll aber der Ambari File View gezeigt werden. Zu diesem navigiert man wie bereits in Abschnitt \ref{chap:fund sec:core sub:handson hdfs} beschrieben und wechselt über die grafische Oberfläche in den Zielordner \verb|/user/maria_dev/input|. Über den Upload Button oben rechts kann man die Datei direkt von seinem lokalen Rechner ins HDFS laden. Am Ende sollte der Inhalt des Ordners aussehen wie in Abbildung \ref{fig:ncdc files hdfs}. Das Skript muss noch für alle Nutzer als ausführbar markiert werden, damit der MapReduce Job es später benutzen kann. Dafür wählt man die Datei an, klickt oben links auf \verb|Permissions| und setzt sie entsprechend Abbildung \ref{fig:concat script permissions}. Man könnte hierfür auch das HDFS CLI mit dem Befehl \verb|hdfs dfs -chmod 755 <Pfad>| verwenden.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.9\textwidth]{ncdc_files_on_hdfs}
     \caption[Upload der NCDC Datensätze]{Upload der NCDC Datensätze}
     \label{fig:ncdc files hdfs}
-    \includegraphics[width=0.5\textwidth]{script_permissions}
+    \includegraphics[width=0.3\textwidth]{script_permissions}
     \caption[Setzen von Dateiberechtigungen im Ambari File View]{Setzen von Dateiberechtigungen im Ambari File View}
     \label{fig:concat script permissions}
 \end{figure}
 
-
-\section{MapReduce mit der Hadoop Streaming API}
-\label{chap:fund sec:core sub:handson mapred streaming}
+\subsection{Ausführung des MapReduce Jobs}
 Um den vorbereiteten MapReduce Job auszuführen, muss der Befehl aus Listing \ref{lst:ncdc concatenate start script} abgesetzt werden. Der vollständig dokumentierte Befehl ist in Appendix \ref{appendix lst:ncdc concatenate start script} zu finden. 
 
 \begin{itemize}
     \item Zeile 1 weist Hadoop an, ein JAR auszuführen. Dateipfad des Hadoop Streaming JARs angegeben, welches mit dem Framework mitgeliefert wird.
-    \item Zeile 2 sorgt dafür, dass Hadoop das im HDFS gespeicherte JAR \verb|ncdc.jar| in die Laufzeitumgebung des MapReduce Jobs kopiert und automatisch entpackt. Prozesse können während des Jobs unter dem Pfad \verb|ncdc.jar| auf die darin enthaltenen Dateien (hier die TARs mit den jährlichen Datensätzen) zugreifen.
+    \item Zeile 2 lässt Hadoop das im HDFS gespeicherte JAR \verb|ncdc.jar| in die Laufzeitumgebung des MapReduce Jobs kopieren und automatisch entpacken. Prozesse können während des Jobs unter dem Pfad \verb|ncdc.jar| auf die darin enthaltenen Dateien zugreifen.
     \item Zeile 3 weist Hadoop eigentlich an, die Mapper-Klasse vom lokalen Dateisystem auf alle am Job beteiligten Nodes zu kopieren, damit sie dort lokal zur Verfügung steht. Durch das Präfix \verb|hdfs://host:port/| teilt man Hadoop mit, dass die Datei bereits im HDFS liegt. Mit \verb|\#concatenate\_ncdc\_data.sh| am Ende des Pfades gibt man der Datei einen Alias, damit man in der \verb|-mapper| Option nicht wieder den vollen Pfad angeben muss.      
     \item Mit \verb|-D| kriegt ein Parameter Priorität über eine Einstellung, die bereits in Konfigurationsdateien gesetzt sind.
     \item Zeile 4 macht aus diesem Job einen reinen Map-Job ohne Reduce-Phase, da für die Umwandlung der Dateien keine Reduce-Phase nötig ist.
@@ -112,9 +115,10 @@ Um den vorbereiteten MapReduce Job auszuführen, muss der Befehl aus Listing \re
     \item Zeile 8 gibt den Pfad an, unter dem die Reducer ihre Ausgabedateien ablegen werden. Es muss sich hierbei um einen Ordner handeln, der noch nicht existiert. Im HDFS können Dateien nicht einfach überschrieben werden. Daher dürfen Ausgabeordner grundsätzlich nicht vorher existieren.
     \item Zeile 9 gibt die Mapper-Klasse an. Würde die Java API statt der Streaming API verwendet, stünde hier eine Java Klasse. Es wird der Alias aus Zeile 3 benutzt.
 \end{itemize}
+\pagebreak
 
 \lstinputlisting[language=bash, linerange={7-15}, caption={Startskript für den NCDC Concatenation MapReduce Job}, label={lst:ncdc concatenate start script}]{code/concat_files_start.sh}
-\pagebreak
+
 Sind alle Dateien an den richtigen Orten platziert, kann man sich erneut als \verb|maria_dev| per \verb|ssh| auf den NameNode verbinden und den Befehl aus Listing \ref{lst:ncdc concatenate start script} absetzen. Die Ausführung kann mehrere Minuten dauern. Am Ende sollte die Konsole eine ähnliche Ausgabe wie in Abbildung \ref{fig:ncdc concat console output} zeigen. Es wurden der Übersicht halber viele Zeilen in der Abbildung entfernt. 
 
 \begin{figure}[ht]
@@ -151,10 +155,11 @@ Im Ordner \verb|/user/maria_dev/input/processed| liegen die zusammengefassten un
 \section{Die MapReduce Java API}
 \label{chap:fund sec:core sub:handson mapred java}
 \subsection{Struktur der Eingabedaten}
-Jetzt wo die 87000 einzelnen CSV-Dateien zu sieben großen Dateien zusammengefasst wurden, soll die Maximaltemperatur jedes Monats in Grad Celsius bestimmt werden. Dafür wird ein neuer MapReduce Job geschrieben, diesmal mit der MapReduce Java API\footnote{https://hadoop.apache.org/docs/stable/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html}. Den Aufbau der Datensätze kann man der offiziellen Referenz entnehmen\footnote{https://www.ncei.noaa.gov/data/global-summary-of-the-day/doc/readme.txt}. Jedes Feld einer Zeile ist in doppelte Anführungszeichen eingefasst und manchmal mit Leerzeichen umgeben. Einzelne Felder sind mit Kommata voneinander getrennt. Das Datum steht im zweiten Feld im Format \verb|"jjjj-mm-tt"|, auch wenn in der Referenz \verb|"mm/dd/yyyy"| steht. Die Tageshöchsttemperatur steht im 21. Feld in Grad Fahrenheit mit einer Nachkommastelle Genauigkeit. Ein Wert von \verb|"9999.9"| oder \verb|"999.9"| denotiert hier einen fehlenden Messwert und muss dementsprechend gefiltert werden. Auch gilt es zu beachten, dass Kopfzeilen herausgefiltert und die Ausgabewerte von Grad Fahrenheit zu Grad Celsius umgerechnet werden müssen. Um einen MapReduce Job in Java zu schreiben, muss man drei Klassen implementieren: die Mapper-Klasse, die Reducer-Klasse und den Treiber-Code. Diese drei Klassen werden in den nächsten Abschnitten besprochen. Die komplette MapReduce-Applikation befindet sich in Appendix \ref{appendix lst:mr java api}.
+Jetzt wo die 87000 einzelnen CSV-Dateien zu sieben großen Dateien zusammengefasst wurden, soll die Maximaltemperatur jedes Monats in Grad Celsius bestimmt werden. Dafür wird ein neuer MapReduce Job geschrieben, diesmal mit der MapReduce Java API\footnote{https://hadoop.apache.org/docs/stable/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html}. Den Aufbau der Datensätze kann man der offiziellen Referenz entnehmen\footnote{https://www.ncei.noaa.gov/data/global-summary-of-the-day/doc/readme.txt}. Jedes Feld einer Zeile ist in doppelte Anführungszeichen eingefasst und manchmal mit Leerzeichen umgeben. Einzelne Felder sind mit Kommata voneinander getrennt. Das Datum steht im zweiten Feld im Format \verb|"jjjj-mm-tt"|, auch wenn in der Referenz \verb|"mm/dd/yyyy"| steht. Die Tageshöchsttemperatur steht im 21. Feld in Grad Fahrenheit mit einer Nachkommastelle Genauigkeit. Ein Wert von \verb|"9999.9"| oder \verb|"999.9"| denotiert hier einen fehlenden Messwert und muss dementsprechend gefiltert werden. Auch gilt es zu beachten, dass Kopfzeilen herausgefiltert und die Ausgabewerte von Grad Fahrenheit zu Grad Celsius umgerechnet werden müssen. Um einen MapReduce Job in Java zu schreiben, muss man drei Klassen implementieren: die Mapper-Klasse, die Reducer-Klasse und den Treiber-Code. Diese drei Klassen werden in den nächsten Abschnitten besprochen. Die komplette MapReduce-Applikation befindet sich in Appendix \ref{appendix lst:mr java api}. 
 
 \subsection{Die Mapper-Klasse}
 Die Mapper-Klasse muss die Klasse \verb|Mapper<KEYIN,VALUEIN,KEYOUT,VALUEOUT>| erweitern und die Methode \verb|map(KEYIN key,| \verb|VALUEIN value, Context context)| überschreiben. \verb|KEY| und \verb|VALUE| Parameter sind jeweils aus Hadoops speziellen Datentypen zu wählen und auf das InputFormat abzustimmen. In diesem Beispiel werden \verb|LongWritable|, \verb|DoubleWritable| und \verb|Text| zusammen mit dem \verb|TextInputFormat| verwendet. Bei diesem InputFormat entpackt das Framework automatisch \verb|.gz| Dateien und ruft die Map-Funktion für jede Zeile in den Dateien auf. Dabei übergibt es den Offset der Zeile zum Dateianfang als Key vom Typ \verb|LongWritable|. Der Value enthält den Zeileninhalt, aber nicht als Java \verb|String|, sondern als \verb|Text|. Der Context ist das Objekt, in das die Map-Funktion ihre Ausgabe schreibt, damit diese an den Reducer weitergegeben wird. Die fertige Klasse ist in Listing \ref{lst:mr java api mapper} abgebildet.
+\pagebreak
 
 \lstinputlisting[language=java, caption={Mapper-Klasse in Java}, label={lst:mr java api mapper}, linerange={15-34}]{code/MaxTemperature.java}
 
@@ -170,10 +175,34 @@ Die Treiber-Klasse enthält der Einfachheit halber die Mapper- und Reducer-Klass
 
 \lstinputlisting[language=java, caption={Treiber-Klasse in Java}, label={lst:mr java api main}, linerange={13-13,50-63}]{code/MaxTemperature.java}
 
-\subsection{Ausführung der MapReduce-Applikation}
-scp
-javac mit classpath
-jar cf
-ausführen
-Konsolenoutput
-Ausgabedateien
+\subsection{Ausführung der MapReduce Java-Applikation}
+Um die geschriebene MapReduce-Applikation zu starten, muss der Quellcode zuerst kompiliert werden. Hat man die Packages von Hadoop nicht lokal vorliegen, kann man die Java-Datei per \verb|scp| in die Sandbox kopieren. Dort kann man sich mit dem Befehl \verb|hadoop| \verb|classpath| den Klassenpfad der nötigen Packages ausgeben lassen und diesen an den Java Compiler weitergeben. Anschließend müssen die drei entstandenen \verb|.class| Dateien in ein JAR verpackt werden (siehe Abb. \ref{fig:mr java api compile}). 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{mr_java_compile}
+    \caption[Kompilieren der MapReduce Java-Applikation]{Kompilieren der MapReduce Java-Applikation}
+    \label{fig:mr java api compile}
+\end{figure}
+
+Der Befehl zum Ausführen des Jobs (siehe Abb. \ref{fig:mr java api command}) beginnt wieder mit \verb|hadoop jar|, um dem Framework mitzuteilen, dass es eine Main-Methode aus einem JAR ausführen soll. Danach kommt der Dateipfad des JARs auf dem System, gefolt vom Namen der Klasse, die die Main-Methode enthält. Der Befehl wurde aus dem Ordner abgesetzt, in dem das JAR liegt, daher steht an dieser Stelle nur der Dateiname. Man musste das JAR nicht im Vorfeld ins HDFS hochladen, da sich Hadoop automatisch um die Verteilung an die einzelnen DataNodes kümmert. Danach kommen der Eingabepfad und der Ausgabepfad im HDFS. Auch hier gilt es wieder zu beachten, dass der Ausgabeordner noch nicht existieren darf und dass die Schreibberechtigung auf dem übergeordneten Ordner gesetzt sein muss. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{mr_java_output}
+    \caption[Ausführen der MapReduce Java-Applikation]{Ausführen der MapReduce Java-Applikation}
+    \label{fig:mr java api command}
+\end{figure}
+
+In der Konsolenausgabe (der Übersicht halber in Abb. \ref{fig:mr java api command} gekürzt) sieht man, dass Hadoop diesmal sieben Eingabedateien gefunden hat (eine \verb|.gz| Datei für jedes Jahr). Daraus wurden sieben InputSplits erstellt und an eine ebensolche Anzahl Mapper weitergegeben. Es wurde auf die Beendigung aller Mapper gewartet, bevor danach ein einziger Reducer seine Arbeit aufnahm. Das Framework konnte nicht wissen, dass einzelne Dateien logisch abgeschlossene Einheiten bilden und konnte daher die Reduce-Phase nicht parallelisieren. Das Framework meldet außerdem, dass alle sieben Mapper nach dem Prinzip der \textit{Datenlokalität} ausgeführt werden konnten. Da es in der Sandbox nur einen DataNode gibt, ist dies zu erwarten. Außerdem traten während der Shuffle-Phase zwischen Mapper und Reducer keine Fehler auf.
+\par
+Da ein Reducer benutzt wurde, erzeugt der Job zwei Ausgabedateien im HDFS-Ordner \verb|/user/maria_dev/maxtemp/output|: die Statusmeldung \verb|_SUCCESS| und die Datei mit den Ergebnissen, \verb|part-r-00000| (siehe Abb. \ref{fig:mr java api result}). Der Dateiname unterscheidet sich von dem des ersten MapReduce Jobs durch das \verb|-r-|. Dieses zeigt an, dass es sich hierbei um den Output eines Reducers und nicht um den eines Mappers handelt. Öffnet man die Datei, findet man darin die Maximaltemperaturen aller Monate der Jahre 2016 bis 2022 sortiert nach den Keys, also dem String aus Jahr und Monat. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{mr_java_result}
+    \caption[Ergebnis der MapReduce Java-Applikation]{Ergebnis der MapReduce Java-Applikation}
+    \label{fig:mr java api result}
+\end{figure}
+
+In diesem Kapitel wurde gezeigt, wie man MapReduce-Applikationen sowohl mit der Hadoop Streaming API, als auch mit der Java API umsetzt. Im nächsten Kapitel soll es nun um die reichhaltige Sammlung an Tools und Frameworks gehen, die sich im Laufe der Jahre um Hadoop herum gebildet hat. Einige davon setzen auf dem MapReduce Framework auf und abstrahieren dessen Programmiermodell durch eigene Skripting-Sprachen, andere ersetzen es komplett durch andere Processing Engines. 

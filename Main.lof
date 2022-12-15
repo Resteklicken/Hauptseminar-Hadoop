@@ -19,8 +19,11 @@
 \contentsline {figure}{\numberline {3.12}{\ignorespaces MapReduce Ausgabedateien}}{19}{figure.3.12}%
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Zusammengefügte, komprimierte Wetterdaten im HDFS}}{20}{figure.3.13}%
 \contentsline {figure}{\numberline {3.14}{\ignorespaces Fehlerhafte Anzeige der Daten im File View}}{20}{figure.3.14}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Kompilieren der MapReduce Java-Applikation}}{24}{figure.3.15}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Ausführen der MapReduce Java-Applikation}}{24}{figure.3.16}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Ergebnis der MapReduce Java-Applikation}}{25}{figure.3.17}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Komponenten des Hadoop Ecosystems}}{25}{figure.4.1}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Komponenten des Hadoop Ecosystems}}{27}{figure.4.1}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \babel@toc {ngerman}{}\relax 
